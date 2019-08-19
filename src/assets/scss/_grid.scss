@@ -1,0 +1,25 @@
+@import '../scss/breakpoints';
+
+.container {
+  width: 100%;
+  max-width: 1500px;
+  margin: auto;
+  @include media-breakpoint('sm') {
+    width: 750px;
+  }
+  @include media-breakpoint('md') {
+    width: 950px;
+  }
+  @include media-breakpoint('tb-land') {
+    width: 950px;
+  }
+  @include media-breakpoint('lg') {
+    width: 1170px;
+  }
+  @include media-breakpoint('xl') {
+    width: 1500px;
+  }
+  &--fluid {
+    max-width: auto;
+  }
+}

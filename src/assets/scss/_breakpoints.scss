@@ -1,0 +1,45 @@
+/**
+ * @author Nam Nguyen Trung
+ * @email namnguyentrung95@gmail.com
+ * @desc manage break points media
+*/
+
+$breakpoints: (
+  xs-tiny: 'screen and (max-width: 320px)',
+  xs-min: 'screen and (max-width: 375px)',
+  xs: 'screen and (max-width: 767px)',
+  sm: 'screen and (min-width: 768px) and (max-width: 991px)',
+  md: 'screen and (min-width: 992px) and (max-width: 1024px)',
+  tb-land: 'screen and (min-width: 1025px) and (max-width: 1199px)',
+  lg: 'screen and (min-width: 1200px) and (max-width: 1499px)',
+  xl: 'screen and (min-width: 1500px) and (max-width: 5000px)',
+  lt-sm: 'screen and (max-width: 767px)',
+  lt-md: 'screen and (max-width: 991px)',
+  lt-tb: 'screen and (max-width: 1024px)',
+  lt-lg: 'screen and (max-width: 1199px)',
+  lt-xl: 'screen and (max-width: 1499px)',
+
+  gt-xs: 'screen and (min-width: 600px)',
+  gt-sm: 'screen and (min-width: 992px)',
+  gt-md: 'screen and (min-width: 1280px)',
+  gt-lg: 'screen and (min-width: 1920px)'
+) !default;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 600px,
+  md: 960px,
+  lg: 1200px,
+  xl: 1920px
+);
+
+@mixin media-breakpoint($breakpointName) {
+  
+  $mediaQuery: map-get($breakpoints, $breakpointName);
+
+  @if ($mediaQuery != null) {
+    @media #{$mediaQuery} {
+      @content;
+    }
+  }
+}
