@@ -1,0 +1,39 @@
+.about-us {
+  position: relative;
+  overflow: hidden;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  &__left {
+    width: 50%;
+    float: left;
+  }
+  &__right {
+    width: 50%;
+    float: right;
+  }
+  &__menu {
+    display: block;
+    list-style: none;
+    li {
+      position: relative;
+      padding-left: 38px;
+      margin-top: 30px;
+      .icon {
+        position: absolute;
+        top: 8px;
+        left: 0;
+        width: 18px;
+        height: 14px;
+      }
+    }
+  }
+  &__title {
+    font-size: 45px;
+    font-weight: bold;
+  }
+  &__img {
+    width: 500px;
+    display: block;
+    margin: auto;
+  }
+}

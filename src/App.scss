@@ -43,3 +43,22 @@ a {
     text-transform: uppercase;
   }
 }
+
+$--list-icon: (
+  'check'
+);
+.icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: {
+    position: center;
+    size: cover;
+    repeat: no-repeat;
+  }
+  @each $icon-name in $--list-icon {
+    &__#{$icon-name}{
+      background-image: url('./assets/img/#{check}.png');
+    }
+  }
+}
