@@ -56,11 +56,34 @@ a {
   &--uppercase {
     text-transform: uppercase;
   }
+  &--outline {
+    height: 40px;
+    line-height: 40px;
+    color: $--color-secondary;
+    padding-left: 40px;
+    padding-right: 30px;
+    border-radius: 30px;
+    border: 1px solid $--color-secondary;
+    font-size: $--font-size-base;
+    background: transparent;
+    transition: background 450ms ease-in-out;
+    .icon__arrow {
+      transform: translateY(1px);
+      margin-left: 10px;
+    }
+    &:hover {
+      color: #ffffff;
+      background-image: linear-gradient( to left, rgb(225,92,43) 0%, rgb(135,54,172) 100%);
+      .icon__arrow {
+        background-image: url('./assets/img/arrow-white.svg');
+      }
+    }
+  }
 }
 
 $--list-icon: (
   'check',
-  'test'
+  'test',
 );
 .icon {
   display: inline-block;
@@ -75,5 +98,10 @@ $--list-icon: (
     &__#{$icon-name}{
       background-image: url('./assets/img/#{$icon-name}.png');
     }
+  }
+  &__arrow {
+    background-image: url('./assets/img/arrow.svg');
+    width: 21px;
+    height: 14px;
   }
 }
