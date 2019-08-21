@@ -2,22 +2,29 @@
 
 .container {
   width: 100%;
-  max-width: 1500px;
+  max-width: 1200px;
   margin: auto;
+  padding-left: 8px;
+  padding-right: 8px;
   @include media-breakpoint('sm') {
     width: 750px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
   @include media-breakpoint('md') {
     width: 950px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
   @include media-breakpoint('tb-land') {
     width: 950px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
   @include media-breakpoint('lg') {
     width: 1170px;
-  }
-  @include media-breakpoint('xl') {
-    width: 1500px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
   &--fluid {
     max-width: auto;

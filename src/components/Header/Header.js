@@ -47,7 +47,7 @@ class Header extends React.Component {
     const { menus, showMenu } = this.state;
     return (
       <header className="container--fluid header-fixed">
-        <div className="container header">
+        <div className="header">
           <a className="header__brand" href="/">
             <img src={logo} className="header__brand__img" alt="I-gen logo" />
           </a>

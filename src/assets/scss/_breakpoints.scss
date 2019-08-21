@@ -11,8 +11,8 @@ $breakpoints: (
   sm: 'screen and (min-width: 768px) and (max-width: 991px)',
   md: 'screen and (min-width: 992px) and (max-width: 1024px)',
   tb-land: 'screen and (min-width: 1025px) and (max-width: 1199px)',
-  lg: 'screen and (min-width: 1200px) and (max-width: 1499px)',
-  xl: 'screen and (min-width: 1500px) and (max-width: 5000px)',
+  lg: 'screen and (min-width: 1200px)',
+  // xl: 'screen and (min-width: 1500px) and (max-width: 5000px)',
   lt-sm: 'screen and (max-width: 767px)',
   lt-md: 'screen and (max-width: 991px)',
   lt-tb: 'screen and (max-width: 1024px)',
@@ -21,8 +21,8 @@ $breakpoints: (
 
   gt-xs: 'screen and (min-width: 600px)',
   gt-sm: 'screen and (min-width: 992px)',
-  gt-md: 'screen and (min-width: 1280px)',
-  gt-lg: 'screen and (min-width: 1920px)'
+  gt-md: 'screen and (min-width: 1200px)',
+  // gt-lg: 'screen and (min-width: 1920px)'
 ) !default;
 
 $grid-breakpoints: (

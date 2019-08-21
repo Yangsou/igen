@@ -9,15 +9,23 @@
     width: 100%;
     z-index: 99;
   }
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 20px;
-  @include media-breakpoint('xs') {
+  position: relative;
+  padding: 36px 15px 20px;
+  position: relative;
+  @include media-breakpoint('lt-lg') {
     padding-left: 8px;
     padding-right: 8px;
+    display: flex;
+    justify-content: space-between;
   }
   &__brand {
+    display: block;
+    position: absolute;
+    left: 15px;
+    top: 20px;
+    @include media-breakpoint('lt-lg') {
+      position: initial;
+    }
     &__img {
       width: 162px;
       height: 64px;
@@ -40,9 +48,9 @@
     }
   }
 
-  // &__right {
-  //   //
-  // }
+  &__right {
+    text-align: center;
+  }
 
   &__menu {
     height: 38px;
@@ -72,9 +80,15 @@
 
       }
       &:last-child {
-        margin-left: 140px;
+        // margin-left: 140px;
+        position: absolute;
+        right: 15px;
+        top: 24px;
         @include media-breakpoint('lg') {
           margin-left: 50px;
+        }
+        @include media-breakpoint('lt-lg') {
+          position: initial;
         }
       }
       &--active {
@@ -89,10 +103,10 @@
     @include media-breakpoint('lt-lg') {
       display: none;
       position: absolute;
-      top: 80px;
       left: 0;
       width: 100%;
-      height: calc(100% - 80px);
+      top: 0;
+      height: 100vh;
       padding-left: calc((100% - 950px) / 2);
       padding-top: 8px;
       background: radial-gradient(circle at top, $--color-primary , $--color-secondary);
@@ -141,27 +155,14 @@
         }
       }
     }
-    // .Rectangle_816 {
-    //   background-image: -moz-linear-gradient( 180deg, rgb(225,92,43) 0%, rgb(135,54,172) 100%);
-    //   background-image: -webkit-linear-gradient( 180deg, rgb(225,92,43) 0%, rgb(135,54,172) 100%);
-    //   background-image: -ms-linear-gradient( 180deg, rgb(225,92,43) 0%, rgb(135,54,172) 100%);
-    //   position: absolute;
-    //   left: 674px;
-    //   top: 269px;
-    //   width: 253px;
-    //   height: 60px;
-    //   z-index: 414;
-    // }
     
     @include media-breakpoint('lt-md') {
       padding-left: calc((100% - 750px) / 2);
-      top: 70px;
-      height: calc(100% - 70px);
-    }
-    @include media-breakpoint('lt-sm') {
-      padding-left: 8px;
-      top: 68px;
-      height: calc(100% - 68px);
+      &__item {
+        &::before {
+          display: none;
+        }
+      }
     }
   }
 
@@ -215,6 +216,14 @@
         transform-origin: left;
         bottom: 12px;
       }
+    }
+  }
+
+  .btn {
+    .icon {
+      width: 21px;
+      transform: translateY(6px);
+      margin-right: 12px;
     }
   }
 }

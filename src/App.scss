@@ -39,13 +39,28 @@ a {
       background-color: rgba($--color-primary, .816);
     }
   }
+  &--gradient {
+    background-image: -moz-linear-gradient( to left, rgb(225,92,43) 0%, rgb(135,54,172) 100%);
+    background-image: -webkit-linear-gradient( 180deg, rgb(225,92,43) 0%, rgb(135,54,172) 100%);
+    background-image: -ms-linear-gradient( 180deg, rgb(225,92,43) 0%, rgb(135,54,172) 100%);
+    background-image: linear-gradient( to left, rgb(225,92,43) 0%, rgb(135,54,172) 100%);
+    height: 60px;
+    line-height: 60px;
+    color: #ffffff;
+    text-transform: capitalize;
+    font-size: 20px;
+    border-radius: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
   &--uppercase {
     text-transform: uppercase;
   }
 }
 
 $--list-icon: (
-  'check'
+  'check',
+  'test'
 );
 .icon {
   display: inline-block;
@@ -58,7 +73,7 @@ $--list-icon: (
   }
   @each $icon-name in $--list-icon {
     &__#{$icon-name}{
-      background-image: url('./assets/img/#{check}.png');
+      background-image: url('./assets/img/#{$icon-name}.png');
     }
   }
 }
