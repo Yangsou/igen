@@ -8,7 +8,7 @@ import logoWhite from '../../assets/img/logo-white.png';
 import './Contact.scss';
 export default function Contact() {
   return (
-    <section className="contact">
+    <section className="contact lazy-load" id="contact-us">
       <div className="container">
         <div className="col-md-6 contact__item">
           <img src={logoWhite} alt="logo-white" />

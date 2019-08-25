@@ -6,7 +6,7 @@ import './MethodStudy.scss';
 
 export default function MethodStudy() {
   return (
-    <section className="method">
+    <section className="method lazy-load" id="method">
       <div className="container">
         <p className="method__title">Phương pháp học</p>
 

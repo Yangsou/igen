@@ -61,6 +61,7 @@ input {
     text-transform: uppercase;
   }
   &--outline {
+    display: inline-block;
     height: 40px;
     line-height: 40px;
     color: $--color-secondary;

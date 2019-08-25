@@ -5,8 +5,8 @@ import image from '../../assets/img/about-us-img.png';
 class AboutUs extends React.Component {
   render() {
     return (
-      <section className="container">
-        <div className="about-us">
+      <section className="container" id="about-us">
+        <div className="about-us lazy-load">
           <div className="about-us__left">
             <p className="about-us__title">Về i-Gen</p>
             <ul className="about-us__menu">

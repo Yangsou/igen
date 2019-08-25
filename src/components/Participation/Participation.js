@@ -9,7 +9,7 @@ import './Participation.scss';
 
 export default function Participation() {
   return (
-    <section className="participation">
+    <section className="participation lazy-load" id="rules">
       <div className="container">
         <p className="participation__title">Thể lệ tham gia</p>
 

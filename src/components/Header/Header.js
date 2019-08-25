@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../../assets/img/Logo.png';
 import './header.scss';
+import { doScrolling } from '../../helpers/functional';
 
 class Header extends React.Component {
   constructor(props) {
@@ -43,10 +44,70 @@ class Header extends React.Component {
     })
   }
 
+  activeHeaderWhenScroll = () => {
+    var scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+    var header = this.refs.header;;
+    if(scrollTop > 196){
+      header.classList.add('active');
+    }else{
+      header.classList.remove('active');
+    }
+  }
+
+  clickPrimaryButton = () => {
+    window.location.href = 'https://igen.vsn.edu.vn/dang-ky-thi-thu'
+  }
+
+  clickMenuItem = (id) => {
+    var element = document.getElementById(id);
+
+    if (element) {
+      doScrolling(`#${id}`, 500, 70);
+    }
+  }
+
+  componentDidMount() {
+    this.activeHeaderWhenScroll();
+    window.addEventListener('scroll', this.activeHeaderWhenScroll, false);
+    window.addEventListener('scroll', this.toggleMenuItemActive, false);
+  }
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.activeHeaderWhenScroll, false);
+  }
+
+  toggleMenuItemActive = () => {
+    const menus = this.state.menus.map((e) => {
+      const element = document.getElementById(e.id),
+        rectTop = element.getBoundingClientRect().top,
+        rectBottom = element.getBoundingClientRect().bottom;
+
+      return {
+        ...e,
+        // rectTop,
+        // rectBottom,
+        active: rectTop <= 94 && rectBottom > 94
+      }
+    });
+    this.setState({
+      menus
+    })
+  }
+  isActiveItem = (id) => {
+    if (!window) {
+      return false;
+    }
+    const _top = window.scrollY,
+      element = document.getElementById(id),
+      top = element ? element.getBoundingClientRect().top : null;
+
+    console.log(_top, top);
+
+    return false;
+  }
   render() {
     const { menus, showMenu } = this.state;
     return (
-      <header className="container--fluid header-fixed">
+      <header ref="header" className="container--fluid header-fixed">
         <div className="header">
           <a className="header__brand" href="/">
             <img src={logo} className="header__brand__img" alt="I-gen logo" />
@@ -56,13 +117,16 @@ class Header extends React.Component {
             <ul className={`header__menu ${showMenu ? 'active' : ''}`}>
               {
                 menus.map((item) => (
-                  <li className={`header__menu__item ${item.active ? 'header__menu__item--active': ''}`} key={item.id}>
-                    <a href={`#${item.id}`}>{ item.label }</a>
+                  <li
+                    onClick={() => this.clickMenuItem(item.id)}
+                    className={`header__menu__item ${item.active ? 'header__menu__item--active': ''}`}
+                    key={item.id}>
+                    <p href={`#${item.id}`}>{ item.label }</p>
                   </li>
                 ))
               }
               <li className="header__menu__item">
-                <button className="btn btn--radius btn--primary btn--uppercase">
+                <button onClick={this.clickPrimaryButton} className="btn btn--radius btn--primary btn--uppercase">
                   <span className="icon icon__test"></span>
                   <span className="btn__label">Đăng ký thi thử</span>
                 </button>

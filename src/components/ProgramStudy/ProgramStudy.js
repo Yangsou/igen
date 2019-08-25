@@ -6,7 +6,7 @@ import './programStudy.scss';
 
 export default function ProgramStudy() {
   return (
-    <section className="program">
+    <section className="program lazy-load" id="program">
       <div className="container">
         <p className="program__title">Chương trình học</p>
         <div className="program__row">
@@ -17,7 +17,8 @@ export default function ProgramStudy() {
               </div>
               <p className="program__item__title program__item__title--general">Tiếng Anh tổng quát</p>
               <p className="program__item__text">Giúp sinh viên rèn luyện 4 kỹ năng NGHE - NÓI - ĐỌC - VIẾT. Sinh viên hoàn toàn tự tin khi sử dụng tiếng Anh trong giao tiếp</p>
-              <button className="btn btn--outline">Xem chi tiết <span className="icon icon__arrow"></span></button>
+              {/* <button className="btn btn--outline">Xem chi tiết <span className="icon icon__arrow"></span></button> */}
+              <a href="https://igen.vsn.edu.vn/chuong-trinh-hoc/tieng-anh-tong-quat" target="_blank" className="btn btn--outline" rel="noopener noreferrer">Xem chi tiết <span className="icon icon__arrow"></span></a>
             </div>
           {/* </div> */}
           {/* <div className="col-xs-4"> */}
@@ -27,7 +28,8 @@ export default function ProgramStudy() {
               </div>
               <p className="program__item__title program__item__title--general">TOEIC TEST</p>
               <p className="program__item__text">Giúp sinh viên đạt các cấp độ TOEIC theo chuẩn đầu ra của trường đại học, xóa bỏ nỗi sợ tiếng Anh cho các bạn sinh viên năm cuối</p>
-              <button className="btn btn--outline">Xem chi tiết <span className="icon icon__arrow"></span></button>
+              <a href="https://igen.vsn.edu.vn/chuong-trinh-học/luyen-thi-toeic" target="_blank" className="btn btn--outline" rel="noopener noreferrer">Xem chi tiết <span className="icon icon__arrow"></span></a>
+              {/* <button className="btn btn--outline">Xem chi tiết <span className="icon icon__arrow"></span></button> */}
             </div>
           {/* </div> */}
           {/* <div className="col-xs-4"> */}
@@ -38,7 +40,7 @@ export default function ProgramStudy() {
               <p className="program__item__title program__item__title--general">Luyện thi IELTS</p>
               <p className="program__item__text">Giúp sinh viên đạt cấp độ IELTS từ cơ bản đến nâng cao, nắm vé thông hành trên con đường 
 hội nhập quốc tế</p>
-              <button className="btn btn--outline">Xem chi tiết <span className="icon icon__arrow"></span></button>
+                <a href="https://igen.vsn.edu.vn/chuong-trinh-học/luyen-thi-ielts" target="_blank" className="btn btn--outline" rel="noopener noreferrer">Xem chi tiết <span className="icon icon__arrow"></span></a>
             </div>
           {/* </div> */}
         </div>
