@@ -1,0 +1,31 @@
+@import '../../assets/scss/variable';
+
+.participation {
+  position: relative;
+  background-color: #f4f5f7;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  &__title {
+    color: $--color-text-primary;
+    font-size: 45px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 60px;
+  }
+  &__row {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    .item {
+      text-align: center;
+      margin-top: 50px;
+      &__title {
+        font-size: 24px;
+        color: $--color-text-primary;
+      }
+      &__text {
+        font-size: $--font-size-base;
+      }
+    }
+  }
+}

@@ -1,0 +1,77 @@
+@import '../../assets/scss/variable';
+
+.method {
+  position: relative;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  &__title {
+    color: $--color-text-primary;
+    font-size: 45px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 60px;
+  }
+  &__left {
+    width: 50%;
+    float: left;
+  }
+  &__right {
+    width: 50%;
+    float: right;
+  }
+  &__img {
+    // max-width: 500px;
+    // width: 100%;
+    height: 290px;
+    display: block;
+    margin: auto;
+  }
+  &__menu {
+    display: block;
+    list-style: none;
+    padding: 30px 20px;
+    position: relative;
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.07);
+    margin-top: 24px;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 2px;
+      height: 100%;
+      background-color: $--color-secondary;
+    }
+    li {
+      position: relative;
+      padding-left: 38px;
+      font-size: $--font-size-base;
+      + li {
+        margin-top: 30px;
+      }
+      .icon {
+        position: absolute;
+        top: 8px;
+        left: 0;
+        width: 18px;
+        height: 14px;
+      }
+    }
+  }
+  &__row {
+    padding-bottom: 8px;
+    overflow: hidden;
+    + .method__row {
+      margin-top: 128px;
+    }
+    &__title {
+      font-size: 35px;
+    }
+    &__text {
+      font-size: $--font-size-base;
+      margin-top: 24px;
+    }
+  }
+}

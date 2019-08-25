@@ -1,0 +1,91 @@
+@import '../../assets/scss/variable';
+
+.contact {
+  background: {
+    image: url('../../assets/img/program-bg.png');
+    size: cover;
+    position: center;
+  }
+  padding-top: 60px;
+  padding-bottom: 60px;
+  overflow: hidden;
+  &__item {
+    &__text {
+      font-size: 30px;
+      color: #ffffff;
+      font-weight: bold;
+      margin-top: 30px;
+      &--large {
+        color: #fdaa0f;
+        margin-top: 40px;
+      }
+    }
+    &__wrap {
+      margin-top: 32px;
+    }
+    &__content {
+      position: relative;
+      padding-left: 46px;
+      + .contact__item__content {
+        margin-top: 24px;
+      }
+      .text {
+        font-size: $--font-size-base;
+        color: #ffffff;
+      }
+      .img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        &--facebook {
+          width: 36px;
+          height: 36px;
+        }
+      }
+    }
+  }
+
+  &__form {
+    padding: 32px 64px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 10px 49px 0px rgba(25, 26, 48, 0.08);
+    &__title {
+      font-size: 22px;
+      font-weight: bold;
+      color: $--color-text-primary;
+      text-align: center;
+    }
+    &__text {
+      font-size: $--font-size-base;
+      text-align: center;
+      margin-bottom: 30px;
+      margin-top: 12px;
+    }
+    &__input {
+      width: 100%;
+      border-radius: 5px;
+      border: 1px solid rgb(183, 183, 183);
+      height: 50px;
+      line-height: 50px;
+      padding-left: 20px;
+      padding-right: 20px;
+      font-size: $--font-size-base;
+      + .contact__form__input {
+        margin-top: 20px;
+      }
+      &--area {
+        resize: none;
+        height: auto;
+      }
+    }
+    .btn {
+      margin-top: 30px;
+      .icon {
+        height: 23px;
+        transform: translateY(4px);
+        margin-left: 8px;
+      }
+    }
+  }
+}
