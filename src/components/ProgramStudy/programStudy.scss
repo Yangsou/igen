@@ -15,6 +15,9 @@
     text-align: center;
     font-weight: bold;
     margin-bottom: 60px;
+    @include media-breakpoint('lt-tb') {
+      font-size: 40px;
+    }
   }
   &__row {
     display: flex;
@@ -65,7 +68,7 @@
       bottom: 40px;
       left: 50%;
       transform: translateX(-50%);
-      @include media-breakpoint('md') {
+      @include media-breakpoint('lt-tb') {
         padding-left: 20px;
         padding-right: 20px;
       }
