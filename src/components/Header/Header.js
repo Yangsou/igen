@@ -63,6 +63,9 @@ class Header extends React.Component {
 
     if (element) {
       doScrolling(`#${id}`, 500, 70);
+      this.setState({
+        showMenu: !this.state.showMenu
+      })
     }
   }
 

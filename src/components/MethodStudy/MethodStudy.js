@@ -11,7 +11,7 @@ export default function MethodStudy() {
         <p className="method__title">Phương pháp học</p>
 
         <div className="method__row">
-          <div className="method__left">
+          <div className="method__left col-xs-12 col-sm-6">
             <p className="method__row__title">Học tập trực tuyến</p>
             <p className="method__row__text">Học mọi lúc, mọi nơi, tiết kiệm thời gian di chuyển, thông qua các nền tảng học tập xu thế như: livestream, video, group trao đổi trực tuyến</p>
             <ul className="method__menu">
@@ -19,13 +19,13 @@ export default function MethodStudy() {
               <li><span className="icon icon__check"></span>Hệ thống các video bài giảng quay lại lớp học, không giới hạn số lần xem, đảm bảo sinh viên vắng mặt có thể theo đúng lộ trình học tập đã đề ra</li>
             </ul>
           </div>
-          <div className="method__right">
+          <div className="method__right col-xs-12 col-sm-6">
             <img src={bgOnline} alt="about i-gen" className="method__img" />
           </div>
         </div>
         
         <div className="method__row">
-          <div className="method__right">
+          <div className="method__right col-xs-12 col-sm-6">
             <p className="method__row__title">Rèn luyện bài tập</p>
             <p className="method__row__text">Hệ thống bài tập đa dạng cho mỗi chương trình học. Nội dung bài tập được cập nhật từ các giáo trình uy tín</p>
             <ul className="method__menu">
@@ -33,13 +33,13 @@ export default function MethodStudy() {
               <li><span className="icon icon__check"></span>Kết quả được thể hiện ngay khi vừa nộp bài. Bạn có thể tiếp tục làm lại để cải thiện kết quả, hoặc xem ngay đáp án để bổ sung thêm kiến thức</li>
             </ul>
           </div>
-          <div className="method__left">
+          <div className="method__left col-xs-12 col-sm-6">
             <img src={bgPratice} alt="about i-gen" className="method__img" />
           </div>
         </div>
 
         <div className="method__row">
-          <div className="method__left">
+          <div className="method__left col-xs-12 col-sm-6">
             <p className="method__row__title">Đánh giá sự tiến bộ</p>
             <p className="method__row__text">Học viên có thể theo dõi lộ trình học tập, số buổi học đã tham gia, số bài tập đã hoàn thành, điểm số đạt được... để có thể tự đánh giá sự tiến bộ của mình sau khi kết thúc khoá học</p>
             <ul className="method__menu">
@@ -47,7 +47,7 @@ export default function MethodStudy() {
               <li><span className="icon icon__check"></span>Giảng viên và bộ phận chăm sóc học viên của lớp cũng có thể nắm được thông tin này để đánh giá sự tiến bộ của người học qua từng buổi, góp phần sâu sát để hỗ trợ giúp sinh viên đạt được kết quả tốt hơn</li>
             </ul>
           </div>
-          <div className="method__right">
+          <div className="method__right col-xs-12 col-sm-6">
             <img src={bgevaluate} alt="about i-gen" className="method__img" />
           </div>
         </div>

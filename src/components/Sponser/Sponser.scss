@@ -1,4 +1,5 @@
 @import '../../assets/scss/variable';
+@import '../../assets/scss/breakpoints';
 
 .sponser {
   position: relative;
@@ -10,6 +11,9 @@
     justify-content: space-between;
     + .sponser__item {
       margin-top: 40px;
+    }
+    @include media-breakpoint('lt-tb') {
+      flex-wrap: wrap;
     }
     &__text {
       font-size: 30px;
@@ -28,7 +32,14 @@
     &__content {
       width: 750px;
       display: flex;
-      // justify-content: space-between;
+      @include media-breakpoint('lt-tb') {
+        margin-top: 15px;
+        width: 100%;
+      }
+      @include media-breakpoint('xs') {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
     }
     &__logo {
       text-align: center;
@@ -38,6 +49,14 @@
       box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.07);      
       + .sponser__item__logo {
         margin-left: 15px;
+        @include media-breakpoint('xs') {
+          margin-left: 0;
+          margin-top: 15px;
+        }
+
+      }
+      @include media-breakpoint('sm') {
+        width: calc((100% - 30px) / 3);
       }
     }
     .text {
@@ -50,17 +69,25 @@
 .register-exam {
   overflow: hidden;
   background: {
-    image: url('../../assets/img/register_exam_bg_container.png')
+    image: url('../../assets/img/register_exam_bg_container.png');
+    size: cover;
   }
   padding-top: 40px;
   padding-bottom: 40px;
   padding-left: 40px;
   margin-top: 70px;
   border-radius: 10px;
+  @include media-breakpoint('xs') {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
   &__title {
     font-size: 45px;
     font-weight: bold;
     color: #ffffff;
+    @include media-breakpoint('xs') {
+      font-size: 36px;
+    }
   }
   &__desc {
     color: #ffffff;
@@ -95,9 +122,17 @@
     color: #ffffff;
     border-radius: 45px;
     padding: 20px 44px;
+    @include media-breakpoint('xs') {
+      position: relative;
+      transform: none;
+      font-size: 32px;
+      display: block;
+      margin: 24px auto;
+    }
   }
   img {
-    width: 380px;
+    width: 100%;
+    max-width: 380px;
     object-fit: cover;
   }
 }

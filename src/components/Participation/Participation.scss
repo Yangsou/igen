@@ -22,8 +22,10 @@
       &__title {
         font-size: 24px;
         color: $--color-text-primary;
+        margin-top: 8px;
       }
       &__text {
+        margin-top: 8px;
         font-size: $--font-size-base;
       }
     }

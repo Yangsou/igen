@@ -7,7 +7,7 @@ class AboutUs extends React.Component {
     return (
       <section className="container" id="about-us">
         <div className="about-us lazy-load">
-          <div className="about-us__left">
+          <div className="about-us__left col-xs-12 col-md-6">
             <p className="about-us__title">Về i-Gen</p>
             <ul className="about-us__menu">
               <li><span className="icon icon__check"></span>i-Gen (Intelligent Generation), Một triệu sinh viên Việt Nam tự tin với Tiếng Anh là dự án cộng đồng phi lợi nhuận dành cho sinh viên Việt Nam </li>
@@ -15,7 +15,7 @@ class AboutUs extends React.Component {
               <li><span className="icon icon__check"></span>Toàn bộ khoá học đều được các đối tác của i-Gen tài trợ, sinh viên chỉ phải ký quỹ nhằm thể hiện sự cam kết tham gia chương trình và được hoàn lại sau khi hoàn thành</li>
             </ul>
           </div>
-          <div className="about-us__right">
+          <div className="about-us__right col-xs-12 col-md-6">
             <img src={image} alt="about i-gen" className="about-us__img" />
           </div>
         </div>
