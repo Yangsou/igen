@@ -47,7 +47,7 @@ class Header extends React.Component {
   activeHeaderWhenScroll = () => {
     var scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
     var header = this.refs.header;;
-    if(scrollTop > 196){
+    if(scrollTop > 50){
       header.classList.add('active');
     }else{
       header.classList.remove('active');
@@ -88,7 +88,7 @@ class Header extends React.Component {
         ...e,
         // rectTop,
         // rectBottom,
-        active: rectTop <= 94 && rectBottom > 94
+        active: (rectTop <= 90 && rectBottom > 90) || (e.id === 'contact-us' && rectBottom < 80)
       }
     });
     this.setState({

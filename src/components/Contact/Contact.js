@@ -17,15 +17,15 @@ export default function Contact() {
           <div className="contact__item__wrap">
             <div className="contact__item__content">
               <img className="img img--location" src={locationIcon} alt="Khu Công nghệ Phần mềm ĐHQG-HCM (ITP)<br />Khu phố 6, P.Linh Trung, Q.Thủ Đức, TP.HCM " />
-              <p className="text">Khu Công nghệ Phần mềm ĐHQG-HCM (ITP)<br />Khu phố 6, P.Linh Trung, Q.Thủ Đức, TP.HCM </p>
+              <p className="text"><span className="bold">Khu Công nghệ Phần mềm ĐHQG-HCM (ITP)</span><br />Khu phố 6, P.Linh Trung, Q.Thủ Đức, TP.HCM </p>
             </div>
             <div className="contact__item__content">
             <img className="img img--phone" src={phoneIcon} alt="1900.2104" />
-              <p className="text">1900.2104</p>
+              <p className="text text--large"><span className="bold">1900.2104</span></p>
             </div>
             <div className="contact__item__content">
               <img className="img img--email" src={emailIcon} alt="i-Gen@vsn.edu.vn" />
-              <p className="text">i-Gen@vsn.edu.vn</p>
+              <p className="text"><span className="bold">i-Gen@vsn.edu.vn</span></p>
             </div>
             <div className="contact__item__content">
               <a href="https://www.facebook.com/igen.vietnam" target="blank">

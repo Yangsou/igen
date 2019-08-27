@@ -1,6 +1,8 @@
 @import '../../assets/scss/variable';
 @import '../../assets//scss/breakpoints';
 
+$--header-content-height: 50px;
+
 .header {
   &-fixed {
     position: fixed;
@@ -13,8 +15,7 @@
       box-shadow: 0 0 2px rgba(0,0,0, .1);
     }
   }
-  position: relative;
-  padding: 36px 15px 20px;
+  padding: 20px 15px;
   position: relative;
   @include media-breakpoint('lt-lg') {
     padding-left: 8px;
@@ -27,12 +28,12 @@
     position: absolute;
     left: 15px;
     top: 20px;
+    height: $--header-content-height;
     @include media-breakpoint('lt-lg') {
       position: initial;
     }
     &__img {
-      width: 162px;
-      height: 64px;
+      height: $--header-content-height;
       @include media-breakpoint('tb-land') {
         width: 140px;
         height: auto;
@@ -57,10 +58,10 @@
   }
 
   &__menu {
-    height: 38px;
+    height: $--header-content-height;
     &__item {
       display: inline-block;
-      line-height: 38px;
+      line-height: $--header-content-height;
       font-weight: bold;
       position: relative;
       cursor: pointer;
@@ -85,10 +86,9 @@
 
       }
       &:last-child {
-        // margin-left: 140px;
         position: absolute;
         right: 15px;
-        top: 24px;
+        top: 20px;
         @include media-breakpoint('lg') {
           margin-left: 50px;
         }

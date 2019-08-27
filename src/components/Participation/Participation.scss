@@ -27,6 +27,9 @@
       &__text {
         margin-top: 8px;
         font-size: $--font-size-base;
+        + a.btn {
+          margin-top: 16px;
+        }
       }
     }
   }

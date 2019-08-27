@@ -18,7 +18,7 @@ export default class Sponser extends React.Component {
       <section className="sponser lazy-load">
         <div className="container">
           <div className="sponser__item">
-            <p className="sponser__item__text"><span className="icon icon__ho-tro"></span>Đơn vị phát động</p>
+            <p className="sponser__item__text"><span className="icon icon__phat-dong"></span>Đơn vị phát động</p>
             <div className="sponser__item__content">
               <div className="sponser__item__logo">
                 <img src={uel} alt="Trường Đại học Kinh tế - Luật (ĐHQG-HCM)" />

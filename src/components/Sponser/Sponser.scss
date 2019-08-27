@@ -55,12 +55,17 @@
         }
 
       }
+      img {
+        height: 76px;
+        object-fit: contain;
+        width: 100%;
+      }
       @include media-breakpoint('sm') {
         width: calc((100% - 30px) / 3);
       }
     }
     .text {
-      // margin-top: 20px;
+      font-weight: bold;
       font-size: $--font-size-base;
     }
   }

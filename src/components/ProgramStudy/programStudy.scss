@@ -19,7 +19,7 @@
   &__row {
     display: flex;
     justify-content: space-between;
-    @include media-breakpoint('xs') {
+    @include media-breakpoint('lt-md') {
       flex-wrap: wrap;
       justify-content: center;
     }
@@ -28,8 +28,9 @@
     width: 370px;
     background: #ffffff;
     border-radius: 4px;
-    padding: 40px 10px;
+    padding: 40px 10px 80px;
     text-align: center;
+    position: relative;
     &__thumb {
       height: 250px;
       img {
@@ -46,13 +47,33 @@
       &--general {
         color: #cc6633;
       }
+      &--ielts {
+        color: #6d4bde;
+      }
+      &--toiec {
+        color: #09a18e;
+      }
     }
     &__text {
       font-size: $--font-size-base;
       margin-top: 20px;
       margin-bottom: 20px;
+      padding: 0 8px;
     }
-    @include media-breakpoint('xs') {
+    a.btn {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      @include media-breakpoint('md') {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+    @include media-breakpoint('md') {
+      width: calc((100% - 16px) / 3);
+    }
+    @include media-breakpoint('lt-md') {
       margin-top: 15px;
     }
   }
