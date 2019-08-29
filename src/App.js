@@ -1,14 +1,13 @@
 import React from 'react';
 import './App.scss';
 import Header from './components/Header/Header';
-import Home from './components/Home/Home';
-import AboutUs from './components/AboutUs/AboutUs';
-import ProgramStudy from './components/ProgramStudy/ProgramStudy';
-import MethodStudy from './components/MethodStudy/MethodStudy';
-import Participation from './components/Participation/Participation';
-import Sponser from './components/Sponser/Sponser';
+import Banner from './Pages/LandingPage/Banner'
+import Breadcrumb from './Pages/LandingPage/Breadcrumb'
+import Participation from './Pages/LandingPage/Participation/Participation'
+import Register from './Pages/LandingPage/BannerRegister'
+import RegisterPrograming from './Pages/LandingPage/RegisterPrograming'
 import Contact from './components/Contact/Contact';
-
+import LevelItem from './Pages/LandingPage/LevelItem'
 class App extends React.Component {
   // lazy load when scroll
   lazyLoad = () => {
@@ -37,18 +36,12 @@ class App extends React.Component {
       <div className="App">
   
         <Header />
-  
-        <Home />
-  
-        <AboutUs />
-  
-        <ProgramStudy />
-  
-        <MethodStudy />
-  
-        <Participation />
-  
-        <Sponser />
+        <Banner />
+        <Breadcrumb />
+        <RegisterPrograming/>
+        <LevelItem/>
+        <Participation/>
+        <Register />
   
         <Contact />
   
