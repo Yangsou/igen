@@ -19,6 +19,8 @@
     .item {
       text-align: center;
       margin-top: 50px;
+      position: relative;
+      padding-bottom: 72px;
       &__title {
         font-size: 24px;
         color: $--color-text-primary;
@@ -28,7 +30,11 @@
         margin-top: 8px;
         font-size: $--font-size-base;
         + a.btn {
-          margin-top: 16px;
+          white-space: nowrap;
+          position: absolute;
+          bottom: 10px;
+          left: 50%;
+          transform: translateX(-50%);
         }
       }
     }

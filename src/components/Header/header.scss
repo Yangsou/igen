@@ -73,10 +73,15 @@ $--header-content-height: 50px;
         width: 30px;
         height: 2px;
         background-color: $--color-primary;
-        display: none;
+        transition: opacity 450ms ease-in-out;
+        opacity: 0;
       }
-      a {
+      p {
         color: $--color-text-primary;
+        transition: color 450ms ease-in-out;
+        &:hover {
+          color: rgba($--color-primary, .7);
+        }
       }
       + .header__menu__item {
         margin-left: 54px;
@@ -96,9 +101,14 @@ $--header-content-height: 50px;
           position: initial;
         }
       }
+      &:hover {
+        &::before {
+          opacity: 1;
+        }
+      }
       &--active {
         &::before {
-          display: block;
+          opacity: 1;
         }
         p {
           color: $--color-primary;
