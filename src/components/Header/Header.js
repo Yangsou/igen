@@ -78,34 +78,20 @@ class Header extends React.Component {
     window.removeEventListener('scroll', this.activeHeaderWhenScroll, false);
   }
 
-  // toggleMenuItemActive = () => {
-  //   const menus = this.state.menus.map((e) => {
-  //     const element = document.getElementById(e.id),
-  //       rectTop = element.getBoundingClientRect().top,
-  //       rectBottom = element.getBoundingClientRect().bottom;
+  toggleMenuItemActive = () => {
+    const menus = this.state.menus.map((e) => {
+      const element = document.getElementById(e.id),
+        rectTop = element.getBoundingClientRect().top,
+        rectBottom = element.getBoundingClientRect().bottom;
 
-  //     return {
-  //       ...e,
-  //       // rectTop,
-  //       // rectBottom,
-  //       active: (rectTop <= 90 && rectBottom > 90) || (e.id === 'contact-us' && rectBottom < 80)
-  //     }
-  //   });
-  //   this.setState({
-  //     menus
-  //   })
-  // }
-  isActiveItem = (id) => {
-    if (!window) {
-      return false;
-    }
-    const _top = window.scrollY,
-      element = document.getElementById(id),
-      top = element ? element.getBoundingClientRect().top : null;
-
-    console.log(_top, top);
-
-    return false;
+      return {
+        ...e,
+        active: (rectTop <= 90 && rectBottom > 90) || (e.id === 'contact-us' && rectBottom < 180)
+      }
+    });
+    this.setState({
+      menus
+    })
   }
   render() {
     const { menus, showMenu } = this.state;

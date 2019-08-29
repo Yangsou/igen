@@ -1,5 +1,5 @@
 import React from 'react';
-// import './home.scss';
+import './home.scss';
 
 class Home extends React.Component {
   clickPrimaryButton = () => {

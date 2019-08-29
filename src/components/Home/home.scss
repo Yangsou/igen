@@ -66,13 +66,20 @@
     z-index: 2;
     position: relative;
     &__brand {
-      font-size: 36px;
+      font-weight: bold;
+      font-size: 45px;
       color: $--color-primary;
+      @include media-breakpoint('xs') {
+        font-size: 36px;
+      }
     }
     &__text {
-      font-size: 36px;
+      font-size: 40px;
       color: $--color-text-primary;
       font-weight: bold;
+      @include media-breakpoint('xs') {
+        font-size: 36px;
+      }
     }
     .btn {
       width: 250px;
