@@ -1,15 +1,14 @@
 import React from 'react'
-import Home from './App'
-import LandingPage from './Pages/LandingPage/LandingPage'
-
+import LandingPage from './Pages/LandingPage'
+import HomePage from './Pages/Home'
 const routes = [
     {
         path : '/',
         exact : true,
-        main: () => <Home />
+        main: () => <HomePage />
     },
     {
-        path : '/landingpage',
+        path : '/tieng-anh-tong-quat',
         exact : false,
         main : () => <LandingPage />
     }

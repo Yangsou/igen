@@ -5,11 +5,11 @@ import bgAvatar from '../../../assets/img/avatar-bg.png';
 import bgClass from '../../../assets/img/bg-class.png';
 import bgHomework from '../../../assets/img/home-work.png';
 import bgexam from '../../../assets/img/exam.png';
-import './Participation.scss';
+import './styles.scss';
 
 export default function Participation() {
   return (
-    <section className="participation lazy-load" id="rules">
+    <section className="participation lazy-load bg-w" id="rules">
       <div className="container">
         <p className="participation__title">Thể lệ tham gia</p>
 

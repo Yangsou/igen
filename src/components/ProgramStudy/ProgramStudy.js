@@ -1,4 +1,5 @@
 import React from 'react';
+import {  Link } from "react-router-dom";
 import generalImage from '../../assets/img/program-img-general.png';
 import toiecImage from '../../assets/img/program-toiec.svg';
 import ieltsImage from '../../assets/img/program-ielts.png';
@@ -18,7 +19,7 @@ export default function ProgramStudy() {
               <p className="program__item__title program__item__title--general">Tiếng Anh tổng quát</p>
               <p className="program__item__text">Giúp sinh viên rèn luyện 4 kỹ năng NGHE - NÓI - ĐỌC - VIẾT. Sinh viên hoàn toàn tự tin khi sử dụng tiếng Anh trong giao tiếp</p>
               {/* <button className="btn btn--outline">Xem chi tiết <span className="icon icon__arrow"></span></button> */}
-              <a href="https://igen.vsn.edu.vn/chuong-trinh-hoc/tieng-anh-tong-quat" target="_blank" className="btn btn--outline" rel="noopener noreferrer">Xem chi tiết <span className="icon icon__arrow"></span></a>
+              <Link to="/tieng-anh-tong-quat" className="btn btn--outline" rel="noopener noreferrer">Xem chi tiết <span className="icon icon__arrow"></span></Link>
             </div>
           {/* </div> */}
           {/* <div className="col-xs-4"> */}

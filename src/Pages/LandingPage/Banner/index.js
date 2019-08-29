@@ -6,13 +6,13 @@ class Banner extends Component {
         return (
             <section className="home lazy-load" id="home">
                 <div className="home__content container">
-                    <div className="wrap-banner row">
+                    <div className="row">
                         <div className="col-sm-7 ">
                             <h1 className="wrap-banner-title banner__title">Tiếng Anh Tổng Quát</h1>
                         </div>
-                        <div className="wrap-banner-img col-sm-5 ">
+                        <div className=" col-sm-5 wrap-banner-img">
                             <div className="wrap-img">
-                                <img  src={generalImage} alt="Tiếng Anh tổng quát" />
+                                <img className="banner-img" src={generalImage} alt="Tiếng Anh tổng quát" />
                             </div>
                         </div>
                     </div>

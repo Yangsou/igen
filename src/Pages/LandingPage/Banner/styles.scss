@@ -7,7 +7,7 @@
   padding-top: 90px;
   @include media-breakpoint('xs') {
     height: 100vh;
-    height: 350px;
+    height: 315px;
   }
   @include media-breakpoint('sm') {
     height: 100vh;
@@ -87,34 +87,42 @@
       width: 250px;
       margin-top: 40px;
     }
-    .wrap-banner {
-      height: 100%;
-      display: flex;
-      .wrap-banner-img {
-        align-items: flex-end;
-        display: flex;
-        img {
-          width: 480px;
 
-        }
-      }
-      @include media-breakpoint('xs') {
-        display: unset;
-        .wrap-banner-img{
-          width: 100%;
-          display: flex;
-          justify-content: flex-end;
-            .wrap-img {
-              img {
-                width: 200px;
-              }
-            }
-        }
-      }
-    }
   }
 }
 
+.row {
+  height: 100%;
+  overflow: hidden;
+  @include media-breakpoint('xs') {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+.wrap-banner-img {
+  align-items: flex-end;
+  display: flex;
+  height: 100%;
+  @include media-breakpoint('xs') {
+    align-items: flex-end;
+    display: flex;
+    justify-content: flex-end;
+    height: auto;
+  }
+}
+.banner-img{
+  width: 412px;
+  @include media-breakpoint('sm') {
+       width: 250px;
+  }
+  @include media-breakpoint('xs') {
+    width: 158px;
+  }
+  @include media-breakpoint('md') {
+    width: 238px;
+  }
+}
 .footer {
   height: 80px;
   line-height: 80px;
