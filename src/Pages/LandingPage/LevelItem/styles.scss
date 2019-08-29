@@ -1,8 +1,10 @@
 @import '../../../assets/scss/variable';
 @import '../../../assets/scss/breakpoints';
+
 .container {
     font-family: 'Nunito Sans', sans-serif;
 }
+
 .bg-row {
     background-color: #f4f5f7;
 }
@@ -12,7 +14,7 @@
     margin: auto;
     margin-top: 6rem;
     position: relative;
-    box-shadow: 0px 0px 20px 20px #efeded;
+    box-shadow: 0px 0px 20px 1px #efeded;
     border-radius: 3px;
     margin-bottom: 90px;
 }
@@ -22,7 +24,7 @@ img.card-level-img {
     position: absolute;
     top: 0;
     left: 50%;
-    transform: translate(-50%,-40%);
+    transform: translate(-50%, -40%);
 }
 
 h1.card-level-title {
@@ -31,21 +33,25 @@ h1.card-level-title {
     margin-bottom: 30px;
     color: $--color-text-primary;
 }
+
 .card-box {
     padding-top: 150px;
     position: relative;
     height: 630px;
     margin: auto;
     color: $--color-text-primary;
+
     @include media-breakpoint('xs') {
         height: auto;
-        
+
     }
-      @include media-breakpoint('sm') {
+
+    @include media-breakpoint('sm') {
         height: 750px;
-        
-      }
+
+    }
 }
+
 .card-level-description {
     font-size: $--font-size-base;
     line-height: 20px;
@@ -55,26 +61,31 @@ h1.card-level-title {
     width: 95%;
     margin: auto;
 }
+
 .card-level-description strong {
     color: $--color-primary;
 }
+
 ul.card-level-list {
     padding-top: 12px;
-    width:95%;
+    width: 95%;
     list-style-type: none;
     margin: auto;
+
     li {
         line-height: 24px;
         margin-bottom: 16px;
         font-size: 15px;
         display: flex;
         margin-left: 10px;
+
         img {
             align-items: flex-start;
             margin-right: 10px;
             width: 30px;
             height: 28px;
         }
+
         .card-level-list-item {
             align-items: flex-start
         }
@@ -84,21 +95,24 @@ ul.card-level-list {
 .card-level-list-item {
     padding-left: 10px;
 }
+
 .pt-80 {
-    padding-top : 60px;
+    padding-top: 60px;
+
     @include media-breakpoint('xs') {
-        padding-top : 40px;
-        
-      }
+        padding-top: 40px;
+
+    }
 }
 
-  .wrap-button{
-      position: absolute;
-      bottom:0%;
-      width: 100%;
-      display: flex;
-      padding-top: 20px;
-      .btn {
+.wrap-button {
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    display: flex;
+    padding-top: 20px;
+
+    .btn {
         width: 225px;
         height: 40px;
         line-height: 40px;
@@ -106,22 +120,25 @@ ul.card-level-list {
         padding: 0 20px;
         margin: auto;
         margin-bottom: 40px;
+
         img {
             margin-left: 12px;
             display: inline;
         }
-      }
-      @include media-breakpoint('xs') {
+    }
+
+    @include media-breakpoint('xs') {
         position: unset;
 
-        
-      }
-  }
 
-  .box-same-certificate {
+    }
+}
+
+.box-same-certificate {
     background: #138ea0;
     height: 75px;
     margin-bottom: 25px;
+
     h5 {
         text-align: center;
         color: #fff;
@@ -129,59 +146,73 @@ ul.card-level-list {
         font-size: 13px;
         font-weight: lighter;
     }
+
     p {
         text-align: center;
         color: #fff;
         font-size: 15px;
+
         span {
             margin: 0px 10px;
         }
+
         @include media-breakpoint('sm') {
             font-size: 10px;
+
             span {
                 margin: 0px 5px;
             }
-            
-          }
-        @include media-breakpoint('xs') {
-        font-size: 10px;
-        span {
-            margin: 0px 4px;
+
         }
-        
+
+        @include media-breakpoint('xs') {
+            font-size: 10px;
+
+            span {
+                margin: 0px 4px;
+            }
+
         }
     }
 }
-.card-box-certificate-b{
+
+.card-box-certificate-b {
     height: 750px;
+
     h1 {
-        margin-bottom:10px;
+        margin-bottom: 10px;
     }
+
     @include media-breakpoint('sm') {
         height: 900px;
-        
-      }
-      
-      
+
+    }
+
+
     @include media-breakpoint('xs') {
         height: auto;
-        
+
     }
 }
-.card-box-certificate-c{
+
+.card-box-certificate-c {
     height: 825px;
+
     h1 {
-        margin-bottom:10px;
+        margin-bottom: 10px;
     }
-    .box-same-certificate{
+
+    .box-same-certificate {
         background: #e15c2b;
     }
+
     @include media-breakpoint('xs') {
         height: auto;
-        
+
     }
+
     @include media-breakpoint('sm') {
         height: 978px;
-        
-      }
+
+    }
 }
