@@ -12,31 +12,37 @@
     color: #8d8d95;
     font-size: 13px;
     font-family: 'Nunito Sans', sans-serif;
-  }
-  
-  .breadcrumb-item + .breadcrumb-item {
+
+    @include media-breakpoint('xs') {
+        font-size: 11px;
+    }
+}
+
+.breadcrumb-item + .breadcrumb-item {
     padding-left: .75rem;
-  }
-  
-  .breadcrumb-item + .breadcrumb-item::before {
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
     display: inline-block;
     padding-right: .5rem;
     color: #8d8d95;
     content: ">";
-  }
-  
-  .breadcrumb-item + .breadcrumb-item:hover::before {
+
+}
+
+.breadcrumb-item + .breadcrumb-item:hover::before {
     text-decoration: underline;
-  }
-  
-  .breadcrumb-item + .breadcrumb-item:hover::before {
+}
+
+.breadcrumb-item + .breadcrumb-item:hover::before {
     text-decoration: none;
-  }
-  .breadcrumb-item a {
+}
+
+.breadcrumb-item a {
     color: #8d8d95;
-  }
-  .breadcrumb-item.active {
+}
+
+.breadcrumb-item.active {
     color: $--color-text-primary;
     font-weight: bold;
-  }
-  
+}
