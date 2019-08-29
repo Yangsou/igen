@@ -1,14 +1,9 @@
 import React from 'react';
 import './App.scss';
 import Header from './components/Header/Header';
-import Home from './components/Home/Home';
-import AboutUs from './components/AboutUs/AboutUs';
-import ProgramStudy from './components/ProgramStudy/ProgramStudy';
-import MethodStudy from './components/MethodStudy/MethodStudy';
-import Participation from './components/Participation/Participation';
-import Sponser from './components/Sponser/Sponser';
-import Contact from './components/Contact/Contact';
-
+import Contact from './components/Contact/Contact'
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import routes from './routes'
 class App extends React.Component {
   // lazy load when scroll
   lazyLoad = () => {
@@ -24,7 +19,7 @@ class App extends React.Component {
 
     }
   }
-
+  
   componentDidMount() {
     this.lazyLoad();
     window.addEventListener('scroll', this.lazyLoad, false);
@@ -33,27 +28,26 @@ class App extends React.Component {
     window.removeEventListener('scroll', this.lazyLoad, false);
   }
   render() {
+    var showRoutes = (routes) => {
+      var result = '';
+      result =  routes.map((route, index) => {
+        return (
+          <Route key={index} exact={route.exact} path={route.path} component={route.main} />
+        )
+      })
+      return result;
+    }
     return (
-      <div className="App">
-  
+        <Router className="App">
         <Header />
-  
-        <Home />
-  
-        <AboutUs />
-  
-        <ProgramStudy />
-  
-        <MethodStudy />
-  
-        <Participation />
-  
-        <Sponser />
-  
+        
+          <Switch>
+          {showRoutes(routes)}
+        </Switch>
         <Contact />
   
         <footer className="footer">&copy; Copyright 2019 i-Gen. All rights reserved.</footer>
-      </div>
+        </Router>
     );
   }
 }
