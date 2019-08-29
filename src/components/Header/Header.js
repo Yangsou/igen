@@ -81,8 +81,8 @@ class Header extends React.Component {
   toggleMenuItemActive = () => {
     const menus = this.state.menus.map((e) => {
       const element = document.getElementById(e.id),
-        rectTop = element.getBoundingClientRect().top,
-        rectBottom = element.getBoundingClientRect().bottom;
+        rectTop = element ? element.getBoundingClientRect().top : null,
+        rectBottom = element ? element.getBoundingClientRect().bottom : null;
 
       return {
         ...e,
