@@ -86,7 +86,7 @@ class Header extends React.Component {
 
       return {
         ...e,
-        active: (rectTop <= 90 && rectBottom > 90) || (e.id === 'contact-us' && rectBottom < 180)
+        active: (rectTop <= 90 && rectBottom > 90) || (e.id === 'contact-us' && window.innerHeight - rectBottom > 0)
       }
     });
     this.setState({
