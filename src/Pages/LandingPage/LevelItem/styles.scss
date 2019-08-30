@@ -68,6 +68,7 @@ h1.card-level-title {
 
 ul.card-level-list {
     padding-top: 12px;
+    padding-bottom: 40px;
     width: 95%;
     list-style-type: none;
     margin: auto;
@@ -109,28 +110,23 @@ ul.card-level-list {
     position: absolute;
     bottom: 0%;
     width: 100%;
-    display: flex;
-    padding-top: 20px;
-
     .btn {
-        width: 225px;
-        height: 40px;
-        line-height: 40px;
         font-size: 13px;
-        padding: 0 20px;
-        margin: auto;
-        margin-bottom: 40px;
-
-        img {
-            margin-left: 12px;
-            display: inline;
+        height: 42px;
+        bottom: 40px;
+        width: 225px;
+        left: 50%;
+        padding-left: 25px;
+        transform: translateX(-50%);
+        white-space: nowrap;
+        @include media-breakpoint('lt-tb') {
+          padding-left: 20px;
+          padding-right: 20px;
         }
-    }
+      }
 
     @include media-breakpoint('xs') {
         position: unset;
-
-
     }
 }
 
@@ -173,11 +169,26 @@ ul.card-level-list {
             }
 
         }
+        @include media-breakpoint('md') {
+            font-size: 12px;
+
+            span {
+                margin: 0px 4px;
+            }
+
+        }
+        @include media-breakpoint('tb-land') {
+            font-size: 13px;
+
+            span {
+                margin: 0px 4px;
+            }
+        }
     }
 }
 
 .card-box-certificate-b {
-    height: 750px;
+    height: 730px;
 
     h1 {
         margin-bottom: 10px;
@@ -193,10 +204,16 @@ ul.card-level-list {
         height: auto;
 
     }
+    @include media-breakpoint('tb-land') {
+        height: 775px;
+    }
+    @include media-breakpoint('md') {
+        height: 775px;
+    }
 }
 
 .card-box-certificate-c {
-    height: 825px;
+    height: 835px;
 
     h1 {
         margin-bottom: 10px;
@@ -215,4 +232,11 @@ ul.card-level-list {
         height: 978px;
 
     }
+    @include media-breakpoint('tb-land') {
+        height: 875px;
+    }
+    @include media-breakpoint('md') {
+        height: 875px;
+    }
+    
 }

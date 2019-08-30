@@ -41,6 +41,9 @@
     margin-top: 1.5rem;
     font-size: 20px;
     color: $--color-text-primary;
+    @include media-breakpoint('xs') {
+        font-size: 17px;
+    }
 }
 
 .__row {
@@ -83,7 +86,7 @@ figcaption {
 
                 @include media-breakpoint('xs') {
                     height: 260px;
-
+                    margin-bottom: 15px;
                 }
             }
 
@@ -91,8 +94,14 @@ figcaption {
                 font-size: 18px;
                 font-weight: bold;
                 width: 80%;
-                margin: auto
+                margin: auto;
+                @include media-breakpoint('xs') {
+                    margin-bottom: 15px;
+                }
             }
+        }
+        @include media-breakpoint('xs') {
+            padding-top: 10px;
         }
     }
 }

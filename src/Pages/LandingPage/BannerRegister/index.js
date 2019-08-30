@@ -10,7 +10,7 @@ export default class Sponser extends React.Component {
   render() {
 
     return (
-      <section className="sponser lazy-load">
+      <section className="sponser-1 lazy-load">
         <div className="container">
           <div className="register-exam">
             <div className="col-md-7">
