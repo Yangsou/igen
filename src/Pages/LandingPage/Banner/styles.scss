@@ -2,18 +2,18 @@
 @import '../../../assets/scss/breakpoints';
 
 .wrap-banner-box {
+    overflow: hidden;
     .home {
         position: relative;
         height: 450px;
         padding-top: 90px;
-
         @include media-breakpoint('sm') {
             height: 420px;
         }
 
         @include media-breakpoint('xs') {
-            height: 315px;
-            min-height: 315px;
+            height: 300px;
+            min-height: 300px;
         }
 
         &__bg {
@@ -55,8 +55,8 @@
 
                 @include media-breakpoint('md') {
                     height: 150px;
-
                 }
+                
             }
 
             &--center {
@@ -138,6 +138,8 @@
     @include media-breakpoint('md') {
         width: 238px;
     }
+
+
 }
 
 .footer {

@@ -6,7 +6,7 @@ import iconB2 from '../../../assets/img/icon-B2.png';
 import iconC1 from '../../../assets/img/icon-C1.png';
 import iconC2 from '../../../assets/img/icon-C2.png';
 import iconList from './../../../assets/img/check-arround.png';
-import arrowIcon from './../../../assets/img/arrow-icon.png';
+
 import './styles.scss'
 class LevelItem extends Component {
     render() {
@@ -55,12 +55,7 @@ class LevelItem extends Component {
                                             </li>
                                         </ul>
                                         <div className="wrap-button">
-                                            <button className="btn btn--gradient btn--radius">
-                                                <div className="btn-box">
-                                                    Xem chi tiết lộ trình học
-                                                    <img src={arrowIcon} alt="" />
-                                                </div>
-                                            </button>
+                                            <a href="https://igen.vsn.edu.vn/chuong-trinh-học/luyen-thi-toeic" target="_blank" className="btn btn--outline" rel="noopener noreferrer">Xem chi tiết lộ trình học<span className="icon icon__arrow"></span></a>
                                         </div>
                                     </div>
 
@@ -101,12 +96,7 @@ class LevelItem extends Component {
 
                                         </ul>
                                         <div className="wrap-button">
-                                            <button className="btn btn--gradient btn--radius">
-                                                <div className="btn-box">
-                                                    Xem chi tiết lộ trình học
-                                                    <img src={arrowIcon} alt="" />
-                                                </div>
-                                            </button>
+                                            <a href="https://igen.vsn.edu.vn/chuong-trinh-học/luyen-thi-toeic" target="_blank" className="btn btn--outline" rel="noopener noreferrer">Xem chi tiết lộ trình học<span className="icon icon__arrow"></span></a>
                                         </div>
                                     </div>
 
@@ -167,12 +157,8 @@ class LevelItem extends Component {
                                             
                                         </ul>
                                         <div className="wrap-button">
-                                            <button className="btn btn--gradient btn--radius">
-                                                <div className="btn-box">
-                                                    Xem chi tiết lộ trình học
-                                                    <img src={arrowIcon} alt="" />
-                                                </div>
-                                            </button>
+                                            <a href="https://igen.vsn.edu.vn/chuong-trinh-học/luyen-thi-toeic" target="_blank" className="btn btn--outline" rel="noopener noreferrer">Xem chi tiết lộ trình học<span className="icon icon__arrow"></span></a>
+
                                         </div>
                                     </div>
 
@@ -217,12 +203,9 @@ class LevelItem extends Component {
 
                                         </ul>
                                         <div className="wrap-button">
-                                            <button className="btn btn--gradient btn--radius">
-                                                <div className="btn-box">
-                                                    Xem chi tiết lộ trình học
-                                                    <img src={arrowIcon} alt="" />
-                                                </div>
-                                            </button>
+
+                                            <a href="https://igen.vsn.edu.vn/chuong-trinh-học/luyen-thi-toeic" target="_blank" className="btn btn--outline" rel="noopener noreferrer">Xem chi tiết lộ trình học<span className="icon icon__arrow"></span></a>
+
                                         </div>
                                     </div>
 
@@ -281,12 +264,9 @@ class LevelItem extends Component {
                                             </li>
                                         </ul>
                                         <div className="wrap-button">
-                                            <button className="btn btn--gradient btn--radius">
-                                                <div className="btn-box">
-                                                    Xem chi tiết lộ trình học
-                                                    <img src={arrowIcon} alt="" />
-                                                </div>
-                                            </button>
+                                        <div className="btn-box">
+                                            <a href="https://igen.vsn.edu.vn/chuong-trinh-học/luyen-thi-toeic" target="_blank" className="btn btn--outline" rel="noopener noreferrer">Xem chi tiết lộ trình học<span className="icon icon__arrow"></span></a>
+                                        </div>
                                         </div>
                                     </div>
 
@@ -353,12 +333,8 @@ class LevelItem extends Component {
 
                                         </ul>
                                         <div className="wrap-button">
-                                            <button className="btn btn--gradient btn--radius">
-                                                <div className="btn-box">
-                                                    Xem chi tiết lộ trình học
-                                                    <img src={arrowIcon} alt="" />
-                                                </div>
-                                            </button>
+                                            <a href="https://igen.vsn.edu.vn/chuong-trinh-học/luyen-thi-toeic" target="_blank" className="btn btn--outline" rel="noopener noreferrer">Xem chi tiết lộ trình học<span className="icon icon__arrow"></span></a>
+
                                         </div>
                                     </div>
 
