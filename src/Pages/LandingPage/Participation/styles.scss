@@ -1,14 +1,14 @@
 @import '../../../assets/scss/variable';
 
 .bg-w {
-    background: #fff !important;
+    background: #fff;
 }
 
 .participation-1 {
     position: relative;
     background-color: #fff;
     padding-top: 70px;
-    padding-bottom: 60px !important;
+    padding-bottom: 0px ;
 
     &__title {
         color: $--color-text-primary;

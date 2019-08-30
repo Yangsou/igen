@@ -3,7 +3,7 @@
 
 .sponser-1 {
     position: relative;
-    padding-top: 0px !important;
+    padding-top: 0px;
     padding-bottom: 70px;
 
     &__item {
@@ -85,7 +85,7 @@
     }
 }
 
-.register-exam {
+.register-exam-1 {
     overflow: hidden;
 
     background: {
@@ -96,7 +96,7 @@
     padding-top: 40px;
     padding-bottom: 40px;
     padding-left: 40px;
-    margin-top: 0px !important;
+    margin-top: 0px;
     border-radius: 10px;
 
     @include media-breakpoint('xs') {
