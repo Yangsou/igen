@@ -94,6 +94,9 @@ $--header-content-height: 50px;
         position: absolute;
         right: 15px;
         top: 20px;
+        &::before {
+          display: none;
+        }
         @include media-breakpoint('lg') {
           margin-left: 50px;
         }
