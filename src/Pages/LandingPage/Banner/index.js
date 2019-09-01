@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import generalImage from '../../../assets/img/program-img-general.png';
+import generalImage from '../../../assets/img/img-banner.png';
 import './styles.scss'
 class Banner extends Component {
     render() {

@@ -21,8 +21,8 @@ class LevelItem extends Component {
                                         <img className="card-level-img" src={iconA1} alt="" />
                                         <h1 className="card-level-title">Trình độ A1</h1>
                                         <p className="card-level-description">
-                                            Đây là thời điểm phát triển kỹ năng ngon ngữ ở giai đoạn <strong>MỚI BẮT ĐẦU</strong>.
-                                            Ở trình độ này, người học sẽ có khả năng sữ dụng tiếng Anh tương đương với trẻ 3 - 4 tuổi người bản xứ,
+                                            Đây là thời điểm phát triển kỹ năng ngôn ngữ ở giai đoạn <strong>MỚI BẮT ĐẦU</strong>.
+                                            Ở trình độ này, người học sẽ có khả năng sử dụng tiếng Anh tương đương với trẻ 3 - 4 tuổi người bản xứ,
                                             nơi tiếng Anh là ngôn ngữ mẹ đẻ.
                                         </p>
                                         <ul className="card-level-list">
@@ -117,7 +117,7 @@ class LevelItem extends Component {
                                         <div className="box-same-certificate ">
                                             <h5>TƯƠNG ĐƯƠNG</h5>
                                             <p>
-                                                IELTS 4.0-5.0    <span>-</span>   TOEIC 550-775    <span>-</span>   TOEFL iBT 42-71   <span>-</span>    EF SET: 4-50
+                                                IELTS 3.0 - 3.5    <span> - </span>   TOEIC 220 - 395    <span>-</span>   TOEFL 30 - 34
                                             </p>
                                         </div>
                                         <p className="card-level-description">
@@ -173,7 +173,7 @@ class LevelItem extends Component {
                                         <div className="box-same-certificate ">
                                             <h5>TƯƠNG ĐƯƠNG</h5>
                                             <p>
-                                            IELTS 5.5-6.0    <span>-</span>   TOEIC 775-935    <span>-</span>   TOEFL iBT 72-94   <span>-</span>    EF SET: 51-60
+                                            IELTS 3.5 - 4.0    <span>-</span>   TOEIC 400 - 515    <span>-</span>   TOEFL 35 - 40
                                             </p>
                                         </div>
                                         <p className="card-level-description">
@@ -226,7 +226,7 @@ class LevelItem extends Component {
                                         <div className="box-same-certificate ">
                                             <h5>TƯƠNG ĐƯƠNG</h5>
                                             <p>
-                                            IELTS 6.5-7.5    <span>-</span>   TOEIC 935-990    <span>-</span>   TOEFL iBT 95-120   <span>-</span>    EF SET: 61-70
+                                            IELTS 4.5-5.0    <span>-</span>   TOEIC 520-600    <span>-</span>   TOEFL 41-50
                                             </p>
                                         </div>
                                         <p className="card-level-description">
@@ -281,7 +281,7 @@ class LevelItem extends Component {
                                         <div className="box-same-certificate ">
                                             <h5>TƯƠNG ĐƯƠNG</h5>
                                             <p>
-                                            IELTS 8.0-9.0    <span>-</span>   EF SET: 71-100
+                                            IELTS 5.0-5.5    <span>-</span>   TOIEC 605-700 <span>-</span> TOEFL 53-64
                                             </p>
                                         </div>
                                         <p className="card-level-description">
