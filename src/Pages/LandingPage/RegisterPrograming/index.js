@@ -10,7 +10,7 @@ class RegisterPrograming extends Component {
                 <div className="description-box">
                     <h3>cách thức đăng kí chương trình</h3>
                     <h1>tiếng anh tổng quát</h1>
-                    <p>Căng cứ vào kết quả kiểm tra trình độ đầu vào và kế hoạch của bạn, i-Gen sẽ tư vấn khóa học và lộ trình phù hợp
+                    <p>Căn cứ vào kết quả kiểm tra trình độ đầu vào và kế hoạch của bạn, i-Gen sẽ tư vấn khóa học và lộ trình phù hợp
                         để bạn có thể đạt được mục tiêu trong thời gian ngắn nhất với kết quả cao nhất. <br/>
                         Tất cả những gì bạn cần để thực hiện chỉ là: 
                     </p>
@@ -37,7 +37,7 @@ class RegisterPrograming extends Component {
                             <div className="wrap-img">
                                 <img src={descriptionImage3} alt=""  />
                             </div>
-                            <figcaption>Chăm chỉ học tập, phát biểu theo hướng dẫn cũa giáo viên.</figcaption>
+                            <figcaption>Chăm chỉ học tập, phát biểu theo hướng dẫn của giáo viên.</figcaption>
                         </figure>
                     </div>
                     
