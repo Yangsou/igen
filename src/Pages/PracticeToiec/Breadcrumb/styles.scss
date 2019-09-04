@@ -1,0 +1,48 @@
+@import '../../../assets/scss/variable';
+@import '../../../assets/scss/breakpoints';
+
+.breadcrumb {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 0.75rem .75rem;
+    margin-bottom: 1rem;
+    list-style: none;
+    color: #8d8d95;
+    font-size: 13px;
+    font-family: 'Nunito Sans', sans-serif;
+
+    @include media-breakpoint('xs') {
+        font-size: 11px;
+    }
+}
+
+.breadcrumb-item + .breadcrumb-item {
+    padding-left: .75rem;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    display: inline-block;
+    padding-right: .5rem;
+    color: #8d8d95;
+    content: ">";
+
+}
+
+.breadcrumb-item + .breadcrumb-item:hover::before {
+    text-decoration: underline;
+}
+
+.breadcrumb-item + .breadcrumb-item:hover::before {
+    text-decoration: none;
+}
+
+.breadcrumb-item a {
+    color: #8d8d95;
+}
+
+.breadcrumb-item.active {
+    color: $--color-text-primary;
+    font-weight: bold;
+}

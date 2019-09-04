@@ -30,14 +30,14 @@ img.card-level-img {
 h1.card-level-title {
     text-align: center;
     font-size: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     color: $--color-text-primary;
 }
 
 .card-box {
-    padding-top: 150px;
+    padding-top: 135px;
     position: relative;
-    height: 630px;
+    height: 605px;
     margin: auto;
     color: $--color-text-primary;
 
@@ -47,7 +47,7 @@ h1.card-level-title {
     }
 
     @include media-breakpoint('sm') {
-        height: 750px;
+        height: 725px;
 
     }
 }
@@ -189,14 +189,14 @@ ul.card-level-list {
 }
 
 .card-box-certificate-b {
-    height: 730px;
+    height: 720px;
 
     h1 {
         margin-bottom: 10px;
     }
 
     @include media-breakpoint('sm') {
-        height: 900px;
+        height: 880px;
 
     }
 
@@ -206,15 +206,15 @@ ul.card-level-list {
 
     }
     @include media-breakpoint('tb-land') {
-        height: 775px;
+        height: 750px;
     }
     @include media-breakpoint('md') {
-        height: 775px;
+        height: 750px;
     }
 }
 
 .card-box-certificate-c {
-    height: 835px;
+    height: 825px;
 
     h1 {
         margin-bottom: 10px;
@@ -230,14 +230,14 @@ ul.card-level-list {
     }
 
     @include media-breakpoint('sm') {
-        height: 978px;
+        height: 985px;
 
     }
     @include media-breakpoint('tb-land') {
-        height: 875px;
+        height: 850px;
     }
     @include media-breakpoint('md') {
-        height: 875px;
+        height: 850px;
     }
     
 }

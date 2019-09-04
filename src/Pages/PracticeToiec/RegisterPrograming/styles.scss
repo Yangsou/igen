@@ -1,0 +1,107 @@
+@import '../../../assets/scss/variable';
+@import '../../../assets/scss/breakpoints';
+
+.container {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.description-box {
+    text-align: center;
+    width: 75%;
+    margin: auto;
+
+    @include media-breakpoint('xs') {
+        width: 85%;
+    }
+}
+
+.description-box h3 {
+    margin-top: 2.5rem;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: $--color-secondary;
+
+    @include media-breakpoint('xs') {
+        font-size: 14px;
+        margin-top: 1rem;
+    }
+}
+
+.description-box h1 {
+    font-size: 45px;
+    text-transform: capitalize;
+    color: #e15c2b;
+
+    @include media-breakpoint('xs') {
+        font-size: 25px;
+    }
+}
+
+.description-box p {
+    margin-top: 1.5rem;
+    font-size: 20px;
+    color: $--color-text-primary;
+    @include media-breakpoint('xs') {
+        font-size: 17px;
+    }
+}
+
+.__row {
+    position: relative;
+}
+
+figure img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    max-width: 350px;
+}
+
+figcaption {
+    text-align: center;
+}
+
+.description-step {
+    padding-top: 65px;
+    padding-bottom: 80px;
+
+    @include media-breakpoint('xs') {
+        padding-top: 10px;
+    }
+
+    .description-step-item {
+        figure {
+            .wrap-img {
+                position: relative;
+                height: 225px;
+                margin-bottom: 35px;
+
+                img {
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+
+                @include media-breakpoint('xs') {
+                    height: 260px;
+                    margin-bottom: 15px;
+                }
+            }
+
+            figcaption {
+                font-size: 18px;
+                font-weight: bold;
+                width: 80%;
+                margin: auto;
+                @include media-breakpoint('xs') {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+        @include media-breakpoint('xs') {
+            padding-top: 10px;
+        }
+    }
+}
