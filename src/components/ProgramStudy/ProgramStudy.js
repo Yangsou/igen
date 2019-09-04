@@ -29,7 +29,7 @@ export default function ProgramStudy() {
               </div>
               <p className="program__item__title program__item__title--toiec">Luyện thi TOEIC</p>
               <p className="program__item__text">Giúp sinh viên đạt các cấp độ TOEIC theo chuẩn đầu ra của trường đại học, xóa bỏ nỗi sợ tiếng Anh cho các bạn sinh viên năm cuối</p>
-              <a href="https://igen.vsn.edu.vn/chuong-trinh-học/luyen-thi-toeic" target="_blank" className="btn btn--outline" rel="noopener noreferrer">Xem chi tiết <span className="icon icon__arrow"></span></a>
+              <Link to="/luyen-thi-toiec" className="btn btn--outline" rel="noopener noreferrer">Xem chi tiết <span className="icon icon__arrow"></span></Link>
               {/* <button className="btn btn--outline">Xem chi tiết <span className="icon icon__arrow"></span></button> */}
             </div>
           {/* </div> */}
@@ -41,7 +41,7 @@ export default function ProgramStudy() {
               <p className="program__item__title program__item__title--ielts">Luyện thi IELTS</p>
               <p className="program__item__text">Giúp sinh viên đạt cấp độ IELTS từ cơ bản đến nâng cao, nắm vé thông hành trên con đường 
 hội nhập quốc tế</p>
-                <a href="https://igen.vsn.edu.vn/chuong-trinh-học/luyen-thi-ielts" target="_blank" className="btn btn--outline" rel="noopener noreferrer">Xem chi tiết <span className="icon icon__arrow"></span></a>
+                <Link to="/luyen-thi-IELTS" className="btn btn--outline" rel="noopener noreferrer">Xem chi tiết <span className="icon icon__arrow"></span></Link>
             </div>
           {/* </div> */}
         </div>

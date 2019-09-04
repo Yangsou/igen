@@ -1,7 +1,7 @@
 @import '../../../assets/scss/variable';
 @import '../../../assets/scss/breakpoints';
 
-.wrap-banner-box {
+.wrap-banner-box-toiec {
     overflow: hidden;
     .home {
         position: relative;
@@ -113,28 +113,31 @@
     }
 }
 
-.wrap-banner-img {
+.wrap-banner-img-toiec {
     height: 100%;
-    .wrap-img {
+    .wrap-img-toiec {
         position: relative;
         height: 100%;
         .banner-img {
-            width: 470px;
+            width: 360px;
             position: absolute;
-            bottom: 0px;
-            right: 7%;
+            bottom: -45px;
+            right: 10%;
             @include media-breakpoint('sm') {
                 width: 250px;
+                bottom: -30px;
                 right: 10%;
             }
         
             @include media-breakpoint('xs') {
                 width: 150px;
+                bottom: -18px;
                 right: 10%;
             }
         
             @include media-breakpoint('md') {
-                width: 290px;
+                width: 280px;
+                bottom: -30px;
                 right: 10%
             }
         
