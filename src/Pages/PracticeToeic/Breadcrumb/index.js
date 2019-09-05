@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {  Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import './styles.scss';
 class Breadcrumb extends Component {
     render() {
@@ -8,7 +8,7 @@ class Breadcrumb extends Component {
                 <ol className="breadcrumb">
                     <li className="breadcrumb-item"><Link to="/">Trang Chủ</Link></li>
                     <li className="breadcrumb-item"><Link to="/">Chương Trình Học</Link></li>
-                    <li className="breadcrumb-item active" aria-current="page">Luyện Thi IELTS</li>
+                    <li className="breadcrumb-item active" aria-current="page">Luyện Thi TOEIC</li>
                 </ol>
             </nav>
         );

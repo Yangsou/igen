@@ -1,7 +1,7 @@
 import React from 'react'
 import LandingPage from './Pages/LandingPage'
 import HomePage from './Pages/Home'
-import PracticeToiec from './Pages/PracticeToiec'
+import PracticeToiec from './Pages/PracticeToeic'
 import PracticeIELTS from './Pages/PracticeIELTS'
 const routes = [
     {
@@ -15,7 +15,7 @@ const routes = [
         main : () => <LandingPage />
     },
     {
-        path : '/luyen-thi-toiec',
+        path : '/luyen-thi-TOEIC',
         exact : false,
         main : () => <PracticeToiec />
     },

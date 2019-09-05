@@ -19,7 +19,11 @@ export default function Participation() {
               <img src={bgOne} className="item__img" alt="Ký quỹ" />
             </div>
             <p className="item__title">Ký quỹ</p>
-            <p className="item__text">Phần ký quỹ nhằm thể hiện sự cam kết tham gia chương trình học. Sinh viên được hoàn lại 100% số tiền ký quỹ sau khi đáp ứng Thể lệ tham gia </p>
+            <p className="item__text">
+            Phần ký quỹ nhằm thể hiện sự cam kết tham gia chương trình học.
+             Sinh viên được hoàn lại 100% số tiền ký quỹ sau khi đáp ứng Thể lệ tham gia <br />
+              Số tiền ký quỹ: <strong>1.300.000 VNĐ.</strong>
+            </p>
             <a href="https://qhdn.uel.edu.vn/tin-tuc/thuc-hien-ky-quy-hoc-tap-cung-du-an-i-gen" target="_blank" className="btn btn--outline" rel="noopener noreferrer">Xem thêm <span className="icon icon__arrow"></span></a>
           </div>
           <div className="item col-sm-6 col-md-4">
@@ -27,7 +31,12 @@ export default function Participation() {
               <img src={bgBook} className="item__img" alt="Mua sách bản quyền" />
             </div>
             <p className="item__title">Mua sách bản quyền</p>
-            <p className="item__text">Sinh viên sẽ được nhận sách trực tiếp từ NXB, i-Gen không thu bất kỳ lợi nhuận nào từ việc mua sách bản quyền</p>
+            <p className="item__text">
+            Sinh viên sẽ được nhận sách trực tiếp từ NXB,
+             i-Gen không thu bất kỳ lợi nhuận nào từ việc mua sách bản quyền 
+              - Sách: <strong>280.000 VNĐ </strong><br/>
+                (Bao gồm phí vận chuyển & không hoàn lại)
+            </p>
             <a href="https://qhdn.uel.edu.vn/tin-tuc/tong-hop-bo-giao-trinh-giang-day-do-nxb-pearson-cung-cap" target="_blank" className="btn btn--outline" rel="noopener noreferrer">Xem sách <span className="icon icon__arrow"></span></a>
           </div>
           <div className="item col-sm-6 col-md-4">

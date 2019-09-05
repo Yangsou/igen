@@ -9,7 +9,7 @@ class Banner extends Component {
                     <div className="home__content container">
                         <div className="row">
                             <div className="col-sm-7 ">
-                                <h1 className="wrap-banner-title banner__title">Luyện Thi IELTs</h1>
+                                <h1 className="wrap-banner-title banner__title">Luyện Thi IELTS</h1>
                             </div>
                             <div className="col-sm-5 wrap-banner-img-ielts">
                                 <div className="wrap-img-ielts">

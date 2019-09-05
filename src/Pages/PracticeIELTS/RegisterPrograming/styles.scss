@@ -28,7 +28,7 @@
 }
 
 .description-box h1 {
-    font-size: 45px;
+    font-size: 30px;
     text-transform: capitalize;
     color: #e15c2b;
 
@@ -39,11 +39,8 @@
 
 .description-box p {
     margin-top: 1.5rem;
-    font-size: 20px;
+    font-size: 16px;
     color: $--color-text-primary;
-    @include media-breakpoint('xs') {
-        font-size: 17px;
-    }
 }
 
 .__row {
@@ -91,7 +88,7 @@ figcaption {
             }
 
             figcaption {
-                font-size: 18px;
+                font-size: 16px;
                 font-weight: bold;
                 width: 80%;
                 margin: auto;
