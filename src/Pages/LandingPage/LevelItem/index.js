@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import Modal from './../../../components/Modal'
 import iconA1 from '../../../assets/img/icon-A1.png';
 import iconA2 from '../../../assets/img/icon-A2.png';
 import iconB1 from '../../../assets/img/icon-B1.png';
@@ -9,6 +10,23 @@ import iconList from './../../../assets/img/check-arround.png';
 
 import './styles.scss'
 class LevelItem extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            show : false,
+            type: 0,
+        }
+    }
+    showModal = (type) => {
+        this.setState({ 
+            show: true,
+            type
+         });
+      };
+    
+      hideModal = () => {
+        this.setState({ show: false });
+      }
     render() {
         return (
             <Fragment>
@@ -55,7 +73,7 @@ class LevelItem extends Component {
                                             </li>
                                         </ul>
                                         <div className="wrap-button">
-                                            <a href="https://igen.vsn.edu.vn/chuong-trinh-học/luyen-thi-toeic" target="_blank" className="btn btn--outline" rel="noopener noreferrer">Xem chi tiết lộ trình học<span className="icon icon__arrow"></span></a>
+                                            <button onClick={() => this.showModal(0)} className="btn btn--outline" rel="noopener noreferrer">Xem chi tiết lộ trình học<span className="icon icon__arrow"></span></button>
                                         </div>
                                     </div>
 
@@ -96,7 +114,7 @@ class LevelItem extends Component {
 
                                         </ul>
                                         <div className="wrap-button">
-                                            <a href="https://igen.vsn.edu.vn/chuong-trinh-học/luyen-thi-toeic" target="_blank" className="btn btn--outline" rel="noopener noreferrer">Xem chi tiết lộ trình học<span className="icon icon__arrow"></span></a>
+                                            <button onClick={() => this.showModal(1)} className="btn btn--outline" rel="noopener noreferrer">Xem chi tiết lộ trình học<span className="icon icon__arrow"></span></button>
                                         </div>
                                     </div>
 
@@ -157,7 +175,7 @@ class LevelItem extends Component {
                                             
                                         </ul>
                                         <div className="wrap-button">
-                                            <a href="https://igen.vsn.edu.vn/chuong-trinh-học/luyen-thi-toeic" target="_blank" className="btn btn--outline" rel="noopener noreferrer">Xem chi tiết lộ trình học<span className="icon icon__arrow"></span></a>
+                                            <button onClick={() => this.showModal(2)} className="btn btn--outline" rel="noopener noreferrer">Xem chi tiết lộ trình học<span className="icon icon__arrow"></span></button>
 
                                         </div>
                                     </div>
@@ -204,7 +222,7 @@ class LevelItem extends Component {
                                         </ul>
                                         <div className="wrap-button">
 
-                                            <a href="https://igen.vsn.edu.vn/chuong-trinh-học/luyen-thi-toeic" target="_blank" className="btn btn--outline" rel="noopener noreferrer">Xem chi tiết lộ trình học<span className="icon icon__arrow"></span></a>
+                                            <button onClick={() => this.showModal(3)} className="btn btn--outline" rel="noopener noreferrer">Xem chi tiết lộ trình học<span className="icon icon__arrow"></span></button>
 
                                         </div>
                                     </div>
@@ -265,7 +283,7 @@ class LevelItem extends Component {
                                         </ul>
                                         <div className="wrap-button">
                                         <div className="btn-box">
-                                            <a href="https://igen.vsn.edu.vn/chuong-trinh-học/luyen-thi-toeic" target="_blank" className="btn btn--outline" rel="noopener noreferrer">Xem chi tiết lộ trình học<span className="icon icon__arrow"></span></a>
+                                            <button onClick={() => this.showModal(4)} className="btn btn--outline" rel="noopener noreferrer">Xem chi tiết lộ trình học<span className="icon icon__arrow"></span></button>
                                         </div>
                                         </div>
                                     </div>
@@ -333,7 +351,7 @@ class LevelItem extends Component {
 
                                         </ul>
                                         <div className="wrap-button">
-                                            <a href="https://igen.vsn.edu.vn/chuong-trinh-học/luyen-thi-toeic" target="_blank" className="btn btn--outline" rel="noopener noreferrer">Xem chi tiết lộ trình học<span className="icon icon__arrow"></span></a>
+                                            <button onClick={() => this.showModal(5)} className="btn btn--outline" rel="noopener noreferrer">Xem chi tiết lộ trình học<span className="icon icon__arrow"></span></button>
 
                                         </div>
                                     </div>
@@ -343,6 +361,7 @@ class LevelItem extends Component {
                             </div>
                         </div>
                     </div>
+                    <Modal show={this.state.show} type={this.state.type} hideModal={this.hideModal} />
                 </section>
             </Fragment>
             
