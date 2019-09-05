@@ -1,7 +1,7 @@
 import React from 'react';
 import {  Link } from "react-router-dom";
 import generalImage from '../../assets/img/program-img-general.png';
-import toiecImage from '../../assets/img/program-toiec.svg';
+import toiecImage from '../../assets/img/program-toiec.png';
 import ieltsImage from '../../assets/img/program-ielts-1.png';
 import './programStudy.scss';
 
