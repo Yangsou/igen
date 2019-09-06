@@ -1,11 +1,17 @@
 import React, { Component, Fragment } from 'react';
-import Modal from './../../../components/Modal'
+import Modal from '../../../components/Modal'
 import iconA1 from '../../../assets/img/icon-A1.png';
 import iconA2 from '../../../assets/img/icon-A2.png';
 import iconB1 from '../../../assets/img/icon-B1.png';
 import iconB2 from '../../../assets/img/icon-B2.png';
 import iconC1 from '../../../assets/img/icon-C1.png';
 import iconC2 from '../../../assets/img/icon-C2.png';
+import imgA1 from '../../../assets/img/description-A1.png'
+import imgA2 from '../../../assets/img/description-A2.png'
+import imgB1 from '../../../assets/img/description-B1.png'
+import imgB2 from '../../../assets/img/description-B2.png'
+import imgC1 from '../../../assets/img/description-C1.png'
+import imgC2 from '../../../assets/img/description-C2.png'
 import iconList from './../../../assets/img/check-arround.png';
 
 import './styles.scss'
@@ -14,13 +20,13 @@ class LevelItem extends Component {
         super(props);
         this.state = {
             show : false,
-            type: 0,
+            img : imgA1
         }
     }
-    showModal = (type) => {
+    showModal = (img) => {
         this.setState({ 
             show: true,
-            type
+            img
          });
       };
     
@@ -73,7 +79,7 @@ class LevelItem extends Component {
                                             </li>
                                         </ul>
                                         <div className="wrap-button">
-                                            <button onClick={() => this.showModal(0)} className="btn btn--outline" rel="noopener noreferrer">Xem chi tiết lộ trình học<span className="icon icon__arrow"></span></button>
+                                            <button onClick={() => this.showModal(imgA1)} className="btn btn--outline" rel="noopener noreferrer">Xem chi tiết lộ trình học<span className="icon icon__arrow"></span></button>
                                         </div>
                                     </div>
 
@@ -114,7 +120,7 @@ class LevelItem extends Component {
 
                                         </ul>
                                         <div className="wrap-button">
-                                            <button onClick={() => this.showModal(1)} className="btn btn--outline" rel="noopener noreferrer">Xem chi tiết lộ trình học<span className="icon icon__arrow"></span></button>
+                                            <button onClick={() => this.showModal(imgA2)} className="btn btn--outline" rel="noopener noreferrer">Xem chi tiết lộ trình học<span className="icon icon__arrow"></span></button>
                                         </div>
                                     </div>
 
@@ -175,7 +181,7 @@ class LevelItem extends Component {
                                             
                                         </ul>
                                         <div className="wrap-button">
-                                            <button onClick={() => this.showModal(2)} className="btn btn--outline" rel="noopener noreferrer">Xem chi tiết lộ trình học<span className="icon icon__arrow"></span></button>
+                                            <button onClick={() => this.showModal(imgB1)} className="btn btn--outline" rel="noopener noreferrer">Xem chi tiết lộ trình học<span className="icon icon__arrow"></span></button>
 
                                         </div>
                                     </div>
@@ -222,7 +228,7 @@ class LevelItem extends Component {
                                         </ul>
                                         <div className="wrap-button">
 
-                                            <button onClick={() => this.showModal(3)} className="btn btn--outline" rel="noopener noreferrer">Xem chi tiết lộ trình học<span className="icon icon__arrow"></span></button>
+                                            <button onClick={() => this.showModal(imgB2)} className="btn btn--outline" rel="noopener noreferrer">Xem chi tiết lộ trình học<span className="icon icon__arrow"></span></button>
 
                                         </div>
                                     </div>
@@ -283,7 +289,7 @@ class LevelItem extends Component {
                                         </ul>
                                         <div className="wrap-button">
                                         <div className="btn-box">
-                                            <button onClick={() => this.showModal(4)} className="btn btn--outline" rel="noopener noreferrer">Xem chi tiết lộ trình học<span className="icon icon__arrow"></span></button>
+                                            <button onClick={() => this.showModal(imgC1)} className="btn btn--outline" rel="noopener noreferrer">Xem chi tiết lộ trình học<span className="icon icon__arrow"></span></button>
                                         </div>
                                         </div>
                                     </div>
@@ -351,7 +357,7 @@ class LevelItem extends Component {
 
                                         </ul>
                                         <div className="wrap-button">
-                                            <button onClick={() => this.showModal(5)} className="btn btn--outline" rel="noopener noreferrer">Xem chi tiết lộ trình học<span className="icon icon__arrow"></span></button>
+                                            <button onClick={() => this.showModal(imgC2)} className="btn btn--outline" rel="noopener noreferrer">Xem chi tiết lộ trình học<span className="icon icon__arrow"></span></button>
 
                                         </div>
                                     </div>
@@ -361,7 +367,7 @@ class LevelItem extends Component {
                             </div>
                         </div>
                     </div>
-                    <Modal show={this.state.show} type={this.state.type} hideModal={this.hideModal} />
+                    <Modal show={this.state.show} img={this.state.img} hideModal={this.hideModal} />
                 </section>
             </Fragment>
             

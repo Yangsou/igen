@@ -1,5 +1,5 @@
 import React from 'react'
-import LandingPage from './Pages/LandingPage'
+import LandingPage from './Pages/GeneralEnglish'
 import HomePage from './Pages/Home'
 import PracticeToiec from './Pages/PracticeToeic'
 import PracticeIELTS from './Pages/PracticeIELTS'

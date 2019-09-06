@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import Modal from './../../../components/Modal';
+import Modal from '../../../components/Modal';
 import iconTOIEC500plus from '../../../assets/img/icon-toiec500plus.png';
 import iconTOIEC650plus from '../../../assets/img/icon-toiec650plus.png';
 import iconTOIEC800plus from '../../../assets/img/icon-toiec800plus.png';
+import imgToiec from '../../../assets/img/description-toiec.png'
 import iconList from './../../../assets/img/check-arround.png';
 
 import './styles.scss'
@@ -11,13 +12,13 @@ class LevelItem extends Component {
         super(props);
         this.state = {
             show : false,
-            type: 0,
+            img: imgToiec,
         }
     }
-    showModal = (type) => {
+    showModal = (img) => {
         this.setState({ 
             show: true,
-            type
+            img
          });
       };
     
@@ -88,7 +89,7 @@ class LevelItem extends Component {
                                                 
                                             </ul>
                                             <div className="wrap-button">
-                                                <button onClick={() => this.showModal(9)} className="btn btn--outline" rel="noopener noreferrer">Xem chi tiết lộ trình học<span className="icon icon__arrow"></span></button>
+                                                <button onClick={() => this.showModal(imgToiec)} className="btn btn--outline" rel="noopener noreferrer">Xem chi tiết lộ trình học<span className="icon icon__arrow"></span></button>
                                             </div>
                                         </div>
 
@@ -173,7 +174,7 @@ class LevelItem extends Component {
                                                 </li>
                                             </ul>
                                             <div className="wrap-button">
-                                                <button onClick={() => this.showModal(9)} className="btn btn--outline" rel="noopener noreferrer">Xem chi tiết lộ trình học<span className="icon icon__arrow"></span></button>
+                                                <button onClick={() => this.showModal(imgToiec)} className="btn btn--outline" rel="noopener noreferrer">Xem chi tiết lộ trình học<span className="icon icon__arrow"></span></button>
                                             </div>
                                         </div>
 
@@ -262,7 +263,7 @@ class LevelItem extends Component {
                                                 </li>
                                             </ul>
                                             <div className="wrap-button">
-                                                <button onClick={() => this.showModal(9)} className="btn btn--outline" rel="noopener noreferrer">Xem chi tiết lộ trình học<span className="icon icon__arrow"></span></button>
+                                                <button onClick={() => this.showModal(imgToiec)} className="btn btn--outline" rel="noopener noreferrer">Xem chi tiết lộ trình học<span className="icon icon__arrow"></span></button>
 
                                             </div>
                                         </div>
@@ -271,7 +272,7 @@ class LevelItem extends Component {
                             </div>
                         </div>
                     </section>
-                    <Modal show={this.state.show} type={this.state.type} hideModal={this.hideModal} />
+                    <Modal show={this.state.show} img={this.state.img} hideModal={this.hideModal} />
                 </section>
             
         );
