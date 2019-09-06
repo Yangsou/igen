@@ -3,7 +3,7 @@ import Banner from './Banner'
 import Breadcrumb from './Breadcrumb'
 import Participation from './Participation'
 import Register from './BannerRegister'
-import RegisterPrograming from './RegisterPrograming'
+import RegisterProgram from './RegisterProgram'
 import LevelItem from './LevelItem'
 class LandingPage extends Component {
     render() {
@@ -11,7 +11,7 @@ class LandingPage extends Component {
             <Fragment>
                 <Banner />
                 <Breadcrumb />
-                <RegisterPrograming/>
+                <RegisterProgram/>
                 <LevelItem/>
                 <Participation/>
                 <Register />

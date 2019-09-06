@@ -10,29 +10,30 @@
     z-index: 100;
   }
   @include media-breakpoint('gt-xs') {
-    .style-scroll::-webkit-scrollbar-track
-  {
-      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-      border-radius: 10px;
-      background-color: #F5F5F5;
-    }
-    
-    .style-scroll::-webkit-scrollbar
+      .style-scroll::-webkit-scrollbar-track
     {
-      width: 12px;
-      background-color: #F5F5F5;
-    }
-    
-    .style-scroll::-webkit-scrollbar-thumb
-    {
-      border-radius: 10px;
-      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-      background-color: #555;
-    }
+        box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        border-radius: 10px;
+        background-color: #F5F5F5;
+      }
+      
+      .style-scroll::-webkit-scrollbar
+      {
+        width: 12px;
+        background-color: #F5F5F5;
+      }
+      
+      .style-scroll::-webkit-scrollbar-thumb
+      {
+        border-radius: 10px;
+        box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        background-color: #555;
+      }
   }
   
   .modal-main {
     position:fixed;
+    z-index: 500;
     background: white;
     width: 60%;
     height: 90%;
@@ -63,16 +64,24 @@
   }
   .modal-wrap-btn {
     height: 50px;
+    @include media-breakpoint('xs') {
+      height: 25px;
+    }
 }
 
 button.modal-close {
     width: 70px;
-    height: 35px;
+    height: 30px;
     background-color: #d2d3d2;
     border-radius: 16px;
     font-size: 16px;
     margin-right: 14px;
     box-shadow: 0px 0px 6px 0px #e5e1e1;
+    @include media-breakpoint('xs') {
+      width: 50px;
+      height: 20px;
+      font-size: 14px;
+    }
 }
 
 .modal-wrap-btn {
@@ -97,7 +106,6 @@ button.modal-close {
   }
   @keyframes drop {
     0%{
-      opacity: 0;
     }
     100% {
       top: 50%;
