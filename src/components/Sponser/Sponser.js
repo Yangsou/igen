@@ -1,4 +1,5 @@
 import React from 'react';
+import {  Link } from "react-router-dom";
 import pearson from '../../assets/img/pearson-logo.png';
 import htcItc from '../../assets/img/htc-itc-logo.png';
 import itp from '../../assets/img/itp-logo.png';
@@ -59,7 +60,8 @@ export default class Sponser extends React.Component {
                   <p className="register-exam__list__item"><span className="icon icon__check-arround"></span>Biết ngay kết quả</p>
                   <p className="register-exam__list__item"><span className="icon icon__check-arround"></span>100% online tại nhà</p>
                 </div>
-                <button onClick={this.clickTry} className="btn register-exam__btn">THỬ NGAY</button>
+                  <Link to="/dang-ky-thi-thu" className="btn register-exam__btn">THỬ NGAY</Link>
+
               </div>
             </div>
             <div className="col-md-5">
