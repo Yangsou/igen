@@ -9,8 +9,8 @@ class Modal extends Component {
       }
     componentDidMount() {
         document.addEventListener('mousedown', this.handleClickOutside);
+        
       }
-    
       componentWillUnmount() {
         document.removeEventListener('mousedown', this.handleClickOutside);
       }

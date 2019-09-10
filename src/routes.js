@@ -3,6 +3,7 @@ import LandingPage from './Pages/GeneralEnglish'
 import HomePage from './Pages/Home'
 import PracticeToiec from './Pages/PracticeToeic'
 import PracticeIELTS from './Pages/PracticeIELTS'
+import RegisterTest from './Pages/RegisterTest'
 const routes = [
     {
         path : '/',
@@ -23,6 +24,11 @@ const routes = [
         path : '/luyen-thi-IELTS',
         exact : false,
         main : () => <PracticeIELTS />
+    },
+    {
+        path : '/dang-ky-thi-thu',
+        exact : false,
+        main : () => <RegisterTest />
     }
 ]
 
