@@ -1,0 +1,114 @@
+@import '../../../assets/scss/variable';
+@import '../../../assets/scss/breakpoints';
+
+.info-test{
+    padding-bottom: 80px;
+    &__title {
+        font-size: 25px;
+        text-transform: uppercase;
+        text-align: center;
+        color: $--color-text-primary;
+        line-height: 25px;
+        background: #fff;
+        display: inline;
+        padding-left: 45px;
+        padding-right: 45px;
+        z-index: 2;
+
+    }
+    &__wrap {
+        position: relative;
+        hr {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            border-bottom-width: 0px;
+            border-color: #f8f8f8;
+        }
+    }
+    &__wrap-title {
+        display: flex;
+        justify-content: center;
+    }
+    &__row {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 50px;
+        @include media-breakpoint('xs') {
+            padding-top: 25px;
+        }
+        @include media-breakpoint('sm') {
+            padding-top: 25px;
+        }
+        .item {
+            position: relative;
+            margin: auto;
+            padding-top: 60px;
+            height: 220px;
+            @include media-breakpoint('xs') {
+                width: 370px;
+            }
+            &__wrap {
+                
+                height: 160px;
+                border-radius: 13px;
+            }
+            &__icon {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                position: absolute;
+                transform: translate(-50%, -50%);
+                left: 50%;
+                border: 8px solid #fff;
+                margin: auto;
+                &__img {
+                    position: relative;
+                    height: 100%;
+                    img {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+            }
+            &__content {
+                position: absolute;
+                top: 125px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 252px;
+                margin: auto;
+
+            }
+            &__title {
+                text-align: center;
+                font-size: 18px;
+                font-weight: bold;
+                color: #fff;
+                padding-bottom: 7px;
+            }
+            &__text {
+                text-align: center;
+                text-align: center;
+                font-size: 18px;
+                color: #fff;
+            }
+        }
+    }
+    .wrap-first {
+        background: #ff6200;
+    }
+    .wrap-second {
+        background: #8536ac;
+    }
+    .wrap-third {
+        background: #00a892;
+    }
+    .wrap-four {
+        background: #1e93de;
+    }
+}

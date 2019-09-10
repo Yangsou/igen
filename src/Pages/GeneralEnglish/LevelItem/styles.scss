@@ -1,0 +1,243 @@
+@import '../../../assets/scss/variable';
+@import '../../../assets/scss/breakpoints';
+
+.container {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.bg-row {
+    background-color: #f4f5f7;
+}
+
+.card-level {
+    background-color: #fff;
+    margin: auto;
+    margin-top: 6rem;
+    position: relative;
+    box-shadow: 0px 0px 20px 1px #efeded;
+    border-radius: 3px;
+    margin-bottom: 90px;
+}
+
+img.card-level-img {
+    width: 150px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -40%);
+}
+
+h1.card-level-title {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: $--color-text-primary;
+}
+
+.card-box {
+    padding-top: 135px;
+    position: relative;
+    height: 605px;
+    margin: auto;
+    color: $--color-text-primary;
+
+    @include media-breakpoint('xs') {
+        height: auto;
+
+    }
+
+    @include media-breakpoint('sm') {
+        height: 725px;
+
+    }
+}
+
+.card-level-description {
+    font-size: $--font-size-base;
+    line-height: 20px;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    width: 95%;
+    margin: auto;
+    min-height: 60px;
+}
+
+.card-level-description strong {
+    color: $--color-primary;
+}
+
+ul.card-level-list {
+    padding-top: 12px;
+    padding-bottom: 40px;
+    width: 95%;
+    list-style-type: none;
+    margin: auto;
+
+    li {
+        line-height: 24px;
+        margin-bottom: 16px;
+        font-size: 15px;
+        display: flex;
+        margin-left: 10px;
+
+        img {
+            align-items: flex-start;
+            margin-right: 10px;
+            width: 30px;
+            height: 28px;
+        }
+
+        .card-level-list-item {
+            align-items: flex-start
+        }
+    }
+}
+
+.card-level-list-item {
+    padding-left: 10px;
+}
+
+.pt-80 {
+    padding-top: 60px;
+
+    @include media-breakpoint('xs') {
+        padding-top: 40px;
+
+    }
+}
+
+.wrap-button {
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    .btn {
+        font-size: 13px;
+        height: 42px;
+        bottom: 40px;
+        width: 225px;
+        left: 50%;
+        padding-left: 25px;
+        transform: translateX(-50%);
+        white-space: nowrap;
+        @include media-breakpoint('lt-tb') {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+      }
+
+    @include media-breakpoint('xs') {
+        position: unset;
+    }
+}
+
+.box-same-certificate {
+    background: #138ea0;
+    height: 75px;
+    margin-bottom: 25px;
+
+    h5 {
+        text-align: center;
+        color: #fff;
+        padding: 20px 0px 10px 0px;
+        font-size: 13px;
+        font-weight: lighter;
+    }
+
+    p {
+        text-align: center;
+        color: #fff;
+        font-size: 15px;
+
+        span {
+            margin: 0px 10px;
+        }
+
+        @include media-breakpoint('sm') {
+            font-size: 10px;
+
+            span {
+                margin: 0px 5px;
+            }
+
+        }
+
+        @include media-breakpoint('xs') {
+            font-size: 10px;
+
+            span {
+                margin: 0px 4px;
+            }
+
+        }
+        @include media-breakpoint('md') {
+            font-size: 12px;
+
+            span {
+                margin: 0px 4px;
+            }
+
+        }
+        @include media-breakpoint('tb-land') {
+            font-size: 13px;
+
+            span {
+                margin: 0px 4px;
+            }
+        }
+    }
+}
+
+.card-box-certificate-b {
+    height: 720px;
+
+    h1 {
+        margin-bottom: 10px;
+    }
+
+    @include media-breakpoint('sm') {
+        height: 880px;
+
+    }
+
+
+    @include media-breakpoint('xs') {
+        height: auto;
+
+    }
+    @include media-breakpoint('tb-land') {
+        height: 750px;
+    }
+    @include media-breakpoint('md') {
+        height: 750px;
+    }
+}
+
+.card-box-certificate-c {
+    height: 825px;
+
+    h1 {
+        margin-bottom: 10px;
+    }
+
+    .box-same-certificate {
+        background: #e15c2b;
+    }
+
+    @include media-breakpoint('xs') {
+        height: auto;
+
+    }
+
+    @include media-breakpoint('sm') {
+        height: 985px;
+
+    }
+    @include media-breakpoint('tb-land') {
+        height: 850px;
+    }
+    @include media-breakpoint('md') {
+        height: 850px;
+    }
+    
+}

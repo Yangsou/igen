@@ -27,6 +27,7 @@ class App extends React.Component {
   componentWillUnmount() {
     window.removeEventListener('scroll', this.lazyLoad, false);
   }
+
   render() {
     var showRoutes = (routes) => {
       var result = '';
@@ -39,14 +40,14 @@ class App extends React.Component {
     }
     return (
         <Router className="App">
-        <Header />
-        
-          <Switch>
-          {showRoutes(routes)}
-        </Switch>
-        <Contact />
-  
-        <footer className="footer">&copy; Copyright 2019 i-Gen. All rights reserved.</footer>
+          <Header />
+          
+            <Switch>
+            {showRoutes(routes)}
+          </Switch>
+          <Contact />
+    
+          <footer className="footer">&copy; Copyright 2019 i-Gen. All rights reserved.</footer>
         </Router>
     );
   }
