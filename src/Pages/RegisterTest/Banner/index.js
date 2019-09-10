@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import generalImage from '../../../assets/img/register_exam_bg.png';
 import './styles.scss'
+
 class Banner extends Component {
+    componentDidMount(){
+        window.scroll(0, 0);
+    }
     render() {
         return (
             <section className="wrap-banner-register-exam">

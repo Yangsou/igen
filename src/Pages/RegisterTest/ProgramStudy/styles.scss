@@ -14,6 +14,9 @@
     @include media-breakpoint('lt-tb') {
       font-size: 40px;
     }
+    @include media-breakpoint('xs') {
+      margin-bottom: 20px;
+    }
   }
   &__row {
     display: flex;
