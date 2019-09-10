@@ -1,0 +1,127 @@
+@import '../../../assets/scss/variable';
+@import '../../../assets/scss/breakpoints';
+
+.container {
+    font-family: 'Nunito Sans', sans-serif;
+}
+.wrap-prepare-test {
+
+    .description-box {
+        text-align: center;
+        width: 75%;
+        margin: auto;
+
+        @include media-breakpoint('xs') {
+            width: 85%;
+        }
+    }
+    .description-step__row{
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .description-box h3 {
+        margin-top: 2.5rem;
+        font-size: 18px;
+        text-transform: uppercase;
+        color: $--color-secondary;
+
+        @include media-breakpoint('xs') {
+            font-size: 14px;
+            margin-top: 1rem;
+        }
+    }
+
+    .description-box h1 {
+        font-size: 45px;
+        text-transform: unset;
+        color: $--color-text-primary;
+
+        @include media-breakpoint('xs') {
+            font-size: 25px;
+        }
+    }
+
+    .description-box p {
+        margin-top: 1.5rem;
+        font-size: 16px;
+        color: $--color-text-primary;
+    }
+
+    .__row {
+        position: relative;
+    }
+
+    figure img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 91%;
+        max-width: 350px;
+        @include media-breakpoint('sm') {
+            width: 200px;
+        }
+
+    }
+
+    figcaption {
+        text-align: center;
+    }
+
+    .description-step {
+        padding-top: 95px;
+        padding-bottom: 80px;
+
+        @include media-breakpoint('xs') {
+            padding-top: 0px;
+        }
+        @include media-breakpoint('sm') {
+            padding-top: 50px;
+        }
+        .description-step-item {
+            figure {
+                .wrap-img {
+                    position: relative;
+                    height: 150px;
+                    margin-bottom: 30px;
+
+                    img {
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+
+                    @include media-breakpoint('xs') {
+                        height: 250px;
+                        margin-top: 20px;
+                        margin-bottom: 15px;
+                    }
+                    @include media-breakpoint('sm') {
+                        height: 160px;
+                        margin-top: 20px;
+                        margin-bottom: 15px;
+                    }
+                }
+
+                figcaption {
+                    font-size: 16px;
+                    font-weight: unset;
+                    width: 80%;
+                    margin: auto;
+                    @include media-breakpoint('xs') {
+                        margin-bottom: 15px;
+                    }
+                    a {
+                        color: $--color-primary;
+                    }
+                }
+            }
+            @include media-breakpoint('xs') {
+                padding-top: 10px;
+                width: 370px;
+                margin: auto;
+            }
+        }
+    }
+}

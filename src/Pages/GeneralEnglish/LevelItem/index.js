@@ -23,6 +23,9 @@ class LevelItem extends Component {
             img : imgA1
         }
     }
+    componentDidMount(){
+        window.scroll(0, 0);
+    }
     showModal = (img) => {
         this.setState({ 
             show: true,
