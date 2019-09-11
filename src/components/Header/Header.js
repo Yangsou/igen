@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../../assets/img/Logo.png';
 import './header.scss';
+import { Link } from "react-router-dom";
 import { doScrolling } from '../../helpers/functional';
 
 class Header extends React.Component {
@@ -77,7 +78,9 @@ class Header extends React.Component {
   componentWillUnmount() {
     window.removeEventListener('scroll', this.activeHeaderWhenScroll, false);
   }
-
+  scrollToTop = () => {
+    window.scroll(0, 0);
+  }
   toggleMenuItemActive = () => {
     const menus = this.state.menus.map((e) => {
       const element = document.getElementById(e.id),
@@ -115,10 +118,12 @@ class Header extends React.Component {
                 ))
               }
               <li className="header__menu__item">
-                <button onClick={this.clickPrimaryButton} className="btn btn--radius btn--primary btn--uppercase">
-                  <span className="icon icon__test"></span>
-                  <span className="btn__label">Đăng ký thi thử</span>
-                </button>
+                <Link to="/dang-ky-thi-thu">
+                  <button onClick={() => this.scrollToTop()}  className="btn btn--radius btn--primary btn--uppercase">
+                    <span className="icon icon__test"></span>
+                    <span className="btn__label">Đăng ký thi thử</span>
+                  </button>
+                </Link>
               </li>
             </ul>
 
