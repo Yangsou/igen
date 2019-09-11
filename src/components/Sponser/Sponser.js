@@ -23,7 +23,7 @@ export default class Sponser extends React.Component {
             <div className="sponser__item__content">
               <div className="sponser__item__logo">
                 <img src={uel} alt="Trường Đại học Kinh tế - Luật (ĐHQG-HCM)" />
-                <p className="text">Trường Đại học Kinh tế - Luật (ĐHQG-HCM)</p>
+                <p className="text">Trường Đại học<br />Kinh tế - Luật (ĐHQG-HCM)</p>
               </div>
               <div className="sponser__item__logo">
                 <img src={vsn} alt="Công ty cổ phần Công nghệ giáo dục VSN" />
@@ -37,7 +37,7 @@ export default class Sponser extends React.Component {
             <div className="sponser__item__content">
               <div className="sponser__item__logo">
                 <img src={itp} alt="itp-logo" />
-                <p className="text">Khu Công nghệ Phần mềm ĐHQG-HCM (ITP) </p>
+                <p className="text">Khu Công nghệ<br />Phần mềm ĐHQG-HCM (ITP) </p>
               </div>
               <div className="sponser__item__logo">
                 <img src={htcItc} alt="htcItc" />

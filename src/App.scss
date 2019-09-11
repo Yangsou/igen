@@ -3,6 +3,7 @@
 @import './assets//scss//breakpoints';
 
 @import url('https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap');
+@import './assets/scss/global';
 
 * {
   margin: 0;
@@ -149,8 +150,19 @@ $--list-icon: (
     width: 21px;
     height: 14px;
   }
+  &__arrow-right {
+    background-image: url('./assets/img/arrow-right.svg');
+    width: 21px;
+    height: 14px;
+  }
+  &__eye {
+    background-image: url('./assets/img/eye.svg');
+    width: 21px;
+    height: 14px;
+  }
 }
 
 .relative {
   position: relative;
 }
+
