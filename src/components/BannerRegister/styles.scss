@@ -1,5 +1,5 @@
-@import '../../../assets/scss/variable';
-@import '../../../assets/scss/breakpoints';
+@import '../../assets/scss/variable';
+@import '../../assets/scss/breakpoints';
 
 .sponser-ielts {
     position: relative;
@@ -89,7 +89,7 @@
     overflow: hidden;
 
     background: {
-        image: url('../../../assets/img/register_exam_bg_container.png');
+        image: url('../../assets/img/register_exam_bg_container.png');
         size: cover;
     }
 
@@ -166,4 +166,7 @@
         max-width: 380px;
         object-fit: cover;
     }
+}
+.b-t-0 {
+    padding-top: 0px;
 }
