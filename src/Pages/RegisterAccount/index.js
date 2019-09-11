@@ -167,15 +167,15 @@ class RegisterAccount extends Component {
 
                       <div className="form__item">
                         <p className="form__item__label">Trường học</p>
-                        <Selection value={form.university} options={universities} onChange={this.changeUniversity} />
+                        <Selection size="medium" value={form.university} options={universities} onChange={this.changeUniversity} />
                       </div>
                       <div className="form__item">
                         <p className="form__item__label">Khoa/ Chuyên ngành</p>
-                        <Selection value={form.department} options={departments} onChange={(value) => this.handleChangeForm(value, 'department')} />
+                        <Selection size="medium" value={form.department} options={departments} onChange={(value) => this.handleChangeForm(value, 'department')} />
                       </div>
                       <div className="form__item">
                         <p className="form__item__label">Tỉnh thành <span className="form__required-char">*</span></p>
-                        <Selection value={form.city} options={cities} onChange={(value) => this.handleChangeForm(value, 'city')} />
+                        <Selection size="medium" value={form.city} options={cities} onChange={(value) => this.handleChangeForm(value, 'city')} />
                       </div>
 
                       <div className="form__item">

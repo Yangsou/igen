@@ -17,12 +17,16 @@
     &__arrow {
       position: absolute;
       right: 16px;
-      top: 12px;
+      top: calc(50% - 6px);
       width: 6px;
       height: 11px;
       transform: rotate(90deg);
       transform-origin: center;
       transition: 450ms all ease-in-out;
+    }
+    &.medium {
+      height: 48px;
+      line-height: 48px;
     }
     &--show {
       border-radius: 4px 4px 0 0;

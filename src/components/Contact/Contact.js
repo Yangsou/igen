@@ -24,8 +24,8 @@ export default function Contact() {
               <p className="text text--large"><span className="bold">1900.2104</span></p>
             </div>
             <div className="contact__item__content">
-              <img className="img img--email" src={emailIcon} alt="i-Gen@vsn.edu.vn" />
-              <p className="text"><span className="bold">i-Gen@vsn.edu.vn</span></p>
+              <img className="img img--email" src={emailIcon} alt="igen@vsn.edu.vn" />
+              <p className="text"><span className="bold">igen@vsn.edu.vn</span></p>
             </div>
             <div className="contact__item__content">
               <a href="https://www.facebook.com/igen.vietnam" target="blank">
