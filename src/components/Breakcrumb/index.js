@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-// import './styles.scss';
+import './styles.scss';
 class Breadcrumb extends Component {
     render() {
       const { data } = this.props;

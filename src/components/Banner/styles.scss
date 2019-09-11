@@ -1,7 +1,7 @@
 @import '../../assets/scss/variable';
 @import '../../assets/scss/breakpoints';
 
-.wrap-banner-register-exam {
+.wrap-banner-box {
     overflow: hidden;
     .home {
         position: relative;
@@ -113,8 +113,77 @@
     }
 }
 
-.wrap-banner-img-register-exam {
+.wrap-banner-img {
     height: 100%;
+    .wrap-img {
+        position: relative;
+        height: 100%;
+        .banner-img {
+            width: 430px;
+            position: absolute;
+            bottom: 0px;
+            right: 7%;
+            @include media-breakpoint('sm') {
+                width: 250px;
+                right: 10%;
+            }
+            @include media-breakpoint('xs') {
+                width: 150px;
+                right: 10%;
+            }
+            @include media-breakpoint('md') {
+                width: 290px;
+                right: 10%
+            }
+        }
+    }
+    .wrap-img-ielts {
+        position: relative;
+        height: 100%;
+        .banner-img {
+            width: 315px;
+            position: absolute;
+            bottom: 0px;
+            right: 10%;
+            @include media-breakpoint('sm') {
+                width: 210px;
+                right: 10%;
+            }
+            @include media-breakpoint('xs') {
+                width: 125px;
+                right: 10%;
+            }
+            @include media-breakpoint('md') {
+                width: 240px;
+                right: 10%
+            }
+        }
+    }
+    .wrap-img-toiec {
+        position: relative;
+        height: 100%;
+        .banner-img {
+            width: 360px;
+            position: absolute;
+            bottom: -45px;
+            right: 10%;
+            @include media-breakpoint('sm') {
+                width: 250px;
+                bottom: -30px;
+                right: 10%;
+            }
+            @include media-breakpoint('xs') {
+                width: 150px;
+                bottom: -18px;
+                right: 10%;
+            }
+            @include media-breakpoint('md') {
+                width: 280px;
+                bottom: -30px;
+                right: 10%
+            }
+        }
+    }
     .wrap-img-register-exam {
         position: relative;
         height: 100%;
@@ -140,8 +209,6 @@
                 bottom: 15px;
                 right: 10%
             }
-        
-        
         }
     }
 }
@@ -166,11 +233,11 @@
 
     @include media-breakpoint('xs') {
         font-size: 33px;
-
+        text-align: center;
     }
 
     @include media-breakpoint('sm') {
         font-size: 30px;
-
+        text-align: center;
     }
 }
