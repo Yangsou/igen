@@ -1,0 +1,71 @@
+@import '../../assets//scss/variable';
+
+.ig-select {
+  position: relative;
+  &__selected {
+    height: 36px;
+    line-height: 36px;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    border-radius: 4px;
+    border: 1px solid rgba(0,0,0, .2);
+    padding: {
+      left: 8px;
+      right: 8px;
+    }
+    &--show {
+      border-radius: 4px 4px 0 0;
+    }
+  }
+  &__menu {
+    list-style: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transform: translateY(100%);
+    background-color: #ffffff;
+    display: none;
+    border-radius: 0 0 4px 4px;
+    border: 1px solid rgba(0,0,0, .2);
+    border-top-color: transparent;
+    box-shadow: 0 0 2px rgba(0,0,0, .1);
+    z-index: 1;
+    &--show {
+      display: block;
+    }
+  }
+  &__item {
+    cursor: pointer;
+    padding: {
+      left: 8px;
+      right: 8px;
+    }
+    height: 30px;
+    line-height: 30px;
+    font-size: $--font-size-base;
+    border-top: 1px solid transparent;
+    &:last-child {
+      border-radius: 0 0 4px 4px;
+    }
+    &:hover {
+      background-color: #f5f7fa
+    }
+    &--active {
+      color: $--color-primary;
+      font-weight: bold;
+    }
+    &--empty {
+      cursor: default;
+      color: rgba($--color-text-primary, .6);
+      text-align: center;
+      &:hover {
+        background-color: transparent;
+      }
+    }
+    + .ig-select__item {
+      border-top-color: rgba(#dcdcdcdc, .4);
+    }
+  }
+}

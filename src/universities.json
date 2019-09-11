@@ -1,0 +1,41 @@
+[
+  {
+    "name": "Đại học Công nghệ (ĐHQG Hà Nội)",
+    "departments": [
+      "Khoa Công nghệ thông tin",
+      "Khoa Điện tử Viễn thông",
+      "Khoa Vật lý  kỹ thuật & Công nghệ Nano",
+      "Khoa Cơ học kỹ thụât & Tự động hoá",
+      "Viện Công nghệ Hàng không Vũ trụ"
+    ]   
+  },
+  {
+    "name": "Đại Học Kiểm Sát Hà Nội",
+    "departments": [
+      "Khoa Lý luận chính trị",
+      "Khoa Nhà nước và pháp luật",
+      "Khoa pháp luật hình sự và kiểm sát hình sự",
+      "Khoa pháp luật dân sự và kiểm sát dân sự",
+      "Khoa Tội phạm học và điều tra tội phạm",
+      "Khoa Pháp luật quốc tế",
+      "Khoa Đào tạo, bồi dưỡng cán bộ kiểm sát"
+    ]
+  },
+  {
+    "name": "ĐH Khoa học Tự nhiên (ĐHQG Hà Nội)",
+    "departments": [
+      "Khoa Toán - Cơ - Tin học",
+      "Khoa Vật lý",
+      "Khoa Hóa học",
+      "Khoa Sinh học",
+      "Khoa Địa lý",
+      "Khoa Địa chất",
+      "Khoa Môi trường",
+      "Khoa Khí tượng Thủy văn và Hải dương học"
+    ]
+  },
+  {
+    "name": "Khoa Quốc tế (ĐHQG Hà Nội)",
+    "departments": []
+  }
+]

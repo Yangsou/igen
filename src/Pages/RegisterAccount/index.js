@@ -4,6 +4,10 @@ import Banner from '../../components/Banner';
 import registerAccountImage from '../../assets/img/register-account.svg';
 import './styles.scss';
 import Breadcrumb from '../../components/Breakcrumb';
+import universities from '../../universities.json';
+import Selection from "../../components/Selection";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 class RegisterAccount extends Component {
   constructor(props) {
@@ -15,11 +19,69 @@ class RegisterAccount extends Component {
       }, {
         label: 'Đăng ký tài khoản',
         active: true
-      }]
+      }],
+      universities: universities.map((e) => {
+        return {
+          ...e,
+          value: e.name
+        }
+      }),
+      departments: [],
+      cities: [],
+      form: {
+        university: null,
+        department: null,
+        city: null,
+        birthDay: null
+      }
     }
   }
+  changeUniversity = (value) => {
+    let { form, universities } = this.state;
+    form = {
+      ...form,
+      university: value,
+      department: null
+    }
+    const university = universities.find((e) => e.value === value);
+    const departments = university.departments.map((department) => {
+      return {
+        value: department,
+        name: department
+      }
+    });
+
+    this.setState({form, departments});
+  }
+  // changeDepartment = (value) => {
+  //   let { form } = this.state;
+  //   form = {
+  //     ...form,
+  //     department: value
+  //   }
+
+  //   this.setState({form});
+  // }
+  // changeCity = (value) => {
+  //   let { form } = this.state;
+  //   form = {
+  //     ...form,
+  //     city: value
+  //   }
+
+  //   this.state({form})
+  // }
+  handleChangeForm = (value, key) => {
+    let { form } = this.state;
+    form = {
+      ...form,
+      [key]: value
+    }
+
+    this.setState({form});
+  }
   render() {
-    const { breakcrumb } = this.state;
+    const { breakcrumb, universities, departments, cities, form } = this.state;
       return (
           <Fragment>
               <Banner title="Đăng ký tài khoản" img={registerAccountImage} imgClassName="banner__img" />
@@ -48,7 +110,12 @@ class RegisterAccount extends Component {
 
                       <div className="row">
                         <div className="form__item col-xs-6">
-                          day picker
+                          <p className="form__item__label">Ngày sinh <span className="form__required-char">*</span></p>
+                          <DatePicker
+                            selected={form.birthDay}
+                            dateFormat="dd/MM/yyyy"
+                            onChange={(value) => this.handleChangeForm(value, 'birthDay')}
+                          />
                         </div>
                         <div className="form__item col-xs-6">
                           <p className="form__item__label">Giới tính <span className="form__required-char">*</span></p>
@@ -94,57 +161,24 @@ class RegisterAccount extends Component {
 
                       <div className="form__item">
                         <p className="form__item__label">Trường học</p>
-                        <div className="form__select">
-                          <select>
-                            <option value="1">Audi</option>
-                            <option value="2">BMW</option>
-                            <option value="3">Citroen</option>
-                            <option value="4">Ford</option>
-                            <option value="5">Honda</option>
-                            <option value="6">Jaguar</option>
-                            <option value="7">Land Rover</option>
-                            <option value="8">Mercedes</option>
-                          </select>
-                        </div>
+                        <Selection value={form.university} options={universities} onChange={this.changeUniversity} />
                       </div>
                       <div className="form__item">
                         <p className="form__item__label">Khoa/ Chuyên ngành</p>
-                        <div className="form__select">
-                          <select>
-                            <option value="1">Audi</option>
-                            <option value="2">BMW</option>
-                            <option value="3">Citroen</option>
-                            <option value="4">Ford</option>
-                            <option value="5">Honda</option>
-                            <option value="6">Jaguar</option>
-                            <option value="7">Land Rover</option>
-                            <option value="8">Mercedes</option>
-                          </select>
-                        </div>
+                        <Selection value={form.department} options={departments} onChange={(value) => this.handleChangeForm(value, 'department')} />
                       </div>
                       <div className="form__item">
                         <p className="form__item__label">Tỉnh thành <span className="form__required-char">*</span></p>
-                        <div className="form__select">
-                          <select>
-                            <option value="1">Audi</option>
-                            <option value="2">BMW</option>
-                            <option value="3">Citroen</option>
-                            <option value="4">Ford</option>
-                            <option value="5">Honda</option>
-                            <option value="6">Jaguar</option>
-                            <option value="7">Land Rover</option>
-                            <option value="8">Mercedes</option>
-                          </select>
-                        </div>
+                        <Selection value={form.city} options={cities} onChange={(value) => this.handleChangeForm(value, 'city')} />
                       </div>
 
                       <div className="form__item">
-                        <p className="form__item__label">Nghề nghiệp hiện tại <span className="form__requied-char">*</span></p>
+                        <p className="form__item__label">Nghề nghiệp hiện tại <span className="form__required-char">*</span></p>
                         <input type="text" className="form__input" />
                       </div>
 
                       <div className="form__item">
-                        <p className="form__item__label">Link facebook của bạn (Dùng để vào group của lớp học tập tương ứng) <span className="form__requied-char">*</span></p>
+                        <p className="form__item__label">Link facebook của bạn (Dùng để vào group của lớp học tập tương ứng) <span className="form__required-char">*</span></p>
                         <input type="text" className="form__input" />
                       </div>
 
