@@ -7,18 +7,18 @@ class Banner extends Component {
   //   super(props);
   // }
   render() {
-    const { img, title, imgClassName } = this.props;
+    const { img, title, imgClassName, alt } = this.props;
       return (
-          <section className="wrap-banner-register-exam">
+          <section className="wrap-banner-box">
               <div className="home lazy-load">
                   <div className="home__content container">
                       <div className="row">
-                          <div className="col-sm-6 ">
+                          <div className="col-sm-7 ">
                               <h1 className="wrap-banner-title banner__title">{ title }</h1>
                           </div>
-                          <div className="col-sm-6 wrap-banner-img-register-exam">
-                              <div className="wrap-img-register-exam">
-                                  <img className={`banner-img ${imgClassName}`} src={img} alt="Tiếng Anh tổng quát" />
+                          <div className="col-sm-5 wrap-banner-img">
+                              <div className={imgClassName}>
+                                  <img className="banner-img" src={img} alt={alt} />
                               </div>
                           </div>
                       </div>

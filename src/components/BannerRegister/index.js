@@ -1,17 +1,36 @@
 import React from 'react';
 import {  Link } from "react-router-dom";
-import registerImg from '../../../assets/img/register_exam_bg.png';
+import registerImg from '../../assets/img/register_exam_bg.png';
 
 import './styles.scss';
 export default class Sponser extends React.Component {
-  clickTry = () => {
-    window.location.href = 'https://igen.vsn.edu.vn/dang-ky-thi-thu'
+  // clickTry = () => {
+  //   window.location.href = 'https://igen.vsn.edu.vn/dang-ky-thi-thu'
+  // }
+  constructor(props){
+    super(props);
+    this.state = {
+      noPadding : '',
+    }
   }
-
+  componentDidMount(){
+    const currentLocation = window.location.href;
+    const str = 'tieng-anh-tong-quat'
+    console.log(currentLocation.search(str))
+    if(currentLocation.search(str)>0) {
+      this.setState({ 
+        noPadding : 'b-t-0'
+       });
+    } else {
+      this.setState({ 
+        noPadding : ''
+       });
+    }
+  }
   render() {
 
     return (
-      <section className="sponser-1 lazy-load">
+      <section className={`sponser-ielts lazy-load ${this.state.noPadding}`}>
         <div className="container">
           <div className="register-exam-1">
             <div className="col-md-7">

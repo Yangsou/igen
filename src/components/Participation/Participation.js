@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import bgOne from '../../assets/img/ky-quy.png';
 import bgBook from '../../assets/img/book.png';
 import bgAvatar from '../../assets/img/avatar-bg.png';
@@ -7,9 +7,29 @@ import bgHomework from '../../assets/img/home-work.png';
 import bgexam from '../../assets/img/exam.png';
 import './Participation.scss';
 
-export default function Participation() {
+class Participation extends Component{
+  render() {
+  const { backgroundWhite, price1, price2 } = this.props;
+  var setBackground = (backgroundWhite) => {
+    return backgroundWhite?'background-white':'';
+  }
+  var extendText1 = (price1) => {
+    if(price1) {
+      return <span>
+        <br/>Số tiền ký quỹ: <strong>{price1} VNĐ.</strong>  
+      </span>
+    } else return ''
+  }
+  var extendText2 = (price2) => {
+    if(price1) {
+      return <span>
+         - Sách: <strong>{price2} VNĐ </strong>
+                  <br/>(Bao gồm phí vận chuyển & không hoàn lại)  
+      </span>
+    } else return ''
+  }
   return (
-    <section className="participation lazy-load" id="rules">
+    <section className={`participation lazy-load ${setBackground(backgroundWhite)} ${price1?'p-b-0':''} `} id="rules">
       <div className="container">
         <p className="participation__title">Thể lệ tham gia</p>
 
@@ -17,13 +37,19 @@ export default function Participation() {
           <div className="item col-sm-6 col-md-4">
             <img src={bgOne} className="item__img" alt="Ký quỹ" />
             <p className="item__title">Ký quỹ</p>
-            <p className="item__text">Phần ký quỹ nhằm thể hiện sự cam kết tham gia chương trình học. Sinh viên được hoàn lại 100% số tiền ký quỹ sau khi đáp ứng Thể lệ tham gia </p>
+            <p className="item__text">
+              Phần ký quỹ nhằm thể hiện sự cam kết tham gia chương trình học. Sinh viên được hoàn lại 100% số tiền ký quỹ sau khi đáp ứng Thể lệ tham gia 
+              {extendText1(price1)}
+             </p>
             <a href="https://qhdn.uel.edu.vn/tin-tuc/thuc-hien-ky-quy-hoc-tap-cung-du-an-i-gen" target="_blank" className="btn btn--outline" rel="noopener noreferrer">Xem thêm <span className="icon icon__arrow"></span></a>
           </div>
           <div className="item col-sm-6 col-md-4">
             <img src={bgBook} className="item__img" alt="Mua sách bản quyền" />
             <p className="item__title">Mua sách bản quyền</p>
-            <p className="item__text">Sinh viên sẽ được nhận sách trực tiếp từ NXB, i-Gen không thu bất kỳ lợi nhuận nào từ việc mua sách bản quyền</p>
+            <p className="item__text">
+                Sinh viên sẽ được nhận sách trực tiếp từ NXB, i-Gen không thu bất kỳ lợi nhuận nào từ việc mua sách bản quyền
+                {extendText2(price2)}
+            </p>
             <a href="https://qhdn.uel.edu.vn/tin-tuc/tong-hop-bo-giao-trinh-giang-day-do-nxb-pearson-cung-cap" target="_blank" className="btn btn--outline" rel="noopener noreferrer">Xem sách <span className="icon icon__arrow"></span></a>
           </div>
           <div className="item col-sm-6 col-md-4">
@@ -54,3 +80,5 @@ export default function Participation() {
     </section>
   )
 }
+}
+export default Participation;
