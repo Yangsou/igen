@@ -39,6 +39,12 @@
       }
     }
   }
+  .item__wrapper__img {
+    min-height: 71px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
 }
 .background-white {
   background: #FFF;
