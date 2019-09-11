@@ -11,22 +11,15 @@ class HomePage extends Component {
         return (
             <Fragment>
                 <Home />
-  
                 <AboutUs />
-
                 <ProgramStudy />
-
                 <MethodStudy />
-
                 <Participation />
-
                 <Sponser />
-            </Fragment>
-            
+            </Fragment>   
         );
     }
 }
-
 export default HomePage;
 
 

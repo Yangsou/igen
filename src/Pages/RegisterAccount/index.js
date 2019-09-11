@@ -84,7 +84,7 @@ class RegisterAccount extends Component {
     const { breakcrumb, universities, departments, cities, form } = this.state;
       return (
           <Fragment>
-              <Banner title="Đăng ký tài khoản" img={registerAccountImage} imgClassName="banner__img" />
+              <Banner title="Đăng ký tài khoản" img={registerAccountImage} imgClassName="wrap-img-toiec" />
             <div className="acc-register">
               <Breadcrumb data={breakcrumb}/>
             </div>
