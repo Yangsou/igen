@@ -4,6 +4,7 @@ import HomePage from './Pages/Home'
 import PracticeToiec from './Pages/PracticeToeic'
 import PracticeIELTS from './Pages/PracticeIELTS'
 import RegisterTest from './Pages/RegisterTest'
+import RegisterAccount from './Pages/RegisterAccount'
 const routes = [
     {
         path : '/',
@@ -29,6 +30,11 @@ const routes = [
         path : '/dang-ky-thi-thu',
         exact : false,
         main : () => <RegisterTest />
+    },
+    {
+        path: '/dang-ky-tai-khoan',
+        exact: false,
+        main: () => <RegisterAccount />
     }
 ]
 

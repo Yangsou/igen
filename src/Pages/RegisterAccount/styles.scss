@@ -1,0 +1,134 @@
+@import '../../assets/scss/variable';
+
+.banner {
+  &__img {
+    &.banner-img {
+      right: -60px !important;
+      bottom: -28px !important;
+      height: 100%;
+    }
+  }
+}
+
+.acc-register {
+  background: #f5f5f5;
+  .breadcrumb {
+    margin-bottom: 0;
+  }
+  &--padding {
+    padding-bottom: 70px;
+    padding-top: 30px;
+  }
+  &__wrap {
+    padding: 30px 0;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);    
+  }
+  &__title {
+    font-size: 45px;
+    text-align: center;
+  }
+  &__form {
+    width: 790px;
+    margin: 24px auto 0;
+  }
+}
+
+.form {
+  &__required-char {
+    color: #ff1111;
+  }
+  &__item {
+    margin-top: 30px;
+    &__label {
+      font-size: $--font-size-base;
+      margin-bottom: 8px;
+      a {
+        color: $--color-primary;
+      }
+    }
+    &__radio {
+      display: inline-block;
+      position: relative;
+      padding-left: 24px;
+      + .form__item__radio {
+        margin-left: 100px;
+      }
+      label {
+        cursor: pointer;
+      }
+      input[type="radio"] {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+      }
+    }
+  }
+  &__input {
+    border-width: 1px;
+    border-color: rgb(183, 183, 183);
+    border-style: solid;
+    border-radius: 3px;
+    background-color: rgb(255, 255, 255);
+    height: 48px;
+    width: 100%;
+    padding: {
+      left: 8px;
+      right: 8px;
+    }
+  }
+
+  &__footer {
+    text-align: center;
+    margin-top: 40px;
+    .btn {
+      width: 500px;
+      margin-bottom: 40px;
+    }
+    .form__item__label {
+      a {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+
+input[type="radio"] {
+  // background-color: #ddd;
+  // background-image: -webkit-linear-gradient(0deg, transparent 20%, hsla(0,0%,100%,.7), transparent 80%),
+  //                   -webkit-linear-gradient(90deg, transparent 20%, hsla(0,0%,100%,.7), transparent 80%);
+  border-radius: 10px;
+  box-shadow: inset 0 1px 1px hsla(0,0%,100%,.8),
+              0 0 0 1px hsla(0,0%,0%,.6);
+  cursor: pointer;
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  // margin-right: 16px;
+  position: relative;
+  -webkit-appearance: none;
+
+  &:after {
+    background-color: #444;
+    border-radius: 25px;
+    content: '';
+    display: none;
+    height: 8px;
+    left: 4px;
+    position: relative;
+    top: 4px;
+    width: 8px;
+  }
+
+  &:checked {
+    box-shadow: inset 0 1px 1px hsla(0,0%,100%,.8),
+              0 0 0 1px rgba($--color-primary, .8);
+    &:after {
+      display: block;
+      background-color: $--color-primary;;
+    }
+  }
+}
