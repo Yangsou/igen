@@ -28,6 +28,7 @@ class RegisterAccount extends Component {
       }),
       departments: [],
       cities: [],
+      showPassword: false,
       form: {
         university: null,
         department: null,
@@ -80,8 +81,12 @@ class RegisterAccount extends Component {
 
     this.setState({form});
   }
+
+  toggleShowPassword = () => {
+    this.setState({showPassword: !this.state.showPassword});
+  }
   render() {
-    const { breakcrumb, universities, departments, cities, form } = this.state;
+    const { breakcrumb, universities, departments, cities, form, showPassword } = this.state;
       return (
           <Fragment>
               <Banner title="Đăng ký tài khoản" img={registerAccountImage} imgClassName="wrap-img-toiec" />
@@ -99,9 +104,10 @@ class RegisterAccount extends Component {
                         <p className="form__item__label">Tên đăng nhập <span className="form__required-char">*</span></p>
                         <input type="text" className="form__input" />
                       </div>
-                      <div className="form__item">
+                      <div className="form__item form__item--password">
                         <p className="form__item__label">Mật khẩu <span className="form__required-char">*</span></p>
-                        <input autoComplete="none" type="password" className="form__input" />
+                        <input autoComplete="none" type={`${showPassword ? 'text' : 'password'}`} className="form__input" />
+                        <span onClick={() => this.toggleShowPassword()} className="icon icon__eye form__item__toggle-password"></span>
                       </div>
                       <div className="form__item">
                         <p className="form__item__label">Họ tên <span className="form__required-char">*</span></p>
@@ -117,7 +123,7 @@ class RegisterAccount extends Component {
                             onChange={(value) => this.handleChangeForm(value, 'birthDay')}
                           />
                         </div>
-                        <div className="form__item col-xs-6">
+                        <div className="form__item acc-register__form__item-gender col-xs-6">
                           <p className="form__item__label">Giới tính <span className="form__required-char">*</span></p>
                           <div className="form__item__radio">
                             <input type="radio" name="gender" id="male" value="male" />
@@ -183,7 +189,7 @@ class RegisterAccount extends Component {
                       </div>
 
                       <div className="form__footer">
-                        <button className="btn btn--gradient btn--radius">Gửi Đi<span className="icon icon__send"></span></button>
+                        <button type="button" className="btn btn--gradient btn--radius">Gửi Đi<span className="icon icon__send"></span></button>
                         <div className="form__item__label">Bạn đã có tài khoản? <Link to="#">Đăng nhập</Link></div>
                       </div>
                     </div>

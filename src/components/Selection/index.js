@@ -55,7 +55,7 @@ class Selection extends Component {
     return (
       <Fragment>
         <div className="ig-select" ref="ig-select">
-          <div className={`ig-select__selected ${isFocusing ? 'ig-select__selected--show' : ''}`} onClick={() => this.toogle()}>{ this.formaterText() }</div>
+          <div className={`ig-select__selected ${isFocusing ? 'ig-select__selected--show' : ''}`} onClick={() => this.toogle()}>{ this.formaterText() }<span className="icon icon__arrow-right ig-select__selected__arrow"></span></div>
           <ul className={`ig-select__menu ${isFocusing ? 'ig-select__menu--show' : ''}`}>
 
             {
