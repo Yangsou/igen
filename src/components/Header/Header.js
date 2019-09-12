@@ -118,7 +118,7 @@ class Header extends React.Component {
                 ))
               }
               <li className="header__menu__item">
-                <Link to="/dang-ky-thi-thu">
+                <Link to="/dang-ky-thi-thu" onClick={this.toggleMenu}>
                   <button onClick={() => this.scrollToTop()}  className="btn btn--radius btn--primary btn--uppercase">
                     <span className="icon icon__test"></span>
                     <span className="btn__label">Đăng ký thi thử</span>
