@@ -38,6 +38,7 @@ class RegisterAccount extends Component {
       showPassword: false,
       form: {
         // userName: '',
+        courseId: 'toiec',
         email: '',
         password: '',
         fullName: '',
