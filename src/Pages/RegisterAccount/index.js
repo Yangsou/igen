@@ -40,7 +40,7 @@ class RegisterAccount extends Component {
         userName: '',
         password: '',
         fullName: '',
-        male: '',
+        gender: '',
         phone: '',
         jobType: '',
         currentJob: '',
@@ -123,8 +123,13 @@ class RegisterAccount extends Component {
                       </div>
                       <div className="form__item form__item--password">
                         <p className="form__item__label">Mật khẩu <span className="form__required-char">*</span></p>
-                        <input autoComplete="none" type={`${showPassword ? 'text' : 'password'}`} className="form__input" />
-                        <span value={form.password} onChange={(e) => this.handleChangeForm(e.target.value, 'password') } onClick={() => this.toggleShowPassword()} className="icon icon__eye form__item__toggle-password"></span>
+                        <input
+                          autoComplete="none"
+                          type={`${showPassword ? 'text' : 'password'}`}
+                          className="form__input"
+                          value={form.password}
+                          onChange={(e) => this.handleChangeForm(e.target.value, 'password') }/>
+                        <span onClick={() => this.toggleShowPassword()} className="icon icon__eye form__item__toggle-password"></span>
                       </div>
                       <div className="form__item">
                         <p className="form__item__label">Họ tên <span className="form__required-char">*</span></p>
