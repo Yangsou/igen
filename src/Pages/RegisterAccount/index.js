@@ -37,7 +37,8 @@ class RegisterAccount extends Component {
       }),
       showPassword: false,
       form: {
-        userName: '',
+        // userName: '',
+        email: '',
         password: '',
         fullName: '',
         gender: '',
@@ -117,9 +118,13 @@ class RegisterAccount extends Component {
                     <p className="acc-register__title">Đăng ký thông tin của bạn</p>
 
                     <div className="form acc-register__form">
-                      <div className="form__item">
+                      {/* <div className="form__item">
                         <p className="form__item__label">Tên đăng nhập <span className="form__required-char">*</span></p>
                         <input type="text" value={form.userName} onChange={(e) => this.handleChangeForm(e.target.value, 'userName') } className="form__input" />
+                      </div> */}
+                      <div className="form__item">
+                        <p className="form__item__label">Họ tên <span className="form__required-char">*</span></p>
+                        <input value={form.fullName} onChange={(e) => this.handleChangeForm(e.target.value, 'fullName') } type="text" className="form__input" />
                       </div>
                       <div className="form__item form__item--password">
                         <p className="form__item__label">Mật khẩu <span className="form__required-char">*</span></p>
@@ -130,10 +135,6 @@ class RegisterAccount extends Component {
                           value={form.password}
                           onChange={(e) => this.handleChangeForm(e.target.value, 'password') }/>
                         <span onClick={() => this.toggleShowPassword()} className="icon icon__eye form__item__toggle-password"></span>
-                      </div>
-                      <div className="form__item">
-                        <p className="form__item__label">Họ tên <span className="form__required-char">*</span></p>
-                        <input value={form.fullName} onChange={(e) => this.handleChangeForm(e.target.value, 'fullName') } type="text" className="form__input" />
                       </div>
 
                       <div className="row">
