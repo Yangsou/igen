@@ -5,9 +5,11 @@ import registerAccountImage from '../../assets/img/register-account.svg';
 import './styles.scss';
 import Breadcrumb from '../../components/Breakcrumb';
 import universities from '../../universities.json';
+import cities from '../../cities.json';
 import Selection from "../../components/Selection";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import Axios from "axios";
 
 class RegisterAccount extends Component {
   constructor(props) {
@@ -27,9 +29,22 @@ class RegisterAccount extends Component {
         }
       }),
       departments: [],
-      cities: [],
+      cities: cities.map((e) => {
+        return {
+          ...e,
+          value: e.name
+        }
+      }),
       showPassword: false,
       form: {
+        userName: '',
+        password: '',
+        fullName: '',
+        male: '',
+        phone: '',
+        jobType: '',
+        currentJob: '',
+        fbLink: '',
         university: null,
         department: null,
         city: null,
@@ -54,24 +69,6 @@ class RegisterAccount extends Component {
 
     this.setState({form, departments});
   }
-  // changeDepartment = (value) => {
-  //   let { form } = this.state;
-  //   form = {
-  //     ...form,
-  //     department: value
-  //   }
-
-  //   this.setState({form});
-  // }
-  // changeCity = (value) => {
-  //   let { form } = this.state;
-  //   form = {
-  //     ...form,
-  //     city: value
-  //   }
-
-  //   this.state({form})
-  // }
   handleChangeForm = (value, key) => {
     let { form } = this.state;
     form = {
@@ -84,6 +81,26 @@ class RegisterAccount extends Component {
 
   toggleShowPassword = () => {
     this.setState({showPassword: !this.state.showPassword});
+  }
+
+  submit = () => {
+    const { form } = this.state;
+    console.log('form', form);
+
+    return Axios({
+      method: 'post',
+      data: form,
+      url: 'https://vsn.edu.vn/api/registry-igen',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+    .then(() => {
+      console.log('successfully!');
+    })
+    .catch((error) => {
+        console.log(error);
+    });
   }
   render() {
     const { breakcrumb, universities, departments, cities, form, showPassword } = this.state;
@@ -102,16 +119,16 @@ class RegisterAccount extends Component {
                     <div className="form acc-register__form">
                       <div className="form__item">
                         <p className="form__item__label">Tên đăng nhập <span className="form__required-char">*</span></p>
-                        <input type="text" className="form__input" />
+                        <input type="text" value={form.userName} onChange={(e) => this.handleChangeForm(e.target.value, 'userName') } className="form__input" />
                       </div>
                       <div className="form__item form__item--password">
                         <p className="form__item__label">Mật khẩu <span className="form__required-char">*</span></p>
                         <input autoComplete="none" type={`${showPassword ? 'text' : 'password'}`} className="form__input" />
-                        <span onClick={() => this.toggleShowPassword()} className="icon icon__eye form__item__toggle-password"></span>
+                        <span value={form.password} onChange={(e) => this.handleChangeForm(e.target.value, 'password') } onClick={() => this.toggleShowPassword()} className="icon icon__eye form__item__toggle-password"></span>
                       </div>
                       <div className="form__item">
                         <p className="form__item__label">Họ tên <span className="form__required-char">*</span></p>
-                        <input type="text" className="form__input" />
+                        <input value={form.fullName} onChange={(e) => this.handleChangeForm(e.target.value, 'fullName') } type="text" className="form__input" />
                       </div>
 
                       <div className="row">
@@ -126,11 +143,11 @@ class RegisterAccount extends Component {
                         <div className="form__item acc-register__form__item-gender col-xs-6">
                           <p className="form__item__label">Giới tính <span className="form__required-char">*</span></p>
                           <div className="form__item__radio">
-                            <input type="radio" name="gender" id="male" value="male" />
+                            <input type="radio" name="gender" id="male" value="male" onChange={(e) => this.handleChangeForm(e.target.value, 'gender') } />
                             <label htmlFor="male">Male</label>
                           </div>
                           <div className="form__item__radio">
-                            <input type="radio" name="gender" id="female" value="female" />
+                            <input type="radio" name="gender" id="female" value="female" onChange={(e) => this.handleChangeForm(e.target.value, 'gender') } />
                             <label htmlFor="female">Female</label>
                           </div>
                         </div>
@@ -138,11 +155,11 @@ class RegisterAccount extends Component {
                       <div className="row">
                         <div className="form__item col-xs-6">
                           <p className="form__item__label">Email <span className="form__required-char">*</span></p>
-                          <input type="text" className="form__input" />
+                          <input value={form.email} onChange={(e) => this.handleChangeForm(e.target.value, 'email') } type="text" className="form__input" />
                         </div>
                         <div className="form__item col-xs-6">
                           <p className="form__item__label">Số điện thoại <span className="form__required-char">*</span></p>
-                          <input type="text" className="form__input" />
+                          <input value={form.phone} onChange={(e) => this.handleChangeForm(e.target.value, 'phone') } type="text" className="form__input" />
                         </div>
                       </div>
                       
@@ -152,15 +169,15 @@ class RegisterAccount extends Component {
 
                       <div className="form__item">
                         <div className="form__item__radio">
-                          <input type="radio" name="target" id="student" value="student" />
+                          <input type="radio" name="target" id="student" value="student" onChange={(e) => this.handleChangeForm(e.target.value, 'jobType') }/>
                           <label htmlFor="student">Học sinh</label>
                           </div>
                         <div className="form__item__radio">
-                          <input type="radio" name="target" id="alumnus" value="alumnus" />
+                          <input type="radio" name="target" id="alumnus" value="alumnus" onChange={(e) => this.handleChangeForm(e.target.value, 'jobType') } />
                           <label htmlFor="alumnus">Sinh viên</label>
                         </div>
                         <div className="form__item__radio">
-                          <input type="radio" name="target" id="person" value="person" />
+                          <input type="radio" name="target" id="person" value="person" onChange={(e) => this.handleChangeForm(e.target.value, 'person') } />
                           <label htmlFor="person">Người đi làm/ trên 25 tuổi</label>
                         </div>
                       </div>
@@ -180,16 +197,16 @@ class RegisterAccount extends Component {
 
                       <div className="form__item">
                         <p className="form__item__label">Nghề nghiệp hiện tại <span className="form__required-char">*</span></p>
-                        <input type="text" className="form__input" />
+                        <input value={form.currentJob} onChange={(e) => this.handleChangeForm(e.target.value, 'currentJob') } type="text" className="form__input" />
                       </div>
 
                       <div className="form__item">
                         <p className="form__item__label">Link facebook của bạn (Dùng để vào group của lớp học tập tương ứng) <span className="form__required-char">*</span></p>
-                        <input type="text" className="form__input" />
+                        <input value={form.fbLink} onChange={(e) => this.handleChangeForm(e.target.value, 'fbLink') } type="text" className="form__input" />
                       </div>
 
                       <div className="form__footer">
-                        <button type="button" className="btn btn--gradient btn--radius">Gửi Đi<span className="icon icon__send"></span></button>
+                        <button onClick={() => this.submit()} type="button" className="btn btn--gradient btn--radius">Gửi Đi<span className="icon icon__send"></span></button>
                         <div className="form__item__label">Bạn đã có tài khoản? <Link to="#">Đăng nhập</Link></div>
                       </div>
                     </div>
