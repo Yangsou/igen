@@ -1,5 +1,5 @@
 @import '../../assets/scss/variable';
-
+@import '../../assets//scss//breakpoints';
 .banner {
   &__img {
     &.banner-img {
@@ -71,6 +71,13 @@
         left: 0;
         transform: translateY(-50%);
       }
+      @include media-breakpoint('lt-sm') {
+        display: block;
+        + .form__item__radio {
+          margin-left: 0;
+          margin-top: 12px;
+        }
+      }
     }
     &--password {
       input {
@@ -127,7 +134,8 @@
     text-align: center;
     margin-top: 40px;
     .btn {
-      width: 500px;
+      max-width: 500px;
+      width: 100%;
       margin-bottom: 40px;
     }
     .form__item__label {
