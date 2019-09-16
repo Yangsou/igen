@@ -43,9 +43,6 @@ export function HttpService(options) {
     case 401:
     case 403:
     case 404:
-      // log.warn(`[${response.status}]`, response);
-
-      break;
     case 500:
     case 550:
       // log.error(`[${response.status}]`, response);

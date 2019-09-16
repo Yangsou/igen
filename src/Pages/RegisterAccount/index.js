@@ -11,6 +11,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 // import Axios from "axios";
 import { httpClient } from "../../api/Client";
+import FormItem from "../../components/FormItem";
 
 class RegisterAccount extends Component {
   constructor(props) {
@@ -86,17 +87,20 @@ class RegisterAccount extends Component {
     this.setState({showPassword: !this.state.showPassword});
   }
 
-  submit = () => {
+  submit = async () => {
     const { form } = this.state,
-      { registerAccount } = httpClient().account;
+      { registerAccount } = httpClient().account,
+      el = this.refs.form;
+      // formItems = el.getElementsByClassName('form__item');
 
-    return registerAccount(form)
-      .then((result) => {
-        console.log('successfully!', result);
-      })
-      .catch((error) => {
-        console.log(error);
-    });
+    console.log('el', el.childNodes);
+
+    try {
+      const data = await registerAccount(form)
+      console.log('successfully!', data);
+    } catch (error) {
+      console.log(error);
+    }
   }
   render() {
     const { breakcrumb, universities, departments, cities, form, showPassword } = this.state;
@@ -109,7 +113,7 @@ class RegisterAccount extends Component {
 
             <section className="acc-register acc-register--padding">
                 <div className="container">
-                  <form className="acc-register__wrap">
+                  <form className="acc-register__wrap" ref="form">
                     <p className="acc-register__title">Đăng ký thông tin của bạn</p>
 
                     <div className="form acc-register__form">
@@ -117,10 +121,12 @@ class RegisterAccount extends Component {
                         <p className="form__item__label">Tên đăng nhập <span className="form__required-char">*</span></p>
                         <input type="text" value={form.userName} onChange={(e) => this.handleChangeForm(e.target.value, 'userName') } className="form__input" />
                       </div> */}
-                      <div className="form__item">
+                      {/* <div className="form__item" rules={req}> */}
+                      <FormItem>
                         <p className="form__item__label">Họ tên <span className="form__required-char">*</span></p>
                         <input value={form.fullName} onChange={(e) => this.handleChangeForm(e.target.value, 'fullName') } type="text" className="form__input" />
-                      </div>
+                      </FormItem>
+                      {/* </div> */}
                       <div className="form__item form__item--password">
                         <p className="form__item__label">Mật khẩu <span className="form__required-char">*</span></p>
                         <input
