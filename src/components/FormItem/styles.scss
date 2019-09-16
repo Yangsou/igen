@@ -1,0 +1,19 @@
+@import '../../assets/scss/variable';
+
+.form {
+  &-item {
+    position: relative;
+    &.is-error {
+      .form__input {
+        border-color: $--color-dangerous;
+      }
+      .form-item__label-error {
+        color: $--color-dangerous;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: translateY(100%);
+      }
+    }
+  }
+}
