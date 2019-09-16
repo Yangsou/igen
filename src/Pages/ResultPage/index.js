@@ -31,9 +31,10 @@ class ResultPage extends Component {
         }
     }
     fetchResultTest = () => {
+      let id = window.location.href.split('/').pop();
         return axios({
             method: 'get',
-            url: 'https://vsn.edu.vn/api/user/report-multiple-choice-igen/5d6773f7d8bc3c4df2c9f90b',
+            url: `https://vsn.edu.vn/api/user/report-multiple-choice-igen/${id}`,
           })
           .then((res) => {
             console.log(res.data)
