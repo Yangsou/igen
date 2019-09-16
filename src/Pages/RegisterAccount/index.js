@@ -9,7 +9,8 @@ import cities from '../../cities.json';
 import Selection from "../../components/Selection";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import Axios from "axios";
+// import Axios from "axios";
+import { httpClient } from "../../api/Client";
 
 class RegisterAccount extends Component {
   constructor(props) {
@@ -86,21 +87,14 @@ class RegisterAccount extends Component {
   }
 
   submit = () => {
-    const { form } = this.state;
-    console.log('form', form);
+    const { form } = this.state,
+      { registerAccount } = httpClient().account;
 
-    return Axios({
-      method: 'post',
-      data: form,
-      url: 'https://vsn.edu.vn/api/registry-igen',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    })
-    .then(() => {
-      console.log('successfully!');
-    })
-    .catch((error) => {
+    return registerAccount(form)
+      .then((result) => {
+        console.log('successfully!', result);
+      })
+      .catch((error) => {
         console.log(error);
     });
   }
