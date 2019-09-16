@@ -19,7 +19,7 @@ export default function ProgramStudy() {
               <p className="register-program__item__title">Tiếng Anh tổng quát</p>
               
               {/* <button className="btn btn--outline">Xem chi tiết <span className="icon icon__arrow"></span></button> */}
-              <Link to="/tieng-anh-tong-quat" target="_blank" className="btn btn--outline" rel="noopener noreferrer">Bắt đầu ngay <span className="icon icon__arrow"></span></Link>
+              <Link to={{ pathname: "/dang-ky-tai-khoan", search: "?coureId=english" }} className="btn btn--outline" rel="noopener noreferrer">Bắt đầu ngay <span className="icon icon__arrow"></span></Link>
             </div>
           {/* </div> */}
           {/* <div className="col-xs-4"> */}
@@ -29,7 +29,7 @@ export default function ProgramStudy() {
               </div>
               <p className="register-program__item__title ">Luyện thi TOEIC</p>
               
-              <Link to="/luyen-thi-TOEIC" target="_blank" className="btn btn--outline" rel="noopener noreferrer">Bắt đầu ngay <span className="icon icon__arrow"></span></Link>
+              <Link to={{ pathname: "/dang-ky-tai-khoan", search: "?coureId=toeic" }} className="btn btn--outline" rel="noopener noreferrer">Bắt đầu ngay <span className="icon icon__arrow"></span></Link>
               {/* <button className="btn btn--outline">Xem chi tiết <span className="icon icon__arrow"></span></button> */}
             </div>
           {/* </div> */}
@@ -40,7 +40,7 @@ export default function ProgramStudy() {
               </div>
               <p className="register-program__item__title">Luyện thi IELTS</p>
 
-                <Link to="/luyen-thi-IELTS" target="_blank" className="btn btn--outline" rel="noopener noreferrer">Bắt đầu ngay <span className="icon icon__arrow"></span></Link>
+                <Link to={{ pathname: "/dang-ky-tai-khoan", search: "?coureId=ielts" }} className="btn btn--outline" rel="noopener noreferrer">Bắt đầu ngay <span className="icon icon__arrow"></span></Link>
             </div>
           {/* </div> */}
         </div>

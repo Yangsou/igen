@@ -88,6 +88,9 @@ class RegisterAccount extends Component {
     }
 
   }
+  componentDidMount(){
+    window.scroll(0, 0);
+}
   changeUniversity = (value) => {
     let { form, universities } = this.state;
     form = {
