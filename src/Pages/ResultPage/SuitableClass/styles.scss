@@ -1,0 +1,140 @@
+@import '../../../assets/scss/variable';
+@import '../../../assets/scss/breakpoints';
+
+.suitable-class-wrap {
+    background: #f5f5f5;
+    .suitable-class {
+        padding-bottom: 75px;
+        &__title {
+            font-size: 40px;
+            font-weight: bold;
+            color: $--color-text-primary;
+            margin-top: 45px;
+            margin-bottom: 45px;
+            text-align: center;
+        }
+        &__list {
+            .item {
+                border-radius: 10px;
+                margin-bottom: 20px;
+                overflow: hidden;
+                @include media-breakpoint('xs') {
+                    max-width: 370px; 
+                    margin: auto;
+                    margin-bottom: 20px;
+                }
+                &__title {
+                    text-align: center;
+                    background: #ff6200;
+                    height: 70px;
+                    line-height: 70px;
+                    color: #fff;
+                    &--vsn2 {
+                        background: #138ea0;
+                    }
+                    &--vsn3 {
+                        background: #8536ac;
+                    }
+                }
+                &__main {
+                    &__space {
+                        width: 100%;
+                        height: 125px;
+                        background: #fff6f1;
+                        &--vsn2 {
+                            background: #f1f9f8;
+                        }
+                        &--vsn3 {
+                            background: #faf0ff;
+                        }
+                    }
+                    &__content {
+                        position: relative;
+                        background: #fff;
+                        img {
+                            position: absolute;
+                            width: 150px;
+                            top: -95px;
+                            left: 50%;
+                            transform: translate(-50%);
+                            @include media-breakpoint('sm') {
+                                width: 120px;
+                                top: -75px;
+                            }
+                        }
+                    }
+                    .btn-wrap {
+                        display: flex;
+                        justify-content: center;
+                        background: #fff;
+                        padding-bottom: 45px;
+                        .btn--outline::before {
+                            z-index: 0;
+                        }
+                        .btn:hover {
+                            .btn-text {
+                                position: relative;
+                                z-index: 2;
+                                color: #fff;
+                            }
+                            
+                        }
+                        
+                    }
+                }
+                &__description {
+                    padding-top: 130px;
+                    padding-bottom: 8px;
+                    @include media-breakpoint('sm') {
+                        padding-top: 80px;
+                    }
+                    &__content {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-left: 15px;
+                        margin-right: 15px;
+                        margin-bottom: 25px;
+                        @include media-breakpoint('sm') {
+                            display: unset; 
+                        }
+                        &--last {
+                            @include media-breakpoint('sm') {
+                                display: flex;
+                                justify-content: space-between;
+                                margin-left: 0px;
+                                margin-right: 0px;
+                            }
+                        }
+                    }
+                    &__left {
+                        font-size: 15px;
+                        color: $--color-text-primary;
+                        @include media-breakpoint('sm') {
+                            margin-left: 5px;
+                            font-size: 14px;
+                        }
+                    }
+                    &__right {
+                        font-size: 15px;
+                        font-weight: bold;
+                        color: $--color-text-primary;
+                        @include media-breakpoint('sm') {
+                            text-align: right;
+                            margin-right: 5px;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .p-l-30 {
+        padding-left: 30px;
+    }
+    .p-r-20 {
+        padding-right: 20px;
+    }
+    .f-14 {
+        font-size: 14px;
+    }
+}
