@@ -94,13 +94,15 @@
                 overflow: hidden;
                 .score {
                     font-size: 25px;
-                    margin-top: 40px;
+                    margin-top: 55px;
                     margin-bottom: 40px;
+                    text-align: center;
                     &__label__read {
                         margin-top: 15px;
                     }
                     &__listen {
                         color: $--color-primary;
+                        font-size: 33px;
                     }
                     &__read {
                         color: $--color-secondary;
@@ -111,8 +113,8 @@
                     height: 100%;
                     padding-bottom: 15px;
                     @include media-breakpoint('sm') {
-                        padding-top: 30px;
-                        padding-bottom: 55px;
+                        padding-top: 0px;
+                        padding-bottom: 0px;
                     }
                     h4 {
                         font-size: 20px;
