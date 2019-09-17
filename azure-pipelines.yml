@@ -5,10 +5,7 @@
 
 trigger:
 - master
-<<<<<<< HEAD
-=======
 - develop
->>>>>>> 849e929c8670dd1ef63779ee1c98e06ca1fe1607
 pool:
   vmImage: 'ubuntu-latest'
 
