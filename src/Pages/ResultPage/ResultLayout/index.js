@@ -53,14 +53,17 @@ class ResultLayout extends Component {
           });
     }
     timeTest = (start, end) => {
-        const time = end - start;
+        var time = 0
+        if (start && end) {
+            time = end - start;
+        }
         const minutes = Math.floor(time / 60000);
         const seconds = ((time % 60000) / 1000).toFixed(0);
         return minutes+' phút '+seconds+' giây'
 
     }
     componentDidMount(){
-        this.fetchResultTest('5d7f41c90afbbaab1c6dcdc6');
+        this.fetchResultTest(this.props.id);
         window.scroll(0, 0);
     }
     render() {
