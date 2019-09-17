@@ -21,8 +21,7 @@ steps:
   displayName: 'npm install and build'
 - script: |
     npm install -g firebase-tools
-    firebase login:ci
   displayName: 'Firebase authenticated'
 - script: |
-    firebase deploy
+    firebase deploy --token=AIzaSyDw2NBklLICzu7zHmo8hsawYpgGl9jkw-s --project igen-dev --non-interactive
   displayName: 'deploy on firebase'
