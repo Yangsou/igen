@@ -40,7 +40,8 @@ const routes = [
     {
         path: '/result-test/:id',
         exact: false,
-        main: () => <ResultPage />
+        component: ResultPage 
+        // main: () => <ResultPage />
     }
 ]
 
