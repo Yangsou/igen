@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import React, { Component, Fragment } from 'react';
 import Banner from '../../components/Banner';
 import registerAccountImage from '../../assets/img/register-account.svg';
@@ -192,6 +191,7 @@ class RegisterAccount extends Component {
                               selected={form.birthDay}
                               dateFormat="dd/MM/yyyy"
                               value={form.birthDay}
+                              placeholderText="DD/MM/YYYY"
                               onChange={(value) => this.handleChangeForm(value, 'birthDay')}
                             />
                           </FormItem >
