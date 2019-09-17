@@ -35,6 +35,38 @@
     ]
   },
   {
+    "name": "ĐH Khoa học Xã hội và Nhân văn (ĐHQG Hà Nội)",
+    "departments": [
+      "Khoa Du lịch học",
+      "Khoa Đông phương học",
+      "Khoa Khoa học Chính trị",
+      "Khoa Khoa học quản lí",
+      "Khoa Lịch sử",
+      "Khoa Lưu trữ học và QTVP",
+      "Khoa Ngôn ngữ học",
+      "Khoa Nhân học",
+      "Khoa Quốc tế học",
+      "Khoa Tâm lí học",
+      "Khoa Thông tin-Thư viện",
+      "Khoa Triết học",
+      "Khoa Văn học",
+      "Khoa Việt Nam học và Tiếng Việt",
+      "Khoa Xã hội học",
+      "Bộ môn Tôn giáo học"
+    ]
+  },
+  {
+    "name": " Đại học Kinh tế (ĐHQG Hà Nội)",
+    "departments": [
+      "Khoa Kế toán - Kiểm toán",
+      "Khoa Kinh tế Chính trị",
+      "Khoa Kinh tế Phát triển",
+      "Khoa Kinh tế và Kinh doanh Quốc tế",
+      "Khoa Tài chính - Ngân hàng",
+      "Viện Quản trị Kinh doanh"
+    ]
+  },
+  {
     "name": "Khoa Quốc tế (ĐHQG Hà Nội)",
     "departments": []
   }

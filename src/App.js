@@ -33,7 +33,7 @@ class App extends React.Component {
       var result = '';
       result =  routes.map((route, index) => {
         return (
-          <Route key={index} exact={route.exact} path={route.path} component={route.main} />
+          <Route key={index} exact={route.exact} path={route.path} component={route.main?route.main:route.component} />
         )
       })
       return result;
