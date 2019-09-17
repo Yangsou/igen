@@ -1,5 +1,4 @@
 import React, { Component, Fragment } from 'react';
-// import Banner from './Banner'
 import Banner from './../../components/Banner';
 import Breadcrumb from './../../components/Breakcrumb';
 import Participation from './../../components/Participation/Participation';
