@@ -4,9 +4,6 @@ import registerImg from '../../assets/img/register_exam_bg.png';
 
 import './styles.scss';
 export default class Sponser extends React.Component {
-  // clickTry = () => {
-  //   window.location.href = 'https://igen.vsn.edu.vn/dang-ky-thi-thu'
-  // }
   constructor(props){
     super(props);
     this.state = {
@@ -15,8 +12,7 @@ export default class Sponser extends React.Component {
   }
   componentDidMount(){
     const currentLocation = window.location.href;
-    const str = 'tieng-anh-tong-quat'
-    console.log(currentLocation.search(str))
+    const str = 'tieng-anh-tong-quat';
     if(currentLocation.search(str)>0) {
       this.setState({ 
         noPadding : 'b-t-0'
