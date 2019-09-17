@@ -14,31 +14,20 @@ steps:
   inputs:
     versionSpec: '10.x'
   displayName: 'Build Dev'
+
+- script: |
+    npm install
+    npm run build
+  displayName: 'npm install and build'
+- script: |
+    npm install -g firebase-tools
+  displayName: 'Firebase authenticated'
+- script: |
+    firebase deploy --token=1/pTgsaIPvHyRejuD7GIJVH7hj5fSbOu2HWnSlJQCD9hbb0wfTkq2TxU06vrqAmNB7 --project igen-dev --only hosting:igen-prod --non-interactive
+  displayName: 'deploy on firebase prod'
   condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
 
 - script: |
-    npm install
-    npm run build
-  displayName: 'npm install and build'
-- script: |
-    npm install -g firebase-tools
-  displayName: 'Firebase authenticated'
-- script: |
-    firebase deploy --token=1/pTgsaIPvHyRejuD7GIJVH7hj5fSbOu2HWnSlJQCD9hbb0wfTkq2TxU06vrqAmNB7 --project igen-dev --only hosting:igen-prod --non-interactive
-  displayName: 'deploy on firebase'
-
-- task: NodeTool@0
-  inputs:
-    versionSpec: '10.x'
-  displayName: 'Build Production'
+    firebase deploy --token=1/pTgsaIPvHyRejuD7GIJVH7hj5fSbOu2HWnSlJQCD9hbb0wfTkq2TxU06vrqAmNB7 --project igen-dev --only hosting:igen-dev --non-interactive
+  displayName: 'deploy on firebase dev'
   condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/develop'))
-- script: |
-    npm install
-    npm run build
-  displayName: 'npm install and build'
-- script: |
-    npm install -g firebase-tools
-  displayName: 'Firebase authenticated'
-- script: |
-    firebase deploy --token=1/pTgsaIPvHyRejuD7GIJVH7hj5fSbOu2HWnSlJQCD9hbb0wfTkq2TxU06vrqAmNB7 --project igen-dev --only hosting:igen-prod --non-interactive
-  displayName: 'deploy on firebase'
