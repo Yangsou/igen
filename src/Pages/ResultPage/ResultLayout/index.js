@@ -40,10 +40,10 @@ class ResultLayout extends Component {
     fetchResultTest = () => {
         return axios({
             method: 'get',
-            url: 'https://vsn.edu.vn/api/user/report-multiple-choice-igen/5d7f41c90afbbaab1c6dcdc6',
+            url: `https://vsn.edu.vn/api/user/report-multiple-choice-igen/${this.props.id}`
           })
           .then((res) => {
-            this.setState({ 
+            this.setState({
                 data: res.data.data
             })
           })
@@ -103,7 +103,7 @@ class ResultLayout extends Component {
                     </div>
                     <div className="result__footer">
                         <p>
-                            Bạn muốn làm lại để cải thiện kết quả? <a className="result__footer__link" href="gg.com">Click vào đây.</a>
+                            Bạn muốn làm lại để cải thiện kết quả? <a className="result__footer__link" href={data.link}>Click vào đây.</a>
                         </p>
                     </div>
                 </div>

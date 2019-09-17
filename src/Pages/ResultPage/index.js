@@ -3,7 +3,6 @@ import Banner from '../../components/Banner';
 import ResultLayout from './ResultLayout';
 import Breadcrumb from '../../components/Breakcrumb';
 import SuitableClass from './SuitableClass';
-import axios from 'axios';
 import img from '../../assets/img/register_exam_bg.png';
 class ResultPage extends Component {
     constructor(props){
@@ -26,26 +25,11 @@ class ResultPage extends Component {
                     label : 'Thi Thử TOEIC',
                     active : true
                 }
-            ],
-            resultTest: '',
+            ]
         }
     }
-    fetchResultTest = () => {
-      let id = window.location.href.split('/').pop();
-        return axios({
-            method: 'get',
-            url: `https://vsn.edu.vn/api/user/report-multiple-choice-igen/${id}`,
-          })
-          .then((res) => {
-            console.log(res.data)
-          })
-          .catch((error) => {
-              console.log(error);
-          });
-    }
     componentDidMount(){
-        window.scroll(0, 0);
-        this.fetchResultTest();
+    window.scroll(0, 0);
     }
     render() {
         return (
@@ -53,7 +37,7 @@ class ResultPage extends Component {
                 <Banner img={this.state.img} title={this.state.title} imgClassName={this.state.imgClassName} alt={this.state.alt}/>
                 <div className="background-grey">
                     <Breadcrumb data={this.state.breadcrumb} setBackground={true} />
-                    <ResultLayout />
+                    <ResultLayout id={window.location.href.split('/').pop()} />
                     <SuitableClass />
                 </div>
             </Fragment>
