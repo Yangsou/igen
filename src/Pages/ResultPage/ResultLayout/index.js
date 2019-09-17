@@ -16,7 +16,7 @@ class ResultLayout extends Component {
                 description: "",
                 title: "",
                 user: "",
-                _id: "5"
+                _id: ""
                 },
                 corrected: 0,
                 contact: {
@@ -33,14 +33,15 @@ class ResultLayout extends Component {
                 totalQuestions: 0,
                 description: "",
                 name: "",
-                totalJoined: 0
+                totalJoined: 0,
+                link: ''
                 }
         }
     }
-    fetchResultTest = () => {
+    fetchResultTest = (id) => {
         return axios({
             method: 'get',
-            url: 'https://vsn.edu.vn/api/user/report-multiple-choice-igen/5d7f41c90afbbaab1c6dcdc6',
+            url: `https://vsn.edu.vn/api/user/report-multiple-choice-igen/${id}`,
           })
           .then((res) => {
             this.setState({ 
@@ -59,7 +60,7 @@ class ResultLayout extends Component {
 
     }
     componentDidMount(){
-        this.fetchResultTest();
+        this.fetchResultTest('5d7f41c90afbbaab1c6dcdc6');
         window.scroll(0, 0);
     }
     render() {
@@ -103,7 +104,7 @@ class ResultLayout extends Component {
                     </div>
                     <div className="result__footer">
                         <p>
-                            Bạn muốn làm lại để cải thiện kết quả? <a className="result__footer__link" href="gg.com">Click vào đây.</a>
+                            Bạn muốn làm lại để cải thiện kết quả? <a className="result__footer__link" href={data.link}>Click vào đây.</a>
                         </p>
                     </div>
                 </div>
