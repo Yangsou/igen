@@ -28,22 +28,8 @@ class ResultPage extends Component {
             ],
         }
     }
-    // fetchResultTest = () => {
-    //     return axios({
-    //         method: 'get',
-    //         url: 'https://vsn.edu.vn/api/user/report-multiple-choice-igen/5d7f41c90afbbaab1c6dcdc6',
-    //       })
-    //       .then((res) => {
-    //         this.resultTest = res.data.data;
-    //         console.log(this.resultTest.multipleChoice)
-    //       })
-    //       .catch((error) => {
-    //           console.log(error);
-    //       });
-    // }
     componentDidMount(){
         window.scroll(0, 0);
-        // this.fetchResultTest();
     }
     render() {
         return (
