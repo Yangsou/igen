@@ -13,7 +13,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import { httpClient } from "../../api/Client";
 import FormItem from "../../components/FormItem";
 import Form from "../../components/Form";
-import { ruleRequired } from "../../helpers";
+import { ruleRequired, ruleDate } from "../../helpers";
 
 class RegisterAccount extends Component {
   constructor(props) {
@@ -64,7 +64,7 @@ class RegisterAccount extends Component {
           ruleRequired()
         ],
         birthDay: [
-          ruleRequired()
+          ruleDate()
         ],
         gender: [
           ruleRequired()
@@ -115,7 +115,11 @@ class RegisterAccount extends Component {
       [key]: value
     }
 
-    this.setState({form});
+    this.setState({form}, () => {
+      if (key === 'birthDay') {
+        this.refs.form.validateField('birthDay');
+      }
+    });
   }
 
   toggleShowPassword = () => {
@@ -126,10 +130,8 @@ class RegisterAccount extends Component {
     const { form } = this.state,
       { registerAccount } = httpClient().account,
       el = this.refs.form;
-      // formItems = el.getElementsByClassName('form__item');
 
       el.validate(async (valid) => {
-        console.log('validate', valid);
         if (valid) {
           //
           try {
@@ -189,6 +191,7 @@ class RegisterAccount extends Component {
                             <DatePicker
                               selected={form.birthDay}
                               dateFormat="dd/MM/yyyy"
+                              value={form.birthDay}
                               onChange={(value) => this.handleChangeForm(value, 'birthDay')}
                             />
                           </FormItem >
@@ -223,7 +226,7 @@ class RegisterAccount extends Component {
                       </div>
                       
                       <div className="form__item">
-                      <div className="form__item__label">Vui lòng chọn chính xác thông tin đối tượng người học để được áp dụng mức ký quỹ phù hợp. <Link to="#">Xem thêm tại đây</Link></div>
+                      <div className="form__item__label">Vui lòng chọn chính xác thông tin đối tượng người học để được áp dụng mức ký quỹ phù hợp.</div>
                       </div>
 
                       <div className="form__item">
@@ -236,28 +239,36 @@ class RegisterAccount extends Component {
                           <label htmlFor="alumnus">Sinh viên</label>
                         </div>
                         <div className="form__item__radio">
-                          <input type="radio" name="target" id="person" value="person" onChange={(e) => this.handleChangeForm(e.target.value, 'person') } />
+                          <input type="radio" name="target" id="person" value="person" onChange={(e) => this.handleChangeForm(e.target.value, 'jobType') } />
                           <label htmlFor="person">Người đi làm/ trên 25 tuổi</label>
                         </div>
                       </div>
 
-                      <div className="form__item">
-                        <p className="form__item__label">Trường học</p>
-                        <Selection size="medium" value={form.university} options={universities} onChange={this.changeUniversity} />
-                      </div>
-                      <div className="form__item">
-                        <p className="form__item__label">Khoa/ Chuyên ngành</p>
-                        <Selection size="medium" value={form.department} options={departments} onChange={(value) => this.handleChangeForm(value, 'department')} />
-                      </div>
+                      {
+                        form.jobType === "alumnus" && [
+                          <div className="form__item" key="university">
+                            <p className="form__item__label">Trường học</p>
+                            <Selection size="medium" value={form.university} options={universities} onChange={this.changeUniversity} />
+                          </div>,
+                          <div className="form__item" key="departments">
+                            <p className="form__item__label">Khoa/ Chuyên ngành</p>
+                            <Selection size="medium" value={form.department} options={departments} onChange={(value) => this.handleChangeForm(value, 'department')} />
+                          </div>
+
+                        ]
+                      }
                       <FormItem className="form__item" prop="city">
                         <p className="form__item__label">Tỉnh thành <span className="form__required-char">*</span></p>
                         <Selection size="medium" value={form.city} options={cities} onChange={(value) => this.handleChangeForm(value, 'city')} />
                       </FormItem>
 
-                      <FormItem prop="currentJob" className="form__item">
-                        <p className="form__item__label">Nghề nghiệp hiện tại <span className="form__required-char">*</span></p>
-                        <input value={form.currentJob} onChange={(e) => this.handleChangeForm(e.target.value, 'currentJob') } type="text" className="form__input" />
-                      </FormItem>
+                      {
+                        form.jobType === "person" && 
+                          <FormItem prop="currentJob" className="form__item">
+                            <p className="form__item__label">Nghề nghiệp hiện tại <span className="form__required-char">*</span></p>
+                            <input value={form.currentJob} onChange={(e) => this.handleChangeForm(e.target.value, 'currentJob') } type="text" className="form__input" />
+                          </FormItem>
+                      }
 
                       <FormItem className="form__item" prop="fbLink">
                         <p className="form__item__label">Link facebook của bạn (Dùng để vào group của lớp học tập tương ứng) <span className="form__required-char">*</span></p>
