@@ -100,7 +100,8 @@ figcaption {
         }
         @include media-breakpoint('xs') {
             padding-top: 10px;
-            width: 370px;
+            width: 100%;
+            max-width: 370px;
             margin: auto;
         }
 

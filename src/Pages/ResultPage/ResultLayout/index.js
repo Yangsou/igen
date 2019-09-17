@@ -16,7 +16,7 @@ class ResultLayout extends Component {
                 description: "",
                 title: "",
                 user: "",
-                _id: "5"
+                _id: ""
                 },
                 corrected: 0,
                 contact: {
@@ -33,7 +33,8 @@ class ResultLayout extends Component {
                 totalQuestions: 0,
                 description: "",
                 name: "",
-                totalJoined: 0
+                totalJoined: 0,
+                link: ''
                 }
         }
     }

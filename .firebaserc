@@ -1,5 +1,18 @@
 {
   "projects": {
-    "default": "igen-dev"
+    "default": "igen-dev",
+    "prod": "igen-dev"
+  },
+  "targets": {
+    "igen-dev": {
+      "hosting": {
+        "igen-prod": [
+          "igen-prod"
+        ],
+        "igen-dev": [
+          "igen-dev"
+        ]
+      }
+    }
   }
 }
