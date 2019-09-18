@@ -76,7 +76,7 @@ class ResultLayout extends Component {
                             <img className="result__stick" src={largeStick} alt=""/>
                         </div>
                         <h1 className="result__title">Chúc mừng bạn đã hoàn thành bài thi thử</h1>
-                        <h3 className="result__sub-title">Kết quả bài kiểm tra đầu vào "{data.multipleChoice.title}"</h3>
+                        <h3 className="result__sub-title">Kết quả {data.multipleChoice.title}</h3>
                         <hr />
                     </div>
                     <div className="result__description row">
