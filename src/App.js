@@ -5,6 +5,12 @@ import Contact from './components/Contact/Contact'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import routes from './routes'
 class App extends React.Component {
+  // constructor(props){
+  //   super(props);
+  //   this.state = {
+  //     isLoaded : false
+  //   }
+  // }
   // lazy load when scroll
   lazyLoad = () => {
     var element = document.getElementsByClassName('lazy-load');
@@ -19,7 +25,11 @@ class App extends React.Component {
 
     }
   }
-  
+  changeStatusLoad = (value) => {
+    this.setState({
+      isLoaded: value
+    })
+  }
   componentDidMount() {
     this.lazyLoad();
     window.addEventListener('scroll', this.lazyLoad, false);
@@ -34,6 +44,7 @@ class App extends React.Component {
       result =  routes.map((route, index) => {
         return (
           <Route key={index} exact={route.exact} path={route.path} component={route.main?route.main:route.component} />
+          // <Route key={index} exact={route.exact} path={route.path} render={(props)=> <route.component {...props} />} />
         )
       })
       return result;
@@ -43,8 +54,8 @@ class App extends React.Component {
           <Header />
           
             <Switch>
-            {showRoutes(routes)}
-          </Switch>
+              {showRoutes(routes)}
+            </Switch>
           <Contact />
     
           <footer className="footer">&copy; Copyright 2019 i-Gen. All rights reserved.</footer>

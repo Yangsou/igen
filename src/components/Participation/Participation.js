@@ -43,7 +43,7 @@ class Participation extends Component{
               Phần ký quỹ nhằm thể hiện sự cam kết tham gia chương trình học. Sinh viên được hoàn lại 100% số tiền ký quỹ sau khi đáp ứng Thể lệ tham gia 
               {extendText1(price1)}
              </p>
-            <a href="https://qhdn.uel.edu.vn/tin-tuc/thuc-hien-ky-quy-hoc-tap-cung-du-an-i-gen" target="_blank" className="btn btn--outline" rel="noopener noreferrer">Xem thêm <span className="icon icon__arrow"></span></a>
+            <a href="https://vsn.edu.vn/post/ky-quy-cam-ket-hoc-tap-cung-du-an-igen" target="_blank" className="btn btn--outline" rel="noopener noreferrer">Xem thêm <span className="icon icon__arrow"></span></a>
           </div>
           <div className="item col-sm-6 col-md-4">
             <div className="item__wrapper__img">
@@ -54,7 +54,7 @@ class Participation extends Component{
                 Sinh viên sẽ được nhận sách trực tiếp từ NXB, i-Gen không thu bất kỳ lợi nhuận nào từ việc mua sách bản quyền
                 {extendText2(price2)}
             </p>
-            <a href="https://qhdn.uel.edu.vn/tin-tuc/tong-hop-bo-giao-trinh-giang-day-do-nxb-pearson-cung-cap" target="_blank" className="btn btn--outline" rel="noopener noreferrer">Xem sách <span className="icon icon__arrow"></span></a>
+            <a href="https://vsn.edu.vn/post/tong-hop-bo-giao-trinh-giang-day-do-nxb-pearson-cung-cap" target="_blank" className="btn btn--outline" rel="noopener noreferrer">Xem sách <span className="icon icon__arrow"></span></a>
           </div>
           <div className="item col-sm-6 col-md-4">
             <div className="item__wrapper__img">
@@ -62,7 +62,7 @@ class Participation extends Component{
             </div>
             <p className="item__title">Thay Avatar cùng dự án</p>
             <p className="item__text">Học viên tham gia sẽ sử dụng Avatar i-Gen trên trang facebook của mình trong suốt thời gian học nhằm thể hiện sự quyết tâm hoàn thành chương trình</p>
-            <a href="https://qhdn.uel.edu.vn/tin-tuc/huong-dan-thay-khung-anh-i-gen-dong-hanh-cung-du-an/" target="_blank" className="btn btn--outline" rel="noopener noreferrer">Xem khung ảnh <span className="icon icon__arrow"></span></a>
+            <a href="https://vsn.edu.vn/post/huong-dan-thay-khung-anh-igen-dong-hanh-cung-du-an" target="_blank" className="btn btn--outline" rel="noopener noreferrer">Xem khung ảnh <span className="icon icon__arrow"></span></a>
           </div>
           <div className="item col-sm-6 col-md-4">
             <div className="item__wrapper__img">

@@ -58,18 +58,17 @@ class Header extends React.Component {
   clickPrimaryButton = () => {
     window.location.href = 'https://igen.vsn.edu.vn/dang-ky-thi-thu'
   }
-
   clickMenuItem = (id) => {
-    var element = document.getElementById(id);
-
-    if (element) {
-      doScrolling(`#${id}`, 500, 70);
-      this.setState({
-        showMenu: !this.state.showMenu
-      })
-    }
+      setTimeout(()=> {
+        var element = document.getElementById(id);
+        if (element) {
+        doScrolling(`#${id}`, 500, 70);
+        this.setState({
+          showMenu: !this.state.showMenu
+        })
+        }
+      },200)
   }
-
   componentDidMount() {
     this.activeHeaderWhenScroll();
     window.addEventListener('scroll', this.activeHeaderWhenScroll, false);
@@ -96,6 +95,15 @@ class Header extends React.Component {
       menus
     })
   }
+  showListMenu = (id , label) => {
+    if(window.location.href === 'https://igen.edu.vn/'){
+      return <p href={`#${id}`}>{ label }</p>
+    } else {
+      return <Link to='/'>
+                <p href={`#${id}`}>{label }</p>
+              </Link>
+    }
+  }
   render() {
     const { menus, showMenu } = this.state;
     return (
@@ -113,7 +121,7 @@ class Header extends React.Component {
                     onClick={() => this.clickMenuItem(item.id)}
                     className={`header__menu__item ${item.active ? 'header__menu__item--active': ''}`}
                     key={item.id}>
-                    <p href={`#${item.id}`}>{ item.label }</p>
+                      {this.showListMenu(item.id, item.label)}
                   </li>
                 ))
               }
