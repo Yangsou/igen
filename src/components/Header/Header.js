@@ -67,7 +67,7 @@ class Header extends React.Component {
           showMenu: !this.state.showMenu
         })
         }
-      },200)
+      },250)
   }
   componentDidMount() {
     this.activeHeaderWhenScroll();
