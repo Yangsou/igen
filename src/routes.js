@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import LandingPage from './Pages/GeneralEnglish'
 import HomePage from './Pages/Home'
 import PracticeToiec from './Pages/PracticeToeic'
@@ -10,32 +10,32 @@ const routes = [
     {
         path : '/',
         exact : true,
-        main: () => <HomePage />
+        component: HomePage
     },
     {
         path : '/tieng-anh-tong-quat',
         exact : false,
-        main : () => <LandingPage />
+        component :LandingPage
     },
     {
         path : '/luyen-thi-TOEIC',
         exact : false,
-        main : () => <PracticeToiec />
+        component : PracticeToiec
     },
     {
         path : '/luyen-thi-IELTS',
         exact : false,
-        main : () => <PracticeIELTS />
+        component : PracticeIELTS
     },
     {
         path : '/dang-ky-thi-thu',
         exact : false,
-        main : () => <RegisterTest />
+        component : RegisterTest
     },
     {
         path: '/dang-ky-tai-khoan',
         exact: false,
-        main: () => <RegisterAccount />
+        component: RegisterAccount
     },
     {
         path: '/result-test/:id',

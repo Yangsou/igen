@@ -25,20 +25,19 @@ class ResultPage extends Component {
                     label : 'Thi Thử TOEIC',
                     active : true
                 }
-            ],
+            ]
         }
     }
     componentDidMount(){
-        window.scroll(0, 0);
+      window.scroll(0, 0);
     }
     render() {
-        const { id } = this.props.match.params
         return (
             <Fragment>
                 <Banner img={this.state.img} title={this.state.title} imgClassName={this.state.imgClassName} alt={this.state.alt}/>
                 <div className="background-grey">
                     <Breadcrumb data={this.state.breadcrumb} setBackground={true} />
-                    <ResultLayout id={id}/>
+                    <ResultLayout id={window.location.href.split('/').pop()} />
                     <SuitableClass />
                 </div>
             </Fragment>

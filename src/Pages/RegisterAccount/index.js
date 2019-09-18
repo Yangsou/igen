@@ -41,7 +41,7 @@ class RegisterAccount extends Component {
       showPassword: false,
       form: {
         // userName: '',
-        courseId: 'toiec',
+        courseId: window.location.href.split('=').pop() || 'toeic',
         email: '',
         password: '',
         fullName: '',
@@ -89,7 +89,7 @@ class RegisterAccount extends Component {
   }
   componentDidMount(){
     window.scroll(0, 0);
-}
+  }
   changeUniversity = (value) => {
     let { form, universities } = this.state;
     form = {
@@ -135,7 +135,9 @@ class RegisterAccount extends Component {
           //
           try {
             const data = await registerAccount(form)
-            console.log('successfully!', data);
+            if(data && data.data){
+              window.location.href = data.data
+            }
           } catch (error) {
             console.log(error);
           }

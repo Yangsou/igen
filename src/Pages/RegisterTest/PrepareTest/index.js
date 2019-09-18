@@ -45,7 +45,7 @@ class RegisterPrograming extends Component {
                             </div>
                             <figcaption>
                             Sử dụng trình duyệt Google Chrome để trải nghiệm tốt nhất.
-                                <a href="/"> Download tại đây</a>
+                                <a href="https://www.google.com/chrome/"> Download tại đây</a>
                             </figcaption>
                         </figure>
                     </div>
