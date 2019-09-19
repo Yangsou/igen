@@ -278,7 +278,7 @@ class RegisterAccount extends Component {
                       </FormItem>
 
                       <div className="form__footer">
-                        <button onClick={() => this.submit()} type="button" className="btn btn--gradient btn--radius">Gửi Đi<span className="icon icon__send"></span></button>
+                        <button onClick={() => this.submit()} type="button" className="submit-register-form btn btn--gradient btn--radius">Gửi Đi<span className="icon icon__send"></span></button>
                         {/* <div className="form__item__label">Bạn đã có tài khoản? <Link to="#">Đăng nhập</Link></div> */}
                       </div>
                     </div>

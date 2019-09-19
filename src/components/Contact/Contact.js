@@ -96,7 +96,7 @@ class Contact extends Component {
             <div className="contact__form">
               <p className="contact__form__title">Bạn cần được tư vấn?</p>
               <p className="contact__form__text">Hãy để lại thông tin, đội ngũ tư vấn sẽ liên hệ ngay với bạn</p>
-              <form onSubmit={ this.onHandleSubmit }>
+              <form className="send-form-footer" onSubmit={ this.onHandleSubmit }>
                 <input 
                   type="text" 
                   name="txtName"
