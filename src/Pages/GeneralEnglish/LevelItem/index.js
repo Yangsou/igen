@@ -6,12 +6,12 @@ import iconB1 from '../../../assets/img/icon-B1.png';
 import iconB2 from '../../../assets/img/icon-B2.png';
 import iconC1 from '../../../assets/img/icon-C1.png';
 import iconC2 from '../../../assets/img/icon-C2.png';
-import imgA1 from '../../../assets/img/description-A1.png'
-import imgA2 from '../../../assets/img/description-A2.png'
-import imgB1 from '../../../assets/img/description-B1.png'
-import imgB2 from '../../../assets/img/description-B2.png'
-import imgC1 from '../../../assets/img/description-C1.png'
-import imgC2 from '../../../assets/img/description-C2.png'
+import imgA1 from '../../../assets/img/GE-A1.png'
+import imgA2 from '../../../assets/img/GE-A2.png'
+import imgB1 from '../../../assets/img/GE-B1.png'
+import imgB2 from '../../../assets/img/GE-B2.png'
+import imgC1 from '../../../assets/img/GE-C1.png'
+import imgC2 from '../../../assets/img/GE-C2.png'
 import iconList from './../../../assets/img/check-arround.png';
 
 import './styles.scss'

@@ -4,9 +4,9 @@ import iconIELTS50 from '../../../assets/img/icon-ielts50.png';
 import iconIELTS60 from '../../../assets/img/icon-ielts60.png';
 import iconIELTS70 from '../../../assets/img/icon-ielts70.png';
 import iconList from './../../../assets/img/check-arround.png';
-import imgIeltsBasic from '../../../assets/img/description-ielts.png'
-import imgIeltsInter from '../../../assets/img/description-ielts-inter.png'
-import imgIeltsFoundation from '../../../assets/img/description-ielts-foundation.png'
+import imgIelts1 from '../../../assets/img/IE1.png'
+import imgIelts2 from '../../../assets/img/IE2.png'
+import imgIelts3 from '../../../assets/img/IE3.png'
 
 import './styles.scss'
 class LevelItem extends Component {
@@ -14,7 +14,7 @@ class LevelItem extends Component {
         super(props);
         this.state = {
             show : false,
-            img: imgIeltsBasic,
+            img: imgIelts1,
         }
     }
     showModal = (img) => {
@@ -91,7 +91,7 @@ class LevelItem extends Component {
                                                 
                                             </ul>
                                             <div className="wrap-button">
-                                                <button onClick={() => this.showModal(imgIeltsFoundation)} className="btn btn--outline" rel="noopener noreferrer">Xem chi tiết lộ trình học<span className="icon icon__arrow"></span></button>
+                                                <button onClick={() => this.showModal(imgIelts1)} className="btn btn--outline" rel="noopener noreferrer">Xem chi tiết lộ trình học<span className="icon icon__arrow"></span></button>
                                             </div>
                                         </div>
 
@@ -153,7 +153,7 @@ class LevelItem extends Component {
                                                 </li>
                                             </ul>
                                             <div className="wrap-button">
-                                                <button onClick={() => this.showModal(imgIeltsBasic)} className="btn btn--outline" rel="noopener noreferrer">Xem chi tiết lộ trình học<span className="icon icon__arrow"></span></button>
+                                                <button onClick={() => this.showModal(imgIelts2)} className="btn btn--outline" rel="noopener noreferrer">Xem chi tiết lộ trình học<span className="icon icon__arrow"></span></button>
                                             </div>
                                         </div>
 
@@ -225,7 +225,7 @@ class LevelItem extends Component {
                                                 </li>
                                             </ul>
                                             <div className="wrap-button">
-                                                <button onClick={() => this.showModal(imgIeltsInter)} className="btn btn--outline" rel="noopener noreferrer">Xem chi tiết lộ trình học<span className="icon icon__arrow"></span></button>
+                                                <button onClick={() => this.showModal(imgIelts3)} className="btn btn--outline" rel="noopener noreferrer">Xem chi tiết lộ trình học<span className="icon icon__arrow"></span></button>
 
                                             </div>
                                         </div>

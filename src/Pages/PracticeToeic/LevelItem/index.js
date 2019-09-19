@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Modal from '../../../components/Modal';
-import iconTOIEC500plus from '../../../assets/img/icon-toiec500plus.png';
-import iconTOIEC650plus from '../../../assets/img/icon-toiec650plus.png';
-import iconTOIEC800plus from '../../../assets/img/icon-toiec800plus.png';
-import imgToiec from '../../../assets/img/description-toiec.png'
+import iconTOIEC500plus from '../../../assets/img/icon-toeic-500.png';
+import iconTOIEC650plus from '../../../assets/img/icon-toeic-650.png';
+import iconTOIEC800plus from '../../../assets/img/icon-toeic-800.png';
+import imgToiec from '../../../assets/img/TE.png'
 import iconList from './../../../assets/img/check-arround.png';
 
 import './styles.scss'
