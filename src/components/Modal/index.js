@@ -34,9 +34,9 @@ class Modal extends Component {
                 <div className={`${showHideClassName} scrollbar style-scroll`} ref={this.setWrapperRef}>
                     <div className="modal-main-wrap-img">  
                         <img src={img} alt="Mô tả khóa học" />
-                        <div className="modal-wrap-btn">
+                        {/* <div className="modal-wrap-btn"> */}
                             <button className="modal-close" onClick={()=> this.onHideModal()} >Close</button>
-                        </div>
+                        {/* </div> */}
                     </div>   
                 </div>
             </section>
