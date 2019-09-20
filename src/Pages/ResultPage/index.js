@@ -38,7 +38,7 @@ class ResultPage extends Component {
                 <div className="background-grey">
                     <Breadcrumb data={this.state.breadcrumb} setBackground={true} />
                     <ResultLayout id={window.location.href.split('/').pop()} />
-                    <SuitableClass />
+                    <SuitableClass id={window.location.href.split('/').pop()} />
                 </div>
             </Fragment>
         );
