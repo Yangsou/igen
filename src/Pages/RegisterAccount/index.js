@@ -12,7 +12,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import { httpClient } from "../../api/Client";
 import FormItem from "../../components/FormItem";
 import Form from "../../components/Form";
-import { ruleRequired, ruleDate } from "../../helpers";
+import { ruleRequired } from "../../helpers";
 
 function converUniversity(universities) {
   const u = [];
@@ -76,7 +76,7 @@ class RegisterAccount extends Component {
           ruleRequired()
         ],
         birthDay: [
-          ruleDate()
+          ruleRequired()
         ],
         gender: [
           ruleRequired()
