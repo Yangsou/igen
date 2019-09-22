@@ -43,7 +43,8 @@ class Contact extends Component {
         txtEmail: this.state.txtEmail,
         txtContent: this.state.txtContent 
       },
-      url: 'https://vsn.edu.vn/api/contact-igen',
+      // url: 'https://vsn.edu.vn/api/contact-igen',
+      url: 'http://localhost:8008/api/contact-igen',
       headers: {
         'Content-Type': 'application/json',
       },

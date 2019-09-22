@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-// import {  Link } from "react-router-dom";
-// import img500 from '../../../assets/img/small-icon-toeic-500plus.png';
-// import img600 from '../../../assets/img/small-icon-toeic-600plus.png';
-// import img900 from '../../../assets/img/small-icon-toeic-900plus.png';
+import {  Link } from "react-router-dom";
+import img500 from '../../../assets/img/small-icon-toeic-500plus.png';
+import img600 from '../../../assets/img/small-icon-toeic-600plus.png';
+import img900 from '../../../assets/img/small-icon-toeic-900plus.png';
 import './styles.scss';
 class SuitableClass extends Component {
     render() {
