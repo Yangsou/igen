@@ -1,3 +1,4 @@
+import { omit, cloneDeep } from 'lodash';
 import React, { Component, Fragment } from 'react';
 import Banner from '../../components/Banner';
 import registerAccountImage from '../../assets/img/register-account.svg';
@@ -6,13 +7,28 @@ import Breadcrumb from '../../components/Breakcrumb';
 import universities from '../../universities.json';
 import cities from '../../cities.json';
 import Selection from "../../components/Selection";
-import DatePicker from "react-datepicker";
+// import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-// import Axios from "axios";
 import { httpClient } from "../../api/Client";
 import FormItem from "../../components/FormItem";
 import Form from "../../components/Form";
 import { ruleRequired, ruleDate } from "../../helpers";
+
+function converUniversity(universities) {
+  const u = [];
+  universities.map((e) => {
+    u.push({
+      ...e,
+      value: e.name
+    })
+    return e;
+  });
+  u.push({
+    value: 'other',
+    name: 'Other'
+  })
+  return u;
+}
 
 class RegisterAccount extends Component {
   constructor(props) {
@@ -25,12 +41,7 @@ class RegisterAccount extends Component {
         label: 'Đăng ký tài khoản',
         active: true
       }],
-      universities: universities.map((e) => {
-        return {
-          ...e,
-          value: e.name
-        }
-      }),
+      universities: converUniversity(universities),
       departments: [],
       cities: cities.map((e) => {
         return {
@@ -53,7 +64,9 @@ class RegisterAccount extends Component {
         university: null,
         department: null,
         city: null,
-        birthDay: null
+        birthDay: '',
+        cloneUniversity: '',
+        cloneDepartment: ''
       },
       rules: {
         fullName: [
@@ -83,6 +96,9 @@ class RegisterAccount extends Component {
         fbLink: [
           ruleRequired()
         ],
+        cloneUniversity: [
+          ruleRequired()
+        ],
       }
     }
 
@@ -95,20 +111,34 @@ class RegisterAccount extends Component {
     form = {
       ...form,
       university: value,
-      department: null
+      department: null,
+      cloneDepartment: '',
+      cloneUniversity: ''
     }
-    const university = universities.find((e) => e.value === value);
+    if (value === 'other') {
+      this.setState({form});
+
+      return;
+    }
+    const university = value ? universities.find((e) => e.value === value) : [];
     const departments = university.departments.map((department) => {
       return {
         value: department,
         name: department
       }
     });
+    departments.push({
+      value: 'other',
+      name: 'Other'
+    })
 
     this.setState({form, departments});
   }
   handleChangeForm = (value, key) => {
     let { form } = this.state;
+    if (key === 'department') {
+      form.cloneDepartment = '';
+    }
     form = {
       ...form,
       [key]: value
@@ -126,15 +156,21 @@ class RegisterAccount extends Component {
   }
 
   submit = () => {
-    const { form } = this.state,
+    const { form } = cloneDeep(this.state),
       { registerAccount } = httpClient().account,
       el = this.refs.form;
+      if (form.cloneUniversity) {
+        form.university = form.cloneUniversity;
+      }
+      if (form.cloneDepartment) {
+        form.department = form.cloneDepartment;
+      }
 
       el.validate(async (valid) => {
         if (valid) {
           //
           try {
-            const data = await registerAccount(form)
+            const data = await registerAccount(omit(form, ['cloneDepartment', 'cloneUniversity']))
             if(data && data.data){
               window.location.href = data.data
             }
@@ -189,13 +225,14 @@ class RegisterAccount extends Component {
                         <div className="col-xs-12 col-sm-6">
                           <FormItem  className="form__item" prop="birthDay">
                             <p className="form__item__label">Ngày sinh <span className="form__required-char">*</span></p>
-                            <DatePicker
+                            <input value={form.birthDay} onChange={(e) => this.handleChangeForm(e.target.value, 'birthDay') } placeholder="DD/MM/YYYY" type="text" className="form__input" />
+                            {/* <DatePicker
                               selected={form.birthDay}
                               dateFormat="dd/MM/yyyy"
                               value={form.birthDay}
                               placeholderText="DD/MM/YYYY"
                               onChange={(value) => this.handleChangeForm(value, 'birthDay')}
-                            />
+                            /> */}
                           </FormItem >
                         </div>
                         <div className="col-xs-12 col-sm-6">
@@ -252,10 +289,24 @@ class RegisterAccount extends Component {
                             <p className="form__item__label">Trường học</p>
                             <Selection size="medium" value={form.university} options={universities} onChange={this.changeUniversity} />
                           </div>,
+                          (
+                            form.university === 'other' && 
+                            <FormItem className="form__item" prop="cloneUniversity" key="cloneUniversity">
+                              <p className="form__item__label">Trường học <span className="form__required-char">*</span></p>
+                              <input value={form.cloneUniversity} onChange={(e) => this.handleChangeForm(e.target.value, 'cloneUniversity') } type="text" className="form__input" />
+                            </FormItem>
+                          ),
                           <div className="form__item" key="departments">
                             <p className="form__item__label">Khoa/ Chuyên ngành</p>
-                            <Selection size="medium" value={form.department} options={departments} onChange={(value) => this.handleChangeForm(value, 'department')} />
-                          </div>
+                            <Selection disabled={!form.university || form.university === 'other'} size="medium" value={form.department} options={departments} onChange={(value) => this.handleChangeForm(value, 'department')} />
+                          </div>,
+                          (
+                            (form.university === 'other' || form.department === 'other') &&
+                            <FormItem className="form__item" prop="cloneDepartment" key="cloneDepartment">
+                              <p className="form__item__label">Khoa/ Chuyên ngành</p>
+                              <input value={form.cloneDepartment} onChange={(e) => this.handleChangeForm(e.target.value, 'cloneDepartment') } type="text" className="form__input" />
+                            </FormItem>
+                          )
 
                         ]
                       }
