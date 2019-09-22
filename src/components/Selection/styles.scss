@@ -2,6 +2,10 @@
 
 .ig-select {
   position: relative;
+  &.disabled {
+    pointer-events: none;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
   &__selected {
     height: 36px;
     line-height: 36px;

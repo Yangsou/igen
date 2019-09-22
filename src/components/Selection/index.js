@@ -49,12 +49,12 @@ class Selection extends Component {
   }
 
   render() {
-    const { options, value, emptyText, size } = this.props;
+    const { options, value, emptyText, size, disabled } = this.props;
     const { isFocusing } = this.state;
 
     return (
       <Fragment>
-        <div className="ig-select" ref="ig-select">
+        <div className={`ig-select${disabled ? ' disabled' : ''}`} ref="ig-select">
           <div className={`ig-select__selected ${size} ${isFocusing ? 'ig-select__selected--show' : ''}`} onClick={() => this.toogle()}>{ this.formaterText() }<span className="icon icon__arrow-right ig-select__selected__arrow"></span></div>
           <ul className={`ig-select__menu ${isFocusing ? 'ig-select__menu--show' : ''}`}>
 
@@ -76,6 +76,7 @@ Selection.defaultProps = {
   placeholder: 'Select',
   value: null,
   options: [],
-  emptyText: 'No data'
+  emptyText: 'No data',
+  disabled: false
 }
 export default Selection;
