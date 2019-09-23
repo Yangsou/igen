@@ -37,7 +37,9 @@ class App extends React.Component {
   componentWillUnmount() {
     window.removeEventListener('scroll', this.lazyLoad, false);
   }
-
+  setDisplayNone = () => {
+    return window.location.href.split('/').pop() === 'coming-soon'?'display-none':'';
+  }
   render() {
     var showRoutes = (routes) => {
       var result = '';
@@ -58,7 +60,7 @@ class App extends React.Component {
             </Switch>
           <Contact />
     
-          <footer className="footer">&copy; Copyright 2019 i-Gen. All rights reserved.</footer>
+          <footer className={`footer ${this.setDisplayNone()}`}>&copy; Copyright 2019 i-Gen. All rights reserved.</footer>
         </Router>
     );
   }
