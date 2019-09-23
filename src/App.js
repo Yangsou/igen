@@ -3,6 +3,7 @@ import './App.scss';
 import Header from './components/Header/Header';
 import Contact from './components/Contact/Contact'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { loadReCaptcha } from 'react-recaptcha-google'
 import routes from './routes'
 class App extends React.Component {
   // constructor(props){
@@ -33,6 +34,7 @@ class App extends React.Component {
   componentDidMount() {
     this.lazyLoad();
     window.addEventListener('scroll', this.lazyLoad, false);
+    loadReCaptcha();
   }
   componentWillUnmount() {
     window.removeEventListener('scroll', this.lazyLoad, false);
@@ -58,8 +60,7 @@ class App extends React.Component {
             <Switch>
               {showRoutes(routes)}
             </Switch>
-          <Contact />
-    
+              <Contact />
           <footer className={`footer ${this.setDisplayNone()}`}>&copy; Copyright 2019 i-Gen. All rights reserved.</footer>
         </Router>
     );
