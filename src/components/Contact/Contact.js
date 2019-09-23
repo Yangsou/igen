@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { ReCaptcha } from 'react-recaptcha-google'
 import facebookIcon from '../../assets/img/facebook.png';
 import locationIcon from '../../assets/img/location.png';
 import phoneIcon from '../../assets/img/phone.png';
@@ -14,9 +15,27 @@ class Contact extends Component {
       txtName : '',
       txtPhoneNumber : '',
       txtEmail : '',
-      txtContent : ''
+      txtContent : '',
+      checkedCaptcha: false,
+      captchaMsg: ''
     }
   }
+  onLoadRecaptcha=() =>{
+    if (this.captchaDemo) {
+        this.captchaDemo.reset();
+    }
+}
+componentDidMount(){
+  if (this.captchaDemo) {
+    this.captchaDemo.reset();
+}
+}
+verifyCallback=(recaptchaToken) =>{
+  this.setState({
+    checkedCaptcha: !this.state.checkedCaptcha,
+    captchaMsg: ''
+  })
+}
   onHandleChange = (event) => {
     var target = event.target;
     var name = target.name;
@@ -38,32 +57,41 @@ class Contact extends Component {
   }
   onHandleSubmit = (event) => {
     event.preventDefault();
-    return axios({
-      method: 'post',
-      data: {
-        txtName: this.state.txtName,
-        txtPhoneNumber: this.state.txtPhoneNumber,
-        txtEmail: this.state.txtEmail,
-        txtContent: this.state.txtContent 
-      },
-      url: 'https://vsn.edu.vn/api/contact-igen',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    })
-    .then(() => {
-      swal({
-        title: "Đã gửi!",
-        text: "Chúng tôi đã ghi nhận thông tin của bạn.",
-        icon: "success",
-        timer: 1000,
-        button: false
+    if (this.state.checkedCaptcha) {
+      
+      return axios({
+        method: 'post',
+        data: {
+          txtName: this.state.txtName,
+          txtPhoneNumber: this.state.txtPhoneNumber,
+          txtEmail: this.state.txtEmail,
+          txtContent: this.state.txtContent 
+        },
+        url: 'https://vsn.edu.vn/api/contact-igen',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      })
+      .then(() => {
+        swal({
+          title: "Đã gửi!",
+          text: "Chúng tôi đã ghi nhận thông tin của bạn.",
+          icon: "success",
+          timer: 1000,
+          button: false
+        });
+        this.clearForm();
+        this.onLoadRecaptcha();
+      })
+      .catch((error) => {
+          console.log(error);
       });
-      this.clearForm();
-    })
-    .catch((error) => {
-        console.log(error);
-    });
+    } else {
+      this.setState({
+        captchaMsg: 'The captcha is missing or wrong!'
+      })
+    }
+    
   }
   render(){
     return (
@@ -136,6 +164,16 @@ class Contact extends Component {
                   required 
                   onChange={this.onHandleChange}
                   />
+                    <ReCaptcha
+                          ref={(el) => {this.captchaDemo = el;}}
+                          size="normal"
+                          data-theme="dark"            
+                          render="explicit"
+                          sitekey="6Lem47kUAAAAAJkXoE3vYKhm_8LD3IbXCMDKhlby"
+                          onloadCallback={this.onLoadRecaptcha}
+                          verifyCallback={this.verifyCallback}
+                      />
+                  <p className="captcha-msg">{this.state.captchaMsg}</p>
                 <button type="submit" className="btn btn--fluid btn--gradient btn--radius">Gửi Đi<span className="icon icon__send"></span></button>
               </form>
             </div>
