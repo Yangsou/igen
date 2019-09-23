@@ -33,6 +33,9 @@ class Contact extends Component {
       txtContent : ''
     })
   }
+  setDisplayNone = () => {
+    return window.location.href.split('/').pop() === 'coming-soon'?'display-none':'';
+  }
   onHandleSubmit = (event) => {
     event.preventDefault();
     return axios({
@@ -64,7 +67,7 @@ class Contact extends Component {
   }
   render(){
     return (
-      <section className="contact lazy-load" id="contact-us">
+      <section className={`contact lazy-load ${this.setDisplayNone()}`} id="contact-us">
         <div className="container">
           <div className="col-md-6 contact__item">
             <img src={logoWhite} alt="logo-white" />
