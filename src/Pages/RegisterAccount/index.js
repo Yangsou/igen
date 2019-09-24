@@ -136,10 +136,11 @@ class RegisterAccount extends Component {
           try {
             const data = await registerAccount(form)
             if(data && data.data){
-              window.location.href = data.data
+                window.location.href = data.data
             }
           } catch (error) {
             console.log(error);
+            window.location.href = 'https://igen.edu.vn/coming-soon'
           }
         }
         
