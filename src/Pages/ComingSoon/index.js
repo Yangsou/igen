@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactTypingEffect from 'react-typing-effect';
 import './styles.scss';
 class ComingSoon extends React.Component {
   render() {
@@ -12,16 +11,13 @@ class ComingSoon extends React.Component {
 
       <div className="home__content container coming-soon-content">
         <p className="home__content__brand">i-Gen</p>
-        <ReactTypingEffect className="home__content__text home__content__text--mobile"
-          text="Chúng tôi đang hoàn thiện bài kiểm tra đầu vào và khóa học bạn đã chọn.
-                Chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất."
-          speed={70}
-          eraseDelay={900000}
-        />
+        <p className="home__content__text home__content__text--mobile">
+                Chúng tôi đang hoàn thiện bài kiểm tra đầu vào và khóa học bạn đã chọn. Chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất.
+        </p>
       </div>
     </section>
     )
-  }
+  }  
 }
 
 export default ComingSoon;
