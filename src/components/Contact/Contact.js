@@ -112,7 +112,7 @@ verifyCallback=(recaptchaToken) =>{
               </div>
               <div className="contact__item__content">
                 <img className="img img--email" src={emailIcon} alt="igen@vsn.edu.vn" />
-                <p className="text"><span className="bold">igen@vsn.edu.vn</span></p>
+                <p className="text"><span className="bold">contact@igen.edu.vn</span></p>
               </div>
               <div className="contact__item__content">
                 <a href="https://www.facebook.com/igen.vietnam" target="blank">
