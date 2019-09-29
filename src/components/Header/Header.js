@@ -54,7 +54,9 @@ class Header extends React.Component {
       header.classList.remove('active');
     }
   }
-
+  setDisplayNone = () => {
+    return window.location.href.split('/').pop() === 'coming-soon'?'display-none':'';
+  }
   clickPrimaryButton = () => {
     window.location.href = 'https://igen.vsn.edu.vn/dang-ky-thi-thu'
   }
@@ -107,7 +109,7 @@ class Header extends React.Component {
   render() {
     const { menus, showMenu } = this.state;
     return (
-      <header ref="header" className="container--fluid header-fixed">
+      <header ref="header" className={`container--fluid header-fixed ${this.setDisplayNone()}`}>
         <div className="header">
           <a className="header__brand" href="/">
             <img src={logo} className="header__brand__img" alt="I-gen logo" />

@@ -6,6 +6,7 @@ import PracticeIELTS from './Pages/PracticeIELTS'
 import RegisterTest from './Pages/RegisterTest'
 import RegisterAccount from './Pages/RegisterAccount'
 import ResultPage from './Pages/ResultPage'
+import ComingSoon from './Pages/ComingSoon'
 const routes = [
     {
         path : '/',
@@ -42,6 +43,11 @@ const routes = [
         exact: false,
         component: ResultPage 
         // main: () => <ResultPage />
+    },
+    {
+        path: '/coming-soon',
+        exact: false,
+        component: ComingSoon
     }
 ]
 

@@ -12,7 +12,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import { httpClient } from "../../api/Client";
 import FormItem from "../../components/FormItem";
 import Form from "../../components/Form";
-import { ruleRequired, ruleDate } from "../../helpers";
+import { ruleRequired } from "../../helpers";
 
 function converUniversity(universities) {
   const u = [];
@@ -76,7 +76,7 @@ class RegisterAccount extends Component {
           ruleRequired()
         ],
         birthDay: [
-          ruleDate()
+          ruleRequired()
         ],
         gender: [
           ruleRequired()
@@ -172,10 +172,13 @@ class RegisterAccount extends Component {
           try {
             const data = await registerAccount(omit(form, ['cloneDepartment', 'cloneUniversity']))
             if(data && data.data){
-              window.location.href = data.data
+                window.location.href = data.data
+            } else {
+              window.location.href = 'https://igen.edu.vn/coming-soon'
             }
           } catch (error) {
             console.log(error);
+            window.location.href = 'https://igen.edu.vn/coming-soon'
           }
         }
         
