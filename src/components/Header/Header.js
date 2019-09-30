@@ -54,9 +54,6 @@ class Header extends React.Component {
       header.classList.remove('active');
     }
   }
-  setDisplayNone = () => {
-    return window.location.href.split('/').pop() === 'coming-soon'?'display-none':'';
-  }
   clickPrimaryButton = () => {
     window.location.href = 'https://igen.vsn.edu.vn/dang-ky-thi-thu'
   }
@@ -83,19 +80,22 @@ class Header extends React.Component {
     window.scroll(0, 0);
   }
   toggleMenuItemActive = () => {
-    const menus = this.state.menus.map((e) => {
-      const element = document.getElementById(e.id),
-        rectTop = element ? element.getBoundingClientRect().top : null,
-        rectBottom = element ? element.getBoundingClientRect().bottom : null;
+    if (window.location.href.split('/').pop() !== "coming-soon") {
+      const menus = this.state.menus.map((e) => {
+        const element = document.getElementById(e.id),
+          rectTop = element ? element.getBoundingClientRect().top : null,
+          rectBottom = element ? element.getBoundingClientRect().bottom : null;
+  
+        return {
+          ...e,
+          active: (rectTop <= 90 && rectBottom > 90) || (e.id === 'contact-us' && window.innerHeight - rectBottom > 0)
+        }
+      });
+      this.setState({
+        menus
+      })
+    }
 
-      return {
-        ...e,
-        active: (rectTop <= 90 && rectBottom > 90) || (e.id === 'contact-us' && window.innerHeight - rectBottom > 0)
-      }
-    });
-    this.setState({
-      menus
-    })
   }
   showListMenu = (id , label) => {
     if(window.location.href === 'https://igen.edu.vn/'){
@@ -109,7 +109,7 @@ class Header extends React.Component {
   render() {
     const { menus, showMenu } = this.state;
     return (
-      <header ref="header" className={`container--fluid header-fixed ${this.setDisplayNone()}`}>
+      <header ref="header" className="container--fluid header-fixed">
         <div className="header">
           <a className="header__brand" href="/">
             <img src={logo} className="header__brand__img" alt="I-gen logo" />
