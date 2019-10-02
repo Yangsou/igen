@@ -46,7 +46,7 @@ class ResultLayout extends Component {
           .then((res) => {
             if(res && res.data.success){
               this.setState({
-                data: res.data
+                data: res.data.data
               })
             }
           })
