@@ -24,7 +24,7 @@ class SuitableClass extends Component {
           .then((res) => {
             if(res && res.success){
               this.setState({
-                suitableClass: res.data.courseInfo
+                suitableClass: res.courseInfo
               })
             }
           })
