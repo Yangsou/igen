@@ -12,6 +12,13 @@
             margin-top: 45px;
             margin-bottom: 45px;
             text-align: center;
+        } &__empty {
+            font-size: 30px;
+            font-weight: bold;
+            color: $--color-text-primary;
+            margin-top: 45px;
+            margin-bottom: 45px;
+            text-align: center;
         }
         &__list {
             .item {
@@ -29,6 +36,7 @@
                     height: 70px;
                     line-height: 70px;
                     color: #fff;
+                    overflow: hidden;
                     &--vsn2 {
                         background: #138ea0;
                     }
