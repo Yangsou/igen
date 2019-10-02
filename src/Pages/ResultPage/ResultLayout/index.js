@@ -44,9 +44,9 @@ class ResultLayout extends Component {
             url: `https://vsn.edu.vn/api/user/report-multiple-choice-igen/${this.props.id}`
           })
           .then((res) => {
-            if(res && res.success){
+            if(res && res.data.success){
               this.setState({
-                data: res.data.data
+                data: res.data
               })
             }
           })
