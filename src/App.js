@@ -21,7 +21,7 @@ class App extends React.Component {
       if(elementPosition.top < window.innerHeight / 1.5
         && elementPosition.top + element[i].clientHeight >= window.innerHeight / 2
       ){
-        element[i].classList.add('active');
+            element[i].classList.add('active');
       }
 
     }
@@ -39,16 +39,12 @@ class App extends React.Component {
   componentWillUnmount() {
     window.removeEventListener('scroll', this.lazyLoad, false);
   }
-  setDisplayNone = () => {
-    return window.location.href.split('/').pop() === 'coming-soon'?'display-none':'';
-  }
   render() {
     var showRoutes = (routes) => {
       var result = '';
       result =  routes.map((route, index) => {
         return (
           <Route key={index} exact={route.exact} path={route.path} component={route.main?route.main:route.component} />
-          // <Route key={index} exact={route.exact} path={route.path} render={(props)=> <route.component {...props} />} />
         )
       })
       return result;
@@ -61,7 +57,7 @@ class App extends React.Component {
               {showRoutes(routes)}
             </Switch>
               <Contact />
-          <footer className={`footer ${this.setDisplayNone()}`}>&copy; Copyright 2019 i-Gen. All rights reserved.</footer>
+          <footer className="footer">&copy; Copyright 2019 i-Gen. All rights reserved.</footer>
         </Router>
     );
   }
