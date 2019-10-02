@@ -18,8 +18,8 @@ class SuitableClass extends Component {
     fetchResultTest = () => {
         return axios({
             method: 'get',
-            url: `http://localhost:8008/api/user/report-multiple-choice-igen/${this.props.id}`
-            //url: `https://vsn.edu.vn/api/user/report-multiple-choice-igen/${this.props.id}`
+            //url: `http://localhost:8008/api/user/report-multiple-choice-igen/${this.props.id}`
+            url: `https://vsn.edu.vn/api/user/report-multiple-choice-igen/${this.props.id}`
           })
           .then((res) => {
             if(res && res.data.success){
