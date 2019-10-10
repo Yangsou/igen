@@ -8,18 +8,18 @@ class ResultPage extends Component {
     constructor(props){
         super(props);
         this.state = {
-            title: 'Đăng Ký Thi Thử',
+            title: 'Đánh Giá Năng Lực',
             img,
             imgClassName: 'wrap-img-register-exam',
-            alt: 'Đăng Ký Thi Thử',
+            alt: 'Đánh Giá Năng Lực',
             breadcrumb : [
                 {
                     label : 'Trang Chủ',
                     path : '/'
                 },
                 {
-                    label : 'Đăng Ký Thi Thử',
-                    path : '/dang-ky-thi-thu'
+                    label : 'Đánh Giá Năng Lực',
+                    path : '/danh-gia-nang-luc'
                 },
                 {
                     label : 'Thi Thử TOEIC',

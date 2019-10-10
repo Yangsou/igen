@@ -11,6 +11,7 @@ import Selection from "../../components/Selection";
 import "react-datepicker/dist/react-datepicker.css";
 import { httpClient } from "../../api/Client";
 import FormItem from "../../components/FormItem";
+import swal from 'sweetalert';
 import Form from "../../components/Form";
 import { ruleRequired } from "../../helpers";
 
@@ -172,7 +173,14 @@ class RegisterAccount extends Component {
           try {
             const data = await registerAccount(omit(form, ['cloneDepartment', 'cloneUniversity']))
             if(data && data.data){
+              swal({
+                text: "Bạn làm bài đánh giá năng lực trên nền tảng eLearning của Công ty Cổ phần Công nghệ Giáo dục VSN.",
+                type: "info",
+                timer: 3000,
+                button: false
+              }).then(() => {
                 window.location.href = data.data
+              }); 
             } else {
               window.location.href = 'https://igen.edu.vn/coming-soon'
             }

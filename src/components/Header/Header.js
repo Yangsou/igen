@@ -44,7 +44,11 @@ class Header extends React.Component {
       showMenu: !this.state.showMenu
     })
   }
-
+  closeMenu = () => {
+    this.setState({
+      showMenu: false
+    })
+  }
   activeHeaderWhenScroll = () => {
     var scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
     var header = this.refs.header;;
@@ -55,9 +59,10 @@ class Header extends React.Component {
     }
   }
   clickPrimaryButton = () => {
-    window.location.href = 'https://igen.vsn.edu.vn/dang-ky-thi-thu'
+    window.location.href = 'https://igen.vsn.edu.vn/danh-gia-nang-luc'
   }
   clickMenuItem = (id) => {
+    console.log('click click')
       setTimeout(()=> {
         var element = document.getElementById(id);
         if (element) {
@@ -111,9 +116,9 @@ class Header extends React.Component {
     return (
       <header ref="header" className="container--fluid header-fixed">
         <div className="header">
-          <a className="header__brand" href="/">
+          <Link className="header__brand" to="/" onClick={() => this.scrollToTop()}>
             <img src={logo} className="header__brand__img" alt="I-gen logo" />
-          </a>
+          </Link>
 
           <div className="header__right">
             <ul className={`header__menu ${showMenu ? 'active' : ''}`}>
@@ -128,10 +133,10 @@ class Header extends React.Component {
                 ))
               }
               <li className="header__menu__item">
-                <Link to="/dang-ky-thi-thu" onClick={this.toggleMenu}>
-                  <button onClick={() => this.scrollToTop()}  className="btn btn--radius btn--primary btn--uppercase">
+                <Link to="/">
+                  <button onClick={() => this.clickMenuItem('process')}  className="btn btn--radius btn--primary btn--uppercase">
                     <span className="icon icon__test"></span>
-                    <span className="btn__label">Đăng ký thi thử</span>
+                    <span className="btn__label">ĐĂNG KÝ HỌC NGAY</span>
                   </button>
                 </Link>
               </li>
