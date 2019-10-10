@@ -9,17 +9,17 @@ class RegisterTest extends Component {
     constructor(props){
         super(props);
         this.state = {
-            title: 'Đăng Ký Thi Thử',
+            title: 'Đánh Giá Năng Lực',
             img,
             imgClassName: 'wrap-img-register-exam',
-            alt: 'Đăng Ký Thi Thử',
+            alt: 'Đánh Giá Năng Lực',
             breadcrumb : [
                 {
                     label : 'Trang Chủ',
                     path : '/'
                 },
                 {
-                    label : 'Đăng Ký Thi Thử',
+                    label : 'Đánh Giá Năng Lực',
                     active : true
                 }
             ]

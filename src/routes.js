@@ -29,7 +29,7 @@ const routes = [
         component : PracticeIELTS
     },
     {
-        path : '/dang-ky-thi-thu',
+        path : '/danh-gia-nang-luc',
         exact : false,
         component : RegisterTest
     },
