@@ -19,7 +19,7 @@ export default function ProgramStudy() {
               <p className="register-program__item__title">Tiếng Anh tổng quát</p>
               
               {/* <button className="btn btn--outline">Xem chi tiết <span className="icon icon__arrow"></span></button> */}
-              <Link to={{ pathname: "/dang-ky-tai-khoan", search: "?courseId=english" }} className="GE-dang-ky-thi-thu btn btn--outline" rel="noopener noreferrer">Bắt đầu ngay <span className="icon icon__arrow"></span></Link>
+              <Link to={{ pathname: "/dang-ky-tai-khoan", search: "?courseId=english" }} className="GE-danh-gia-nang-luc btn btn--outline" rel="noopener noreferrer">Bắt đầu ngay <span className="icon icon__arrow"></span></Link>
             </div>
           {/* </div> */}
           {/* <div className="col-xs-4"> */}
@@ -29,7 +29,7 @@ export default function ProgramStudy() {
               </div>
               <p className="register-program__item__title ">Luyện thi TOEIC</p>
               
-              <Link to={{ pathname: "/dang-ky-tai-khoan", search: "?courseId=toeic" }} className="TE-dang-ky-thi-thu btn btn--outline" rel="noopener noreferrer">Bắt đầu ngay <span className="icon icon__arrow"></span></Link>
+              <Link to={{ pathname: "/dang-ky-tai-khoan", search: "?courseId=toeic" }} className="TE-danh-gia-nang-luc btn btn--outline" rel="noopener noreferrer">Bắt đầu ngay <span className="icon icon__arrow"></span></Link>
               {/* <button className="btn btn--outline">Xem chi tiết <span className="icon icon__arrow"></span></button> */}
             </div>
           {/* </div> */}
@@ -40,7 +40,7 @@ export default function ProgramStudy() {
               </div>
               <p className="register-program__item__title">Luyện thi IELTS</p>
 
-                <Link to={{ pathname: "/dang-ky-tai-khoan", search: "?courseId=ielts" }} className="IE-dang-ky-thi-thu btn btn--outline" rel="noopener noreferrer">Bắt đầu ngay <span className="icon icon__arrow"></span></Link>
+                <Link to={{ pathname: "/dang-ky-tai-khoan", search: "?courseId=ielts" }} className="IE-danh-gia-nang-luc btn btn--outline" rel="noopener noreferrer">Bắt đầu ngay <span className="icon icon__arrow"></span></Link>
             </div>
           {/* </div> */}
         </div>

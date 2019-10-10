@@ -10,7 +10,7 @@ import registerImg from '../../assets/img/register_exam_bg.png';
 import './Sponser.scss';
 export default class Sponser extends React.Component {
   clickTry = () => {
-    window.location.href = 'https://igen.vsn.edu.vn/dang-ky-thi-thu'
+    window.location.href = 'https://igen.vsn.edu.vn/danh-gia-nang-luc'
   }
 
   render() {
@@ -52,20 +52,20 @@ export default class Sponser extends React.Component {
          
           <div className="register-exam">
             <div className="col-md-7">
-              <p className="register-exam__title">Đăng Ký Thi Thử</p>
-              <p className="register-exam__desc">Kiểm tra ngay trình độ của bạn để tìm thấy lớp học và thời gian phù hợp.</p>
+              <p className="register-exam__title">Đánh Giá Năng Lực</p>
+              <p className="register-exam__desc">Kiểm tra ngay trình độ của bạn để tìm thấy lớp học và thời gian phù hợp</p>
               <div className="relative">
                 <div className="register-exam__list">
                   <p className="register-exam__list__item"><span className="icon icon__check-arround"></span>Hoàn toàn miễn phí</p>
                   <p className="register-exam__list__item"><span className="icon icon__check-arround"></span>Biết ngay kết quả</p>
                   <p className="register-exam__list__item"><span className="icon icon__check-arround"></span>100% online tại nhà</p>
                 </div>
-                  <Link to="/dang-ky-thi-thu" className="btn register-exam__btn">THỬ NGAY</Link>
+                  <Link to="/danh-gia-nang-luc" className="btn register-exam__btn">LÀM NGAY</Link>
 
               </div>
             </div>
             <div className="col-md-5">
-              <img src={registerImg} alt="Đăng Ký Thi Thử" />
+              <img src={registerImg} alt="Đánh Giá Năng Lực" />
             </div>
           </div>
          </div>
