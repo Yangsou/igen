@@ -19,7 +19,7 @@ class RegisterProcess extends Component {
                             <p className="method__row__title">Bước 1: Đánh giá năng lực</p>
                           <p className="method__row__text">Trước khi học cùng dự án, học viên cần thực hiện bài kiểm tra đánh giá năng lực để biết được trình độ của mình. </p>
                           <br />
-                          <p><Link className="btn btn--outline" to="/danh-gia-nang-luc">Làm tại đây</Link></p>
+                          <p><Link className="btn btn--outline" to="/danh-gia-nang-luc">Làm bài test tại đây</Link></p>
                         </div>
                         <div className="method__right col-xs-12 col-sm-6">
                             <img src={bgOnline} alt="about i-gen" className="method__img_register" />
