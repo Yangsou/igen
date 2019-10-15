@@ -33,9 +33,9 @@
                 &__title {
                     text-align: center;
                     background: #ff6200;
-                    height: 70px;
-                    line-height: 70px;
+                    font-size: 1.3em;
                     color: #fff;
+                    padding: 5px 0;
                     overflow: hidden;
                     &--vsn2 {
                         background: #138ea0;
@@ -60,15 +60,8 @@
                         position: relative;
                         background: #fff;
                         img {
-                            position: absolute;
-                            width: 150px;
-                            top: -95px;
-                            left: 50%;
-                            transform: translate(-50%);
-                            @include media-breakpoint('sm') {
-                                width: 120px;
-                                top: -75px;
-                            }
+                            border-top: 5px solid #8536ac;
+                            width: 100%;
                         }
                     }
                     .btn-wrap {
@@ -91,11 +84,8 @@
                     }
                 }
                 &__description {
-                    padding-top: 130px;
+                    padding-top: 0px;
                     padding-bottom: 8px;
-                    @include media-breakpoint('sm') {
-                        padding-top: 80px;
-                    }
                     &__content {
                         display: flex;
                         justify-content: space-between;

@@ -13,7 +13,9 @@ class SuitableClass extends Component {
         var year = date.getFullYear();
         var month = date.getMonth() + 1;
         var day = date.getDate();
-        return day+'.'+month+'.'+year
+        var hour = date.getHours();
+        var min = date.getMinutes();
+        return hour + ':' + min + ' ' + day+'.'+month+'.'+year
     }
     fetchResultTest = () => {
         return axios({
@@ -58,7 +60,6 @@ class SuitableClass extends Component {
                              <div className="item">
                                <h2 className="item__title item__title--vsn1">{course.title}</h2>
                                <div className="item__main">
-                                 <div className="item__main__space item__main__space--vsn1"></div>
                                  <div className="item__main__content">
                                    <img src={course.thumbnail} alt=""/>
                                    <div className="item__description">
