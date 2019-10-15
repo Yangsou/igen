@@ -15,8 +15,8 @@ class HomePage extends Component {
                 <AboutUs />
                 <ProgramStudy />
                 <MethodStudy />
-                <RegisterProcess />
                 <Participation />
+                <RegisterProcess />
                 <Sponser />
             </Fragment>   
         );

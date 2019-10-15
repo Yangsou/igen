@@ -6,6 +6,13 @@
   position: relative;
   padding-top: 70px;
   padding-bottom: 70px;
+  &__line{
+    margin-top: 50px;
+    height: 2px;
+    background: #8934B4;
+    display: block;
+    border: none;
+  }
   &__title {
     color: $--color-text-primary;
     font-size: 45px;
@@ -19,9 +26,9 @@
   &__right {
     float: right;
   }
-  &__img {
+  &__img_register {
     width: 100%;
-    max-width: 420px;
+    max-width: 300px;
     display: block;
     margin: auto;
     @include media-breakpoint('gt-md') {
@@ -81,7 +88,7 @@
   }
   .custom-position {
     @include media-breakpoint('lg') {
-        transform: translateY(120px);
+        transform: translateY(50px);
       }
       @include media-breakpoint('tb-land') {
         transform: translateY(95px);
