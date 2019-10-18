@@ -164,15 +164,19 @@ verifyCallback=(recaptchaToken) =>{
                   required 
                   onChange={this.onHandleChange}
                   />
-                    <ReCaptcha
+                {
+                  window.grecaptcha ?
+                      <ReCaptcha
                           ref={(el) => {this.captchaDemo = el;}}
                           size="normal"
-                          data-theme="dark"            
+                          data-theme="dark"
                           render="explicit"
                           sitekey="6Lem47kUAAAAAJkXoE3vYKhm_8LD3IbXCMDKhlby"
                           onloadCallback={this.onLoadRecaptcha}
                           verifyCallback={this.verifyCallback}
                       />
+                      : null
+                }
                   <p className="captcha-msg">{this.state.captchaMsg}</p>
                 <button type="submit" className="btn btn--fluid btn--gradient btn--radius">Gửi Đi<span className="icon icon__send"></span></button>
               </form>
