@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import largeStick from '../../../assets/img/large-stick.png';
+import General from './../component/General';
+import Toeic from './../component/Toeic';
+import Ielts from './../component/Ielts';
 import axios from 'axios';
 import './styles.scss';
 class ResultLayout extends Component {
     constructor(props){
         super(props);
         this.state = {
+            
             data: {
                 _id: "",
                 multipleChoice: {
@@ -64,12 +68,24 @@ class ResultLayout extends Component {
         return minutes+' phút '+seconds+' giây'
 
     }
+    showLevelTitle = (level) => {
+        let title = ''
+        if(level==='5'||level==='6'||level==='7') {
+            title = level +'.0+'
+        } else if (level ==='500'||level ==='600'|| level ==='700') {
+            title = level + '+'
+        } else {
+            title = level
+        }
+        return title
+    }
     componentDidMount(){
         this.fetchResultTest();
         window.scroll(0, 0);
     }
     render() {
         const {data} = this.state;
+        const level = data.courseType;
         return (
             <section className="result__wrap container-fluid">
                 <div className=" result container">
@@ -79,6 +95,7 @@ class ResultLayout extends Component {
                         </div>
                         <h1 className="result__title">Chúc mừng bạn đã hoàn thành bài thi thử</h1>
                         <h3 className="result__sub-title">Kết quả {data.multipleChoice.title}</h3>
+                        <h3 className="result__level">Bạn đạt trình độ {this.showLevelTitle(level)}</h3>
                         <hr />
                     </div>
                     <div className="result__description row">
@@ -112,7 +129,11 @@ class ResultLayout extends Component {
                             Bạn muốn làm lại để cải thiện kết quả? <a className="result__footer__link" href={data.link}>Click vào đây.</a>
                         </p>
                     </div>
+                    <General level={level} />
+                    <Toeic  level={level} />
+                    <Ielts  level={level} />
                 </div>
+                
             </section>
         );
     }
