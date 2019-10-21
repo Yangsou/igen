@@ -37,8 +37,12 @@
             h3 {
                 font-size: 25px;
                 text-align: center;
-                margin-bottom: 30px;
+                margin-bottom: 5px;
                 color: $--color-text-primary;
+            }
+            .result__level {
+                color: red;
+                font-size: 30px;
             }
             hr {
                 border-bottom-width: 0px;

@@ -1,40 +1,23 @@
 import React, { Component } from 'react';
-import Modal from '../../../components/Modal';
-import iconTOIEC500plus from '../../../assets/img/icon-toeic-500.png';
-import iconTOIEC600plus from '../../../assets/img/icon-toeic-600.png';
-import iconTOIEC700plus from '../../../assets/img/icon-toeic-700.png';
-import imgToiec from '../../../assets/img/TE.png'
-import iconList from './../../../assets/img/check-arround.png';
-
-import './styles.scss'
+import iconList from './../../../../assets/img/check-arround.png';
+import './../../../PracticeToeic/LevelItem/styles.scss';
+import './styles.scss';
 class LevelItem extends Component {
     constructor(props){
         super(props);
         this.state = {
-            show : false,
-            img: imgToiec,
         }
     }
-    showModal = (img) => {
-        this.setState({ 
-            show: true,
-            img
-         });
-      };
-    
-      hideModal = () => {
-        this.setState({ show: false });
-      }
     render() {
+        const { level } = this.props;
         return (
                 <section className="item__level_toiec">
                     <section className="container-fluid bg-row">
                         <div className="container">
-                            <div className="row pt-80">
-                                <div className="col-sm-6">
-                                    <div className="card-level">
-                                        <div className="card-box">
-                                            <img className="card-level-img" src={iconTOIEC500plus} alt="" />
+                            <div className="row wrap-flex-center">
+                                {level==='500'?<div className="col-sm-6">
+                                    <div className="card-level card-level-sub">
+                                        <div className="card-box card-box-sub">
                                             <h1 className="card-level-title">Cấp độ 500+</h1>
                                             <p className="card-level-description mb-18">
                                             TOEIC 450, TOEIC 500, TOEIC 550 là số điểm TOEIC yêu cầu đầu ra của rất nhiều các trường Đại học tại Việt Nam. 
@@ -88,18 +71,14 @@ class LevelItem extends Component {
                                                 </li>
                                                 
                                             </ul>
-                                            <div className="wrap-button">
-                                                <button onClick={() => this.showModal(imgToiec)} className="btn btn--outline" rel="noopener noreferrer">Xem chi tiết lộ trình học<span className="icon icon__arrow"></span></button>
-                                            </div>
                                         </div>
 
                                     </div>
 
-                                </div>
-                                <div className="col-sm-6">
-                                    <div className="card-level">
-                                        <div className="card-box">
-                                            <img className="card-level-img" src={iconTOIEC600plus} alt="" />
+                                </div>:''}
+                                {level==='600'?<div className="col-sm-6">
+                                    <div className="card-level card-level-sub">
+                                        <div className="card-box card-box-sub">
                                             <h1 className="card-level-title">Cấp độ 600+</h1>
                                             <p className="card-level-description mb-18">
                                                 Điểm số TOEIC 600 - 750+ là mong muốn của đa số các bạn thí sinh luyện thi chứng chỉ này.
@@ -173,24 +152,14 @@ class LevelItem extends Component {
                                                     </div>
                                                 </li>
                                             </ul>
-                                            <div className="wrap-button">
-                                                <button onClick={() => this.showModal(imgToiec)} className="btn btn--outline" rel="noopener noreferrer">Xem chi tiết lộ trình học<span className="icon icon__arrow"></span></button>
-                                            </div>
                                         </div>
 
                                     </div>
 
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <section className="container-fluid">
-                        <div className="container">
-                            <div className="row pt-80  wrap-flex-center">
-                                <div className="col-sm-6">
-                                    <div className="card-level">
-                                        <div className="card-box card-box-certificate-b">
-                                            <img className="card-level-img" src={iconTOIEC700plus} alt="" />
+                                </div>:''}
+                                {level==='700'?<div className="col-sm-6">
+                                    <div className="card-level card-level-sub">
+                                        <div className="card-box card-box-sub card-box-certificate-b">
                                             <h1 className="card-level-title">Cấp độ 700+</h1>
                                             <p className="card-level-description mb-18">
                                                 Điểm số TOEIC 700+ là một số điểm có thể được gọi là cao đối với trình độ trung bình của các bạn sinh viên hiện nay,
@@ -262,17 +231,12 @@ class LevelItem extends Component {
                                                     </div>
                                                 </li>
                                             </ul>
-                                            <div className="wrap-button">
-                                                <button onClick={() => this.showModal(imgToiec)} className="btn btn--outline" rel="noopener noreferrer">Xem chi tiết lộ trình học<span className="icon icon__arrow"></span></button>
-
-                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div>:''}
                             </div>
                         </div>
                     </section>
-                    <Modal show={this.state.show} img={this.state.img} hideModal={this.hideModal} />
                 </section>
             
         );

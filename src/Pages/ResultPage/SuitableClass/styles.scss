@@ -139,4 +139,17 @@
         display: flex;
         justify-content: center;
     }
+    .wrap-popup {
+        background: white;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 12px;
+        color: #e15c2b;
+        font-size: 14px;
+    }
+    
+    span.level-description:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
 }
