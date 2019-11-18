@@ -121,9 +121,9 @@ class SuitableClass extends Component {
                     <h1 className="suitable-class__title">Lớp học phù hợp với bạn</h1>
                    <div className="suitable-class__list row">
                      {suitableClass.length ? (
-                       suitableClass.map(course => {
+                       suitableClass.map((course, index) => {
                          return (
-                           <div className="col-xs-12 col-sm-4">
+                           <div key={index} className="col-xs-12 col-sm-4">
                              <div className="item">
                                <h2 className="item__title item__title--vsn1">{course.title}</h2>
                                <div className="item__main">

@@ -137,6 +137,28 @@
             }
         }
     }
+    .wrap-img-accompany-project {
+        position: relative;
+        height: 100%;
+        .banner-img {
+            width: 420px;
+            position: absolute;
+            bottom: 5px;
+            right: 10%;
+            @include media-breakpoint('sm') {
+                width: 250px;
+                right: 10%;
+            }
+            @include media-breakpoint('xs') {
+                width: 145px;
+                right: 10%;
+            }
+            @include media-breakpoint('md') {
+                width: 280px;
+                right: 10%
+            }
+        }
+    }
     .wrap-img-ielts {
         position: relative;
         height: 100%;
@@ -239,5 +261,14 @@
     @include media-breakpoint('sm') {
         font-size: 30px;
         text-align: center;
+    }
+}
+.title-accompany-project {
+    @include media-breakpoint('md') {
+        font-size: 34px;
+        text-align: center;
+    }
+    @include media-breakpoint('tb-land') {
+        font-size: 37px;
     }
 }

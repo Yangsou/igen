@@ -1,0 +1,71 @@
+@import '../../../assets/scss/variable';
+@import '../../../assets/scss/breakpoints';
+.list-partner-project {
+    background: #fafafa;
+    .card-level-title {
+        font-size: 30px;
+        margin-bottom: 0px;
+        @include media-breakpoint('md') {
+            font-size: 25px;
+        }
+        @include media-breakpoint('tb-land') {
+            font-size: 25px ;
+        }
+        @include media-breakpoint('sm') {
+            font-size: 20px ;
+        }
+        @include media-breakpoint('xs') {
+            font-size: 20px ;
+        }
+        
+    }
+    .sub-card-level-title {
+        text-align: center;
+        font-size: 25px;
+        @include media-breakpoint('md') {
+            font-size: 20px ;
+        }
+        @include media-breakpoint('tb-land') {
+            font-size: 20px;
+        }
+        @include media-breakpoint('sm') {
+            font-size: 15px ;
+        }
+        @include media-breakpoint('xs') {
+            font-size: 14px ;
+        }
+    }
+    .wrap-quotes-bold {
+        padding-right: 10px;
+        .quotes-start {
+            color: $--color-text-primary;
+            font-size: 50px;
+        }
+    }
+    .wrap-qoute-end {
+        display: inline;
+        position: relative;
+        padding-left: 10px;
+        .quotes-end {
+            position: absolute;
+            transform: rotate(180deg);
+            font-size: 50px;
+            color: $--color-text-primary;
+        }
+    }
+    .card-level {
+        border: 2px solid $--color-secondary;
+        box-shadow: unset;
+    }
+    .card-box {
+        height: 430px;
+    }
+    .card-level-description {
+        font-weight: unset;
+        text-align: justify;
+    }
+    .card-level-description {
+        display: flex;
+        margin-top: 50px;
+    }
+}

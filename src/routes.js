@@ -7,6 +7,7 @@ import RegisterTest from './Pages/RegisterTest'
 import RegisterAccount from './Pages/RegisterAccount'
 import ResultPage from './Pages/ResultPage'
 import ComingSoon from './Pages/ComingSoon'
+import AccompanyProject from './Pages/AccompanyProject'
 const routes = [
     {
         path : '/',
@@ -48,6 +49,11 @@ const routes = [
         path: '/coming-soon',
         exact: false,
         component: ComingSoon
+    },
+    {
+        path: '/dong-hanh-cung-du-an',
+        exact: false,
+        component: AccompanyProject
     }
 ]
 
