@@ -39,7 +39,7 @@
         padding-right: 10px;
         .quotes-start {
             color: $--color-text-primary;
-            font-size: 50px;
+            font-size: 40px;
         }
     }
     .wrap-qoute-end {
@@ -49,7 +49,7 @@
         .quotes-end {
             position: absolute;
             transform: rotate(180deg);
-            font-size: 50px;
+            font-size: 40px;
             color: $--color-text-primary;
         }
     }

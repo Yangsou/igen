@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './styles.scss'
 import iconA1 from '../../../assets/img/icon-A1.png';
+
 export default class index extends Component {
     constructor(props) {
         super(props);
@@ -53,9 +54,9 @@ export default class index extends Component {
         return (
             <div>
                 {
-                    position.map((pos) => {
+                    position.map((pos, index) => {
                         return (
-                        <div>{pos}</div>
+                        <div key={index}>{pos}</div>
                         )
                     })
                 }
@@ -70,9 +71,9 @@ export default class index extends Component {
                     <div className="container">
                         <div className="row pt-80">
                             { 
-                                partnerItem.map((item) => {
+                                partnerItem.map((item, index) => {
                                     return (
-                                        <div className="col-sm-6">
+                                        <div key={index} className="col-sm-6">
                                             <div className="card-level">
                                                 <div className="card-box">
                                                     <img className="card-level-img" src={iconA1} alt="" />
@@ -85,16 +86,16 @@ export default class index extends Component {
                                                     </div>
                                                     <div className="card-level-description">
                                                         <div className="wrap-quotes-bold" ><strong className="quotes-start" ><i>"</i></strong></div>
-                                                        <p className="description-content">
+                                                        <div className="description-content">
                                                             {item.description}
                                                             <div className="wrap-qoute-end"><strong className="quotes-end"><i>"</i></strong> </div>
-                                                        </p>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     )
-                            })
+                                })
                             }
 
                         </div>
