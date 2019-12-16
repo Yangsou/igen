@@ -1,11 +1,19 @@
 import React, { Component } from 'react'
 import './styles.scss'
-import iconA1 from '../../../assets/img/icon-A1.png';
+import image1 from '../../../assets/img/HinhGV/NguyenTienDung.png';
+import image2 from '../../../assets/img/HinhGV/HoangCongGiaKhanh.png';
+import image3 from '../../../assets/img/HinhGV/NguyenBichNgoan.png';
+import image4 from '../../../assets/img/HinhGV/NguyenThiCanh.png';
+import image5 from '../../../assets/img/HinhGV/NguyenTuongChau.png';
+import image6 from '../../../assets/img/HinhGV/HoTrungThanh.png';
+import image7 from '../../../assets/img/HinhGV/LoiMinhThanh.png';
+import image8 from '../../../assets/img/HinhGV/NguyenThanhTrong.png';
 
 export default class index extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            arrImage: [image1, image2, image3, image4, image5, image6, image7,image8],
             partnerItem : [
                 {
                     name : 'PGS. TS Nguyễn Tiến Dũng',
@@ -76,7 +84,7 @@ export default class index extends Component {
                                         <div key={index} className="col-sm-6">
                                             <div className="card-level">
                                                 <div className="card-box">
-                                                    <img className="card-level-img" src={iconA1} alt="" />
+                                                    <img className="card-level-img" src={this.state.arrImage[index]} alt="" />
                                                     <h1 className="card-level-title">{item.name}</h1>
                                                     <div className="sub-card-level-title">
                                                         {
