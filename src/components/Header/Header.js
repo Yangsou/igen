@@ -1,9 +1,8 @@
 import React from 'react';
 import logo from '../../assets/img/Logo.png';
 import './header.scss';
-import { Link } from "react-router-dom";
+import { Link, withRouter  } from "react-router-dom";
 import { doScrolling } from '../../helpers/functional';
-
 class Header extends React.Component {
   constructor(props) {
     super(props);
@@ -16,8 +15,8 @@ class Header extends React.Component {
           active: true
         },
         {
-          label: 'Về chúng tôi',
-          id: 'about-us'
+          label: 'Đồng hành dự án',
+          id: 'partner'
         },
         {
           label: 'Chương trình học',
@@ -62,7 +61,9 @@ class Header extends React.Component {
     window.location.href = 'https://igen.vsn.edu.vn/danh-gia-nang-luc'
   }
   clickMenuItem = (id) => {
-    console.log('click click')
+    if ( id === 'partner') {
+      this.props.history.push('/dong-hanh-cung-du-an')
+    } else {
       setTimeout(()=> {
         var element = document.getElementById(id);
         if (element) {
@@ -72,6 +73,7 @@ class Header extends React.Component {
         })
         }
       },250)
+    }
   }
   componentDidMount() {
     this.activeHeaderWhenScroll();
@@ -155,4 +157,4 @@ class Header extends React.Component {
   }
 }
 
-export default Header;
+export default withRouter(Header);

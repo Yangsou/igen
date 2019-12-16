@@ -2,11 +2,11 @@
 @import '../../../assets/scss/breakpoints';
 
 .result__wrap {
-    background: #f5f5f5;
+    background: #fafafa;
     
     .result{
         // background: #fff;
-        background: #f5f5f5;
+        background: #fafafa;
         // padding-left: 30px;
         // padding-right: 30px;
         &__wrap-title {
@@ -37,8 +37,12 @@
             h3 {
                 font-size: 25px;
                 text-align: center;
-                margin-bottom: 30px;
+                margin-bottom: 5px;
                 color: $--color-text-primary;
+            }
+            .result__level {
+                color: red;
+                font-size: 30px;
             }
             hr {
                 border-bottom-width: 0px;

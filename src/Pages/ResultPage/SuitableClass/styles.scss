@@ -2,7 +2,7 @@
 @import '../../../assets/scss/breakpoints';
 
 .suitable-class-wrap {
-    background: #f5f5f5;
+    background: #fafafa;
     .suitable-class {
         padding-bottom: 75px;
         &__title {
@@ -138,5 +138,18 @@
     .wrap-flex-center {
         display: flex;
         justify-content: center;
+    }
+    .wrap-popup {
+        background: white;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 12px;
+        color: #e15c2b;
+        font-size: 14px;
+    }
+    
+    span.level-description:hover {
+        text-decoration: underline;
+        cursor: pointer;
     }
 }
