@@ -1,19 +1,19 @@
 import React, { Component } from 'react'
 import './styles.scss'
 import image1 from '../../../assets/img/HinhGV/NguyenTienDung.png';
-import image2 from '../../../assets/img/HinhGV/HoangCongGiaKhanh.png';
+// import image2 from '../../../assets/img/HinhGV/HoangCongGiaKhanh.png';
 import image3 from '../../../assets/img/HinhGV/NguyenBichNgoan.png';
 import image4 from '../../../assets/img/HinhGV/NguyenThiCanh.png';
 import image5 from '../../../assets/img/HinhGV/NguyenTuongChau.png';
 import image6 from '../../../assets/img/HinhGV/HoTrungThanh.png';
 import image7 from '../../../assets/img/HinhGV/LoiMinhThanh.png';
-import image8 from '../../../assets/img/HinhGV/NguyenThanhTrong.png';
+// import image8 from '../../../assets/img/HinhGV/NguyenThanhTrong.png';
 
 export default class index extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            arrImage: [image1, image2, image3, image4, image5, image6, image7,image8],
+            arrImage: [image1, '', image3, image4, image5, image6, image7,''],
             partnerItem : [
                 {
                     name : 'PGS. TS Nguyễn Tiến Dũng',
