@@ -56,6 +56,10 @@
     .card-level {
         border: 2px solid $--color-secondary;
         box-shadow: unset;
+        border-radius: 50px;
+        @include media-breakpoint('xs') {
+            margin-top: 130px;
+        }
     }
     .card-box {
         height: 430px;
@@ -67,5 +71,11 @@
     .card-level-description {
         display: flex;
         margin-top: 50px;
+    }
+    .card-level-img {
+        // border-radius: 50%;
+        // border: 2px solid $--color-secondary;
+        width: 235px;
+        transform: translate(-50%, -50%);
     }
 }
