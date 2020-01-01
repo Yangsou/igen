@@ -42,7 +42,7 @@ export default class index extends Component {
                 },
                 {
                     name : 'TS. Lê Hoành Sử',
-                    position: ['Phó Trưởng khoa Hệ thồng thông tin','Trường Đại học Kinh Tế - Luật'],
+                    position: ['Phó Trưởng khoa Hệ thống thông tin','Trường Đại học Kinh Tế - Luật'],
                     description: 'Thế hệ Z đầy tiềm năng cần một phương pháp học hiện đại mà vẫn giữ lại được sự tương tác truyền thống giữa giáo viên và học viên, iGen đang làm tốt ở khía cạnh này để giúp cho thế hệ sinh viên Việt Nam tự tin nói tiếng Anh.'
                 },
                 {
