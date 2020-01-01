@@ -15,7 +15,7 @@ class Header extends React.Component {
           active: true
         },
         {
-          label: 'Đồng hành dự án',
+          label: 'Hưởng ứng cùng dự án',
           id: 'partner'
         },
         {
