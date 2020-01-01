@@ -51,7 +51,7 @@ const routes = [
         component: ComingSoon
     },
     {
-        path: '/dong-hanh-cung-du-an',
+        path: '/huong-ung-cung-du-an',
         exact: false,
         component: AccompanyProject
     }

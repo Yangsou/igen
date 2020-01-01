@@ -62,7 +62,10 @@ class Header extends React.Component {
   }
   clickMenuItem = (id) => {
     if ( id === 'partner') {
-      this.props.history.push('/dong-hanh-cung-du-an')
+      this.props.history.push('/huong-ung-cung-du-an');
+      this.setState({
+        showMenu: !this.state.showMenu
+      })
     } else {
       setTimeout(()=> {
         var element = document.getElementById(id);
@@ -115,6 +118,7 @@ class Header extends React.Component {
   }
   render() {
     const { menus, showMenu } = this.state;
+    const pathname = window.location.pathname;
     return (
       <header ref="header" className="container--fluid header-fixed">
         <div className="header">
@@ -124,11 +128,21 @@ class Header extends React.Component {
 
           <div className="header__right">
             <ul className={`header__menu ${showMenu ? 'active' : ''}`}>
-              {
-                menus.map((item) => (
+              { pathname !== '/huong-ung-cung-du-an'
+                &&menus.map((item) => (
                   <li
                     onClick={() => this.clickMenuItem(item.id)}
                     className={`header__menu__item ${item.active ? 'header__menu__item--active': ''}`}
+                    key={item.id}>
+                      {this.showListMenu(item.id, item.label)}
+                  </li>
+                ))
+              }
+              { pathname === '/huong-ung-cung-du-an'
+                &&menus.map((item) => (
+                  <li
+                    onClick={() => this.clickMenuItem(item.id)}
+                    className={`header__menu__item ${item.id === 'partner' ? 'header__menu__item--active': ''}`}
                     key={item.id}>
                       {this.showListMenu(item.id, item.label)}
                   </li>

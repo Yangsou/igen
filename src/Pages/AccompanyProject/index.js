@@ -8,17 +8,17 @@ export default class index extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            title: 'ĐỒNG HÀNH CÙNG DỰ ÁN',
+            title: 'HƯỞNG ỨNG CÙNG DỰ ÁN',
             img,
             imgClassName: 'wrap-img-accompany-project',
-            alt : 'ĐỒNG HÀNH CÙNG DỰ ÁN',
+            alt : 'HƯỞNG ỨNG CÙNG DỰ ÁN',
             breadcrumb : [
                 {
                     label : 'Trang Chủ',
                     path : '/'
                 },
                 {
-                    label : 'Đồng hành cùng dự án',
+                    label : 'Hưởng ứng cùng dự án',
                     active : true
                 }
             ]

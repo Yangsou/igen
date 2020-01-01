@@ -10,7 +10,7 @@ class Banner extends Component {
     }
   }
   componentDidMount() {
-      if ( window.location.pathname === '/dong-hanh-cung-du-an') {
+      if ( window.location.pathname === '/huong-ung-cung-du-an') {
           this.setState({
               titleAccompany: 'title-accompany-project'
           })
