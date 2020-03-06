@@ -11,6 +11,11 @@
     text-align: center;
     font-weight: bold;
     margin-bottom: 60px;
+    &--studentship {
+      margin-top: 15px;
+      margin-bottom: 0px;
+      font-size: 25px;
+    }
   }
   &__row {
     position: relative;
@@ -20,21 +25,46 @@
       text-align: center;
       margin-top: 50px;
       position: relative;
-      padding-bottom: 72px;
+      padding-bottom: 60px;
+      .link-border-avatar {
+        text-decoration: underline;
+      }
+      &--fix-space {
+        margin-top: 25px;
+        padding-bottom: 25px;
+      }
       &__title {
-        font-size: 24px;
+        font-size: 22px;
         color: $--color-text-primary;
         margin-top: 8px;
+        &--mb-8 {
+          margin-bottom: 8px;
+        }
+        &--studentship {
+          text-align: center;
+        }
+        @media (max-width: 1200px){
+          font-size: 20px;
+        }
       }
       &__text {
         margin-top: 8px;
-        font-size: $--font-size-base;
+        // font-size: $--font-size-base;
+        font-size: 15px;
+        &--none-margin {
+          margin-top: 0px;
+        }
         + a.btn {
           white-space: nowrap;
           position: absolute;
           bottom: 10px;
           left: 50%;
           transform: translateX(-50%);
+        }
+      }
+      &__img {
+        &--fix-size {
+          width: 56px;
         }
       }
     }

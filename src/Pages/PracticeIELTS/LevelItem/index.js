@@ -3,6 +3,7 @@ import Modal from './../../../components/Modal';
 import iconIELTS50 from '../../../assets/img/icon-ielts50.png';
 import iconIELTS60 from '../../../assets/img/icon-ielts60.png';
 import iconIELTS70 from '../../../assets/img/icon-ielts70.png';
+import iconIELTS80 from '../../../assets/img/icon-ielts80.png';
 import iconList from './../../../assets/img/check-arround.png';
 import imgIelts1 from '../../../assets/img/IE1.png'
 import imgIelts2 from '../../../assets/img/IE2.png'
@@ -165,13 +166,13 @@ class LevelItem extends Component {
                     </section>
                     <section className="container-fluid">
                         <div className="container">
-                            <div className="row pt-80 wrap-flex-center">
+                            <div className="row pt-80">
                                 <div className="col-sm-6">
                                     <div className="card-level">
                                         <div className="card-box card-box-certificate-b">
                                             <img className="card-level-img" src={iconIELTS70} alt="" />
                                             <h1 className="card-level-title">Cấp độ 7.0+</h1>
-                                            <p className="card-level-description">
+                                            <p className="card-level-description card-level-description--fix-height">
                                             Học viên ở trình độ trung cấp (IELTS 6.0) cần luyện chuyên sâu kỹ năng Speaking và Writing.
                                             Học viên đã nắm vững cách viết triển khai các dạng bài IELTS Writing và cách triển khai ideas cho IELTS Speaking.
             
@@ -214,6 +215,68 @@ class LevelItem extends Component {
                                                     <div className="card-level-list-item">
                                                         <strong>Writing:</strong> Thay đổi mindset không sử dụng từ đồng nghĩa khi chưa rõ nghĩa ngữ cảnh 
                                                         và collocation của nó, không viết câu quá dài, biết nghĩ tới cấu trúc cả câu trước khi viết.
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <img className="img-icon" src={iconList} alt="" />
+                                                    <div className="card-level-list-item">
+                                                        <strong>Speaking:</strong> Luyện tập cách Think in English để diễn đạt các từ vựng khó, 
+                                                        ideas khó và chủ đề khó từ vốn từ hạn chế và đơn giản của bản thân.
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <div className="wrap-button">
+                                                <button onClick={() => this.showModal(imgIelts3)} className="btn btn--outline" rel="noopener noreferrer">Xem chi tiết lộ trình học<span className="icon icon__arrow"></span></button>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-sm-6">
+                                    <div className="card-level">
+                                        <div className="card-box card-box-certificate-b">
+                                            <img className="card-level-img" src={iconIELTS80} alt="" />
+                                            <h1 className="card-level-title">Cấp độ 8.0+</h1>
+                                            <p className="card-level-description card-level-description--fix-height">
+                                                Học viên đã luyện IELTS và nắm đầy đủ các dạng kiến thức, còn 2 tháng trước khi tham gia kỳ thi thật.
+                                            </p>
+                                            <h1 className="card-level-title--content">Nội dung</h1>
+                                            <ul className="card-level-list pb-0 card-level-list-content card-level-list--more-space">
+                                                <li>
+                                                    <img className="img-icon" src={iconList} alt="" />
+                                                    <div className="card-level-list-item">
+                                                        Trang bị kiến thức toàn diện và chuyên sâu về kỳ thi IELTS.
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <img className="img-icon" src={iconList} alt="" />
+                                                    <div className="card-level-list-item">
+                                                        Tập trung giải đề.
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <h1 className="card-level-title--content">Kết quả đầu ra</h1>
+                                            <ul className="card-level-list">
+                                                <li>
+                                                    <img className="img-icon" src={iconList} alt="" />
+                                                    <div className="card-level-list-item">
+                                                        <strong>Listening:</strong> Các bài tập nghe được thiết kế dưới dạng Homework, 
+                                                        không tốn thời gian trên lớp (tập trung vào luyện nói).
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <img className="img-icon" src={iconList} alt="" />
+                                                    <div className="card-level-list-item">
+                                                        <strong>Reading:</strong> Thay đổi mindset, trước khi đọc nhìn vào cấu trúc câu thay vì đọc dịch từng từ từ trái sang phải. 
+                                                        Làm bài tập phân tích cấu trúc câu, note lại những cấu trúc xuất hiện trong bài,
+                                                         viết câu W áp dụng những cấu trúc và từ vựng đã học.
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <img className="img-icon" src={iconList} alt="" />
+                                                    <div className="card-level-list-item">
+                                                        <strong>Writing:</strong> Thay đổi mindset không sử dụng từ đồng nghĩa khi chưa rõ nghĩa ngữ cảnh và collocation của nó,
+                                                         không viết câu quá dài, biết nghĩ tới cấu trúc cả câu trước khi viết.
                                                     </div>
                                                 </li>
                                                 <li>

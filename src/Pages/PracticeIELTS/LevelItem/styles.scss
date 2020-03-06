@@ -76,6 +76,14 @@
         width: 95%;
         margin: auto;
         min-height: 60px;
+        &--fix-height {
+            @include media-breakpoint('md') {
+               min-height: 80px;
+            }
+            @include media-breakpoint('xs') {
+                min-height: unset;
+             }
+        }
     }
 
     .card-level-description strong {
@@ -88,7 +96,12 @@
         width: 95%;
         list-style-type: none;
         margin: auto;
-
+        &--more-space{
+            min-height: 150px;
+            @include media-breakpoint('xs') {
+               min-height: unset;
+            }
+        }
         li {
             line-height: 24px;
             margin-bottom: 16px;
@@ -259,9 +272,5 @@
             color: #e15c2b;
         }
         
-    }
-    .wrap-flex-center{
-        display: flex;
-        justify-content: center;
     }
 }

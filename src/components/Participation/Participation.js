@@ -1,93 +1,125 @@
 import React, { Component } from 'react';
-import bgOne from '../../assets/img/ky-quy.png';
 import bgBook from '../../assets/img/book.png';
 import bgAvatar from '../../assets/img/avatar-bg.png';
 import bgClass from '../../assets/img/bg-class.png';
 import bgHomework from '../../assets/img/home-work.png';
 import bgexam from '../../assets/img/exam.png';
+import walletImage from '../../assets/img/wallet.png';
 import './Participation.scss';
 
 class Participation extends Component{
   render() {
-  const { backgroundWhite, price1, price2 } = this.props;
+  const { backgroundWhite, price1 } = this.props;
   var setBackground = (backgroundWhite) => {
     return backgroundWhite?'background-white':'';
   }
-  var extendText1 = (price1) => {
-    if(price1) {
-      return <span>
-        <br/>Số tiền ký quỹ: <strong>{price1} VNĐ.</strong>  
-      </span>
-    } else return ''
-  }
-  var extendText2 = (price2) => {
-    if(price1) {
-      return <span>
-         - Sách: <strong>{price2} VNĐ </strong>
-                  <br/>(Bao gồm phí vận chuyển & không hoàn lại)  
-      </span>
-    } else return ''
-  }
+  const pathName = window.location.pathname;
   return (
     <section className={`participation lazy-load ${setBackground(backgroundWhite)} ${price1?'p-b-0':''} `} id="rules">
       <div className="container">
         <p className="participation__title">Thể lệ tham gia</p>
-
         <div className="participation__row">
-          <div className="item col-sm-6 col-md-4">
+          <div className="item col-sm-6 item--fix-space">
             <div className="item__wrapper__img">
-              <img src={bgOne} className="item__img" alt="Ký quỹ" />
+              <img src={walletImage} className="item__img item__img--fix-size" alt="Ký quỹ" />
             </div>
-            <p className="item__title">Ký quỹ</p>
-            <p className="item__text">
-              Phần ký quỹ nhằm thể hiện sự cam kết tham gia chương trình học. Sinh viên được hoàn lại 100% số tiền ký quỹ sau khi đáp ứng Thể lệ tham gia 
-              {extendText1(price1)}
-             </p>
-            <a href="https://vsn.edu.vn/post/ky-quy-cam-ket-hoc-tap-cung-du-an-igen" target="_blank" className="btn btn--outline" rel="noopener noreferrer">Xem thêm <span className="icon icon__arrow"></span></a>
-          </div>
-          <div className="item col-sm-6 col-md-4">
-            <div className="item__wrapper__img">
-              <img src={bgBook} className="item__img" alt="Mua sách bản quyền" />
-            </div>
-            <p className="item__title">Mua sách bản quyền</p>
-            <p className="item__text">
-                Sinh viên sẽ được nhận sách trực tiếp từ NXB, i-Gen không thu bất kỳ lợi nhuận nào từ việc mua sách bản quyền
-                {extendText2(price2)}
+            <p className="item__title item__title--mb-8">Đóng học phí</p>
+            {
+              (pathName === '/' || pathName === '/tieng-anh-tong-quat')
+              && <p className="item__text item__text--none-margin">
+              Chương trình Tiếng Anh Tổng quát: 1.950.000 VND
             </p>
-            <a href="https://vsn.edu.vn/post/tong-hop-bo-giao-trinh-giang-day-do-nxb-pearson-cung-cap" target="_blank" className="btn btn--outline" rel="noopener noreferrer">Xem sách <span className="icon icon__arrow"></span></a>
+            }
+            {
+              (pathName === '/' || pathName === '/luyen-thi-TOEIC')
+              && <p className="item__text item__text--none-margin">
+              Chương trình Luyện thi TOEIC: 1.950.000 VND
+            </p>
+            }
+            {
+              (pathName === '/' || pathName === '/luyen-thi-IELTS')
+              && <p className="item__text item__text--none-margin">
+              Chương trình luyện thi IELTS: 2.950.000 VND
+            </p>
+            }
+            
           </div>
-          <div className="item col-sm-6 col-md-4">
+          <div className="item col-sm-6 item--fix-space">
             <div className="item__wrapper__img">
-              <img src={bgAvatar} className="item__img" alt="Thay Avatar cùng dự án" />
+              <img src={bgBook} className="item__img" alt="Ký quỹ" />
             </div>
-            <p className="item__title">Thay Avatar cùng dự án</p>
-            <p className="item__text">Học viên tham gia sẽ sử dụng Avatar i-Gen trên trang facebook của mình trong suốt thời gian học nhằm thể hiện sự quyết tâm hoàn thành chương trình</p>
-            <a href="https://vsn.edu.vn/post/huong-dan-thay-khung-anh-igen-dong-hanh-cung-du-an" target="_blank" className="btn btn--outline" rel="noopener noreferrer">Xem khung ảnh <span className="icon icon__arrow"></span></a>
+            <p className="item__title">Sách / Tài liệu có bản quyền</p>
+            <p className="item__text">
+              Sinh viên sẽ được nhận 1 quyển sách trực tiếp từ NXB để tham gia học tập cùng dự án (không phát sinh chi phí).
+            </p>
           </div>
-          <div className="item col-sm-6 col-md-4">
+        </div>
+        <h1 className="participation__title participation__title--studentship">ĐIỀU KIỆN HỌC BỔNG 50%</h1>
+        <div className="participation__row">
+          <div className="item col-sm-6 col-md-3">
             <div className="item__wrapper__img">
               <img src={bgClass} className="item__img" alt="Tham gia lớp học" />
             </div>
             <p className="item__title">Tham gia lớp học</p>
-            <p className="item__text">Đảm bảo tham gia từ 70% thời gian học của toàn khoá trở lên</p>
+            <p className="item__text">Đảm bảo tham gia từ 80% toàn thời gian học của lớp học trở lên.</p>
           </div>
-          <div className="item col-sm-6 col-md-4">
+          <div className="item col-sm-6 col-md-3">
             <div className="item__wrapper__img">
               <img src={bgHomework} className="item__img" alt="Bài tập về nhà" />
             </div>
             <p className="item__title">Bài tập về nhà</p>
-            <p className="item__text">Hoàn thiện 100% bài tập về nhà với tỉ lệ đúng từ 60% trở lên</p>
+            <p className="item__text">Làm 100% bài tập về nhà và tỷ lệ "Đạt" từ 70% trở lên.</p>
           </div>
-          <div className="item col-sm-6 col-md-4">
+          <div className="item col-sm-6 col-md-3">
+            <div className="item__wrapper__img">
+              <img src={bgAvatar} className="item__img" alt="Thay Avatar cùng dự án" />
+            </div>
+            <p className="item__title">Thay Avatar cùng dự án</p>
+            <p className="item__text">Học viên đặt Frame Avatar i-Gen trên ảnh đại diện cho facebook của mình trong thời gian học nhằm thể hiện sự quyết tâm hoàn thành chương trình.
+            <a href="https://vsn.edu.vn/post/huong-dan-thay-khung-anh-igen-dong-hanh-cung-du-an" className="link-border-avatar" target="_blank" rel="noopener noreferrer"> Xem khung ảnh</a>
+            </p>
+          </div>
+          <div className="item col-sm-6 col-md-3">
             <div className="item__wrapper__img">
               <img src={bgexam} className="item__img" alt="Thi đánh giá cuối kì" />
             </div>
             <p className="item__title">Thi đánh giá cuối kì</p>
-            <p className="item__text">Tham gia bài thi online đánh giá năng lực cuối khoá học với tỉ lệ đúng từ 50% trở lên</p>
+            <p className="item__text">Tỉ lệ đúng đối với bài thi cuối khóa từ 50% trở lên.</p>
           </div>
-
         </div>
-
+        <h1 className="participation__title participation__title--studentship">ĐIỀU KIỆN HỌC BỔNG 100%</h1>
+        <div className="participation__row">
+          <div className="item col-sm-6 col-md-3">
+            <div className="item__wrapper__img">
+              <img src={bgClass} className="item__img" alt="Tham gia lớp học" />
+            </div>
+            <p className="item__title">Tham gia lớp học</p>
+            <p className="item__text">Đảm bảo tham gia từ 80% toàn thời gian học của lớp học trở lên.</p>
+          </div>
+          <div className="item col-sm-6 col-md-3">
+            <div className="item__wrapper__img">
+              <img src={bgHomework} className="item__img" alt="Bài tập về nhà" />
+            </div>
+            <p className="item__title">Bài tập về nhà</p>
+            <p className="item__text">Làm 100% bài tập về nhà và tỷ lệ "Đạt" từ 70% trở lên.</p>
+          </div>
+          <div className="item col-sm-6 col-md-3">
+            <div className="item__wrapper__img">
+              <img src={bgAvatar} className="item__img" alt="Thay Avatar cùng dự án" />
+            </div>
+            <p className="item__title">Thay Avatar cùng dự án</p>
+            <p className="item__text">Học viên đặt Frame Avatar i-Gen trên ảnh đại diện cho facebook của mình trong thời gian học nhằm thể hiện sự quyết tâm hoàn thành chương trình.
+              <a href="https://vsn.edu.vn/post/huong-dan-thay-khung-anh-igen-dong-hanh-cung-du-an" className="link-border-avatar" target="_blank" rel="noopener noreferrer"> Xem khung ảnh</a>
+            </p>
+          </div>
+          <div className="item col-sm-6 col-md-3">
+            <div className="item__wrapper__img">
+              <img src={bgexam} className="item__img" alt="Thi đánh giá cuối kì" />
+            </div>
+            <p className="item__title">Thi đánh giá cuối kì</p>
+            <p className="item__text">Điểm bài thi cuối kì nằm trong top 10% cao nhất của lớp đó.</p>
+          </div>
+        </div>
       </div>
     </section>
   )

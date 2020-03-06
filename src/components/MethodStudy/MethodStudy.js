@@ -13,10 +13,10 @@ export default function MethodStudy() {
         <div className="method__row">
           <div className="method__left col-xs-12 col-sm-6">
             <p className="method__row__title">Học tập trực tuyến</p>
-            <p className="method__row__text">Học mọi lúc, mọi nơi, tiết kiệm thời gian di chuyển, thông qua các nền tảng học tập xu thế như: livestream, video, group trao đổi trực tuyến</p>
+            <p className="method__row__text">Học mọi lúc, mọi nơi, tiết kiệm thời gian di chuyển, thông qua các nền tảng học tập xu thế như: livestream, video, group trao đổi trực tuyến.</p>
             <ul className="method__menu">
-              <li><span className="icon icon__check"></span>Tương tác trực tiếp với giảng viên như tại lớp học truyền thống qua các buổi học giảng dạy trên nền tảng livestream tiên tiến do Công ty cổ phần Công nghệ Giáo dục VSN xây dựng</li>
-              <li><span className="icon icon__check"></span>Hệ thống các video bài giảng quay lại lớp học, không giới hạn số lần xem, đảm bảo sinh viên vắng mặt có thể theo đúng lộ trình học tập đã đề ra</li>
+              <li><span className="icon icon__check"></span>Tương tác trực tiếp với giảng viên như tại lớp học truyền thống qua các buổi học giảng dạy trên nền tảng livestream tiên tiến do Công ty cổ phần Công nghệ Giáo dục VSN xây dựng.</li>
+              <li><span className="icon icon__check"></span>Hệ thống các video bài giảng quay lại lớp học, không giới hạn số lần xem, đảm bảo sinh viên, nếu vì lí do bất khả kháng, vắng mặt vẫn có thể theo đúng lộ trình học tập đã đề ra</li>
             </ul>
           </div>
           <div className="method__right col-xs-12 col-sm-6">
@@ -27,10 +27,10 @@ export default function MethodStudy() {
         <div className="method__row">
           <div className="method__right col-xs-12 col-sm-6">
             <p className="method__row__title">Rèn luyện bài tập</p>
-            <p className="method__row__text">Hệ thống bài tập đa dạng cho mỗi chương trình học. Nội dung bài tập được cập nhật từ các giáo trình uy tín</p>
+            <p className="method__row__text">Hệ thống bài tập đa dạng cho mỗi chương trình học. Nội dung bài tập được cập nhật từ các giáo trình uy tín.</p>
             <ul className="method__menu">
-              <li><span className="icon icon__check"></span>Danh mục bài tập về nhà được thể hiện trong từng buổi học. Học viên có thể làm ngay bài tập khi vừa kết thúc buổi học, và luyện tập nhiều lần</li>
-              <li><span className="icon icon__check"></span>Kết quả được thể hiện ngay khi vừa nộp bài. Bạn có thể tiếp tục làm lại để cải thiện kết quả, hoặc xem ngay đáp án để bổ sung thêm kiến thức</li>
+              <li><span className="icon icon__check"></span>Danh mục bài tập về nhà được thể hiện trong từng buổi học. Học viên có thể làm ngay bài tập khi vừa kết thúc buổi học, và luyện tập lại nhiều lần.</li>
+              <li><span className="icon icon__check"></span>Kết quả được thể hiện ngay khi vừa nộp bài. Bạn có thể tiếp tục làm lại để cải thiện kết quả, hoặc xem ngay đáp án để bổ sung thêm kiến thức.</li>
             </ul>
           </div>
           <div className="method__left col-xs-12 col-sm-6">
@@ -41,10 +41,10 @@ export default function MethodStudy() {
         <div className="method__row">
           <div className="method__left col-xs-12 col-sm-6">
             <p className="method__row__title">Đánh giá sự tiến bộ</p>
-            <p className="method__row__text">Học viên có thể theo dõi lộ trình học tập, số buổi học đã tham gia, số bài tập đã hoàn thành, điểm số đạt được... để có thể tự đánh giá sự tiến bộ của mình sau khi kết thúc khoá học</p>
+            <p className="method__row__text">Học viên có thể theo dõi lộ trình học tập, số buổi học đã tham gia, số bài tập đã hoàn thành, điểm số đạt được... để có thể tự đánh giá sự tiến bộ của mình sau khi kết thúc khoá học.</p>
             <ul className="method__menu">
-              <li><span className="icon icon__check"></span>Hiển thị rõ ràng số buổi học, số bài tập đã làm để đảm bảo học viên có thể xem lại quá trình học tập, cũng như theo dõi điều kiện tham gia để được hoàn ký quỹ</li>
-              <li><span className="icon icon__check"></span>Giảng viên và bộ phận chăm sóc học viên của lớp cũng có thể nắm được thông tin này để đánh giá sự tiến bộ của người học qua từng buổi, góp phần sâu sát để hỗ trợ giúp sinh viên đạt được kết quả tốt hơn</li>
+              <li><span className="icon icon__check"></span>Tích hợp hệ thống Tracking hiển thị rõ ràng số buổi học, số bài tập đã làm, kết quả làm bài để đảm bảo học viên có thể xem lại quá trình học tập, cũng như theo dõi tình hình đạt yêu cầu để được nhận học bổng.</li>
+              <li><span className="icon icon__check"></span>Giảng viên và bộ phận chăm sóc học viên của lớp cũng có thể nắm được thông tin này để đánh giá sự tiến bộ của người học qua từng buổi, sâu sát để hỗ trợ giúp sinh viên đạt được kết quả tốt hơn.</li>
             </ul>
           </div>
           <div className="method__right col-xs-12 col-sm-6">

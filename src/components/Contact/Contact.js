@@ -108,11 +108,11 @@ verifyCallback=(recaptchaToken) =>{
               </div>
               <div className="contact__item__content">
               <img className="img img--phone" src={phoneIcon} alt="1900.2104" />
-                <p className="text text--large"><span className="bold">1900.2104</span></p>
+                <p className="text text--large"><span className="bold">093.104.5700</span></p>
               </div>
               <div className="contact__item__content">
                 <img className="img img--email" src={emailIcon} alt="igen@vsn.edu.vn" />
-                <p className="text"><span className="bold">contact@igen.edu.vn</span></p>
+                <p className="text"><span className="bold">igen.vietnam@gmail.com</span></p>
               </div>
               <div className="contact__item__content">
                 <a href="https://www.facebook.com/igen.vietnam" target="blank">
